@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychedelic Reality Portal</title>
+    <title>Solar System - Heliocentric View</title>
     <style>
         * {
             margin: 0;
@@ -11,502 +11,523 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Arial Black', sans-serif;
-        }
-
         body {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            z-index: 1;
-            transition: background-color 2s ease, filter 2s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            color: #fff;
         }
 
-        /* Animated background */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Psychedelic overlay patterns */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.3;
-            animation: shimmer 20s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0%, 100% { opacity: 0.2; }
-            50% { opacity: 0.5; }
-        }
-
-        /* Floating bubbles */
-        .bubble {
-            position: fixed;
-            border-radius: 50%;
-            opacity: 0.6;
-            mix-blend-mode: screen;
-            pointer-events: none;
-        }
-
-        .bubble:nth-child(1) { animation: float 20s infinite ease-in-out; }
-        .bubble:nth-child(2) { animation: float 25s infinite ease-in-out 2s; }
-        .bubble:nth-child(3) { animation: float 30s infinite ease-in-out 4s; }
-        .bubble:nth-child(4) { animation: float 22s infinite ease-in-out 1s; }
-        .bubble:nth-child(5) { animation: float 26s infinite ease-in-out 3s; }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(100px, -100px) scale(1.2); }
-            50% { transform: translate(-100px, -200px) scale(0.8); }
-            75% { transform: translate(150px, 100px) scale(1.1); }
-        }
-
-        /* Main container */
         .container {
             position: relative;
-            z-index: 10;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            padding: 60px;
-            border-radius: 30px;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 0 60px rgba(255, 0, 255, 0.5), inset 0 0 60px rgba(0, 255, 255, 0.1);
-            border: 3px solid rgba(255, 0, 255, 0.3);
-            animation: pulse-glow 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 60px rgba(255, 0, 255, 0.5), inset 0 0 60px rgba(0, 255, 255, 0.1); }
-            50% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.7), inset 0 0 80px rgba(255, 0, 255, 0.2); }
-        }
-
-        .header {
-            margin-bottom: 40px;
-            animation: bobbing 4s ease-in-out infinite;
-        }
-
-        @keyframes bobbing {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: conic-gradient(#ff0080, #00ffff, #ff0080);
-            margin: 0 auto 30px;
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 80px;
-            animation: spin 8s linear infinite;
-            box-shadow: 0 0 40px rgba(255, 0, 128, 0.8);
-            border: 4px solid rgba(0, 255, 255, 0.5);
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .solar-system {
+            position: relative;
+            width: 1200px;
+            height: 1200px;
+            max-width: 90vw;
+            max-height: 90vh;
         }
 
-        h1 {
-            color: #00ffff;
-            margin-bottom: 10px;
-            font-size: 48px;
-            text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ffff00;
-            animation: neon-flicker 0.15s infinite;
+        /* Sun */
+        .sun {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle at 35% 35%, #FDB813, #FD8813);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 60px rgba(253, 184, 19, 0.8), 0 0 100px rgba(253, 136, 19, 0.5);
+            z-index: 10;
         }
 
-        @keyframes neon-flicker {
-            0%, 18%, 22%, 25%, 54%, 56%, 100% { text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ffff00; }
-            20%, 24%, 55% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff; }
+        /* Orbit paths */
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .time-weather {
-            color: #00ff00;
-            font-size: 18px;
-            margin: 15px 0;
-            text-shadow: 0 0 10px #00ff00;
+        /* Planet containers */
+        .planet-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
             font-weight: bold;
-            background: rgba(0, 255, 0, 0.1);
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #00ff00;
+            color: #fff;
+            transition: box-shadow 0.3s ease;
         }
 
-        .weather-icon {
-            font-size: 48px;
-            margin: 10px 0;
-            animation: pulse-scale 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse-scale {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        .interactive-button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            background: linear-gradient(45deg, #ff00ff, #00ffff);
-            color: #000;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: bold;
+        .planet:hover {
+            filter: brightness(1.3);
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-            animation: glow-pulse 2s ease-in-out infinite;
         }
 
-        @keyframes glow-pulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
-            50% { box-shadow: 0 0 40px rgba(255, 0, 255, 0.8); }
+        /* Mercury */
+        .mercury-orbit {
+            width: 160px;
+            height: 160px;
+            animation: rotate 8.7s linear infinite;
         }
 
-        .interactive-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 60px rgba(0, 255, 255, 0.9);
+        .mercury {
+            width: 12px;
+            height: 12px;
+            background: #8C7853;
+            left: 74px;
+            top: -6px;
+            box-shadow: 0 0 8px rgba(140, 120, 83, 0.6);
         }
 
-        .interactive-button:active {
-            transform: scale(0.95);
+        /* Venus */
+        .venus-orbit {
+            width: 240px;
+            height: 240px;
+            animation: rotate 22.5s linear infinite;
         }
 
-        .trippy-text {
-            color: #ffff00;
-            font-size: 20px;
-            margin: 20px 0;
-            animation: color-shift 4s ease-in-out infinite;
-            text-shadow: 0 0 10px #ffff00;
-        }
-
-        @keyframes color-shift {
-            0%, 100% { color: #ffff00; text-shadow: 0 0 10px #ffff00; }
-            25% { color: #ff00ff; text-shadow: 0 0 10px #ff00ff; }
-            50% { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
-            75% { color: #ff0080; text-shadow: 0 0 10px #ff0080; }
-        }
-
-        .cursor-tracker {
-            position: fixed;
+        .venus {
             width: 20px;
             height: 20px;
-            border: 2px solid #00ffff;
+            background: #FFC649;
+            left: 110px;
+            top: -10px;
+            box-shadow: 0 0 12px rgba(255, 198, 73, 0.6);
+        }
+
+        /* Earth */
+        .earth-orbit {
+            width: 340px;
+            height: 340px;
+            animation: rotate 36.5s linear infinite;
+        }
+
+        .earth {
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #4A90E2, #2ECC71);
+            left: 159px;
+            top: -11px;
+            box-shadow: 0 0 14px rgba(74, 144, 226, 0.6);
+        }
+
+        /* Mars */
+        .mars-orbit {
+            width: 440px;
+            height: 440px;
+            animation: rotate 68.7s linear infinite;
+        }
+
+        .mars {
+            width: 16px;
+            height: 16px;
+            background: #E27B58;
+            left: 212px;
+            top: -8px;
+            box-shadow: 0 0 10px rgba(226, 123, 88, 0.6);
+        }
+
+        /* Jupiter */
+        .jupiter-orbit {
+            width: 640px;
+            height: 640px;
+            animation: rotate 431s linear infinite;
+        }
+
+        .jupiter {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(90deg, #C88B3A 0%, #A67035 50%, #C88B3A 100%);
+            left: 298px;
+            top: -22px;
+            box-shadow: 0 0 24px rgba(200, 139, 58, 0.6);
+        }
+
+        /* Saturn */
+        .saturn-orbit {
+            width: 820px;
+            height: 820px;
+            animation: rotate 1063s linear infinite;
+        }
+
+        .saturn {
+            width: 36px;
+            height: 36px;
+            background: #FAD5A5;
+            left: 392px;
+            top: -18px;
+            box-shadow: 0 0 20px rgba(250, 213, 165, 0.6);
+            position: relative;
+        }
+
+        .saturn::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(250, 213, 165, 0.4);
             border-radius: 50%;
-            pointer-events: none;
-            z-index: 100;
-            opacity: 0;
-            box-shadow: 0 0 15px #00ffff;
-            transition: opacity 0.3s ease;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotateX(75deg);
         }
 
-        .cursor-tracker.active {
-            opacity: 1;
+        /* Uranus */
+        .uranus-orbit {
+            width: 960px;
+            height: 960px;
+            animation: rotate 3007s linear infinite;
         }
 
+        .uranus {
+            width: 24px;
+            height: 24px;
+            background: #4FD0E7;
+            left: 468px;
+            top: -12px;
+            box-shadow: 0 0 16px rgba(79, 208, 231, 0.6);
+        }
+
+        /* Neptune */
+        .neptune-orbit {
+            width: 1080px;
+            height: 1080px;
+            animation: rotate 5926s linear infinite;
+        }
+
+        .neptune {
+            width: 24px;
+            height: 24px;
+            background: #4166F5;
+            left: 528px;
+            top: -12px;
+            box-shadow: 0 0 16px rgba(65, 102, 245, 0.6);
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Info Panel */
+        .info-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(10, 14, 39, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 300px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-panel h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #4A90E2;
+        }
+
+        .info-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Speed control */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(10, 14, 39, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .controls button {
+            background: #4A90E2;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .controls button:hover {
+            background: #357ABD;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+        }
+
+        .controls button.active {
+            background: #2ECC71;
+        }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(10, 14, 39, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .legend-item {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 40px 30px;
-                max-width: 90%;
+            .solar-system {
+                width: 100%;
+                height: 100%;
+                max-width: 100vw;
+                max-height: 100vh;
             }
 
-            h1 {
-                font-size: 36px;
+            .info-panel {
+                font-size: 12px;
+                padding: 15px;
             }
 
-            .avatar {
-                width: 120px;
-                height: 120px;
-                font-size: 60px;
+            .info-panel h2 {
+                font-size: 14px;
+            }
+
+            .controls {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .controls button {
+                padding: 6px 12px;
+                font-size: 11px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="background"></div>
-    <div class="overlay"></div>
-    
-    <!-- Floating bubbles -->
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-
-    <!-- Cursor tracker -->
-    <div class="cursor-tracker"></div>
-
     <div class="container">
-        <div class="header">
-            <div class="avatar">🌀</div>
-            <h1>CONSCIOUSNESS</h1>
+        <div class="solar-system" id="solarSystem">
+            <!-- Sun -->
+            <div class="sun"></div>
+
+            <!-- Orbits and Planets -->
+            <div class="orbit" style="width: 160px; height: 160px;"></div>
+            <div class="planet-container mercury-orbit">
+                <div class="planet mercury" data-planet="Mercury" data-distance="57.9M km" data-diameter="3,849 km"></div>
+            </div>
+
+            <div class="orbit" style="width: 240px; height: 240px;"></div>
+            <div class="planet-container venus-orbit">
+                <div class="planet venus" data-planet="Venus" data-distance="108.2M km" data-diameter="12,104 km"></div>
+            </div>
+
+            <div class="orbit" style="width: 340px; height: 340px;"></div>
+            <div class="planet-container earth-orbit">
+                <div class="planet earth" data-planet="Earth" data-distance="149.6M km" data-diameter="12,742 km"></div>
+            </div>
+
+            <div class="orbit" style="width: 440px; height: 440px;"></div>
+            <div class="planet-container mars-orbit">
+                <div class="planet mars" data-planet="Mars" data-distance="227.9M km" data-diameter="6,779 km"></div>
+            </div>
+
+            <div class="orbit" style="width: 640px; height: 640px;"></div>
+            <div class="planet-container jupiter-orbit">
+                <div class="planet jupiter" data-planet="Jupiter" data-distance="778.5M km" data-diameter="139,820 km"></div>
+            </div>
+
+            <div class="orbit" style="width: 820px; height: 820px;"></div>
+            <div class="planet-container saturn-orbit">
+                <div class="planet saturn" data-planet="Saturn" data-distance="1,434M km" data-diameter="116,460 km"></div>
+            </div>
+
+            <div class="orbit" style="width: 960px; height: 960px;"></div>
+            <div class="planet-container uranus-orbit">
+                <div class="planet uranus" data-planet="Uranus" data-distance="2,873M km" data-diameter="50,724 km"></div>
+            </div>
+
+            <div class="orbit" style="width: 1080px; height: 1080px;"></div>
+            <div class="planet-container neptune-orbit">
+                <div class="planet neptune" data-planet="Neptune" data-distance="4,495M km" data-diameter="49,244 km"></div>
+            </div>
         </div>
 
-        <div class="time-weather">
-            <div id="time-display">Time: --:--</div>
-            <div id="weather-display">Loading weather...</div>
-            <div class="weather-icon" id="weather-icon">🌤️</div>
+        <!-- Info Panel -->
+        <div class="info-panel">
+            <h2 id="planetName">Solar System</h2>
+            <div class="info-text">
+                <p id="planetInfo">Click on a planet for information</p>
+            </div>
         </div>
 
-        <div class="trippy-text">
-            Reality is what you make it
+        <!-- Controls -->
+        <div class="controls">
+            <button id="pauseBtn" onclick="togglePause()">⏸ Pause</button>
+            <button id="resetBtn" onclick="resetView()">↻ Reset</button>
+            <button id="speedBtn" onclick="changeSpeed()">⚡ Speed</button>
         </div>
 
-        <button class="interactive-button" onclick="triggerPulse()">💫 ENTER THE VOID 💫</button>
-        <button class="interactive-button" onclick="randomizeColors()">🌈 SHIFT SPECTRUM 🌈</button>
-
-        <p class="trippy-text" style="font-size: 14px; margin-top: 30px;">
-            Jacksonville Beach • Always Evolving
-        </p>
+        <!-- Legend -->
+        <div class="legend">
+            <div style="font-weight: bold; margin-bottom: 10px;">Planets</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #8C7853;"></div> Mercury</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #FFC649;"></div> Venus</div>
+            <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(135deg, #4A90E2, #2ECC71);"></div> Earth</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #E27B58;"></div> Mars</div>
+            <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #C88B3A, #A67035);"></div> Jupiter</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #FAD5A5;"></div> Saturn</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #4FD0E7;"></div> Uranus</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #4166F5;"></div> Neptune</div>
+        </div>
     </div>
 
     <script>
-        // Weather API key - using free OpenWeatherMap
-        const WEATHER_API_KEY = 'bb3f7e4a6d4af21c66a2948710284366';
-        const LAT = 30.3008;
-        const LON = -81.3971;
+        let isPaused = false;
+        let speedMultiplier = 1;
 
-        const cursorTracker = document.querySelector('.cursor-tracker');
-        const background = document.querySelector('.background');
-        const container = document.querySelector('.container');
+        const planetData = {
+            'Mercury': { distance: '57.9 Million km', diameter: '3,849 km', type: 'Terrestrial', moons: 0 },
+            'Venus': { distance: '108.2 Million km', diameter: '12,104 km', type: 'Terrestrial', moons: 0 },
+            'Earth': { distance: '149.6 Million km', diameter: '12,742 km', type: 'Terrestrial', moons: 1 },
+            'Mars': { distance: '227.9 Million km', diameter: '6,779 km', type: 'Terrestrial', moons: 2 },
+            'Jupiter': { distance: '778.5 Million km', diameter: '139,820 km', type: 'Gas Giant', moons: 95 },
+            'Saturn': { distance: '1,434 Million km', diameter: '116,460 km', type: 'Gas Giant', moons: 146 },
+            'Uranus': { distance: '2,873 Million km', diameter: '50,724 km', type: 'Ice Giant', moons: 28 },
+            'Neptune': { distance: '4,495 Million km', diameter: '49,244 km', type: 'Ice Giant', moons: 16 }
+        };
 
-        // Cursor tracker
-        document.addEventListener('mousemove', (e) => {
-            cursorTracker.style.left = e.clientX - 10 + 'px';
-            cursorTracker.style.top = e.clientY - 10 + 'px';
-            cursorTracker.classList.add('active');
+        // Add click listeners to planets
+        document.querySelectorAll('.planet').forEach(planet => {
+            planet.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const name = this.dataset.planet;
+                const data = planetData[name];
+                document.getElementById('planetName').textContent = name;
+                document.getElementById('planetInfo').innerHTML = `
+                    <strong>Distance from Sun:</strong> ${data.distance}<br>
+                    <strong>Diameter:</strong> ${data.diameter}<br>
+                    <strong>Type:</strong> ${data.type}<br>
+                    <strong>Moons:</strong> ${data.moons}
+                `;
+            });
         });
 
-        document.addEventListener('mouseleave', () => {
-            cursorTracker.classList.remove('active');
-        });
-
-        // Update time display
-        function updateTime() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
+        function togglePause() {
+            isPaused = !isPaused;
+            const btn = document.getElementById('pauseBtn');
+            const solarSystem = document.getElementById('solarSystem');
             
-            document.getElementById('time-display').textContent = `🕐 ${hours}:${minutes}:${seconds}`;
-            
-            // Update background based on time of day
-            updateBackgroundByTime(now.getHours());
-        }
-
-        // Update background colors based on time of day
-        function updateBackgroundByTime(hour) {
-            let gradient;
-            
-            if (hour >= 5 && hour < 8) {
-                // Early morning - oranges and pinks
-                gradient = 'linear-gradient(-45deg, #ff6a3d, #ff1493, #ffff00, #ff0000)';
-            } else if (hour >= 8 && hour < 12) {
-                // Morning - bright colors
-                gradient = 'linear-gradient(-45deg, #00ffff, #00ff00, #ffff00, #ff00ff)';
-            } else if (hour >= 12 && hour < 17) {
-                // Afternoon - vibrant and intense
-                gradient = 'linear-gradient(-45deg, #ff0080, #00ffff, #ffff00, #ff6600)';
-            } else if (hour >= 17 && hour < 20) {
-                // Evening/sunset - oranges, purples, pinks
-                gradient = 'linear-gradient(-45deg, #ff6600, #ff00ff, #ff1493, #ff69b4)';
-            } else if (hour >= 20 && hour < 23) {
-                // Night - deep purples and blues
-                gradient = 'linear-gradient(-45deg, #1a0033, #330066, #0066ff, #00ffff)';
+            if (isPaused) {
+                btn.textContent = '▶ Resume';
+                btn.classList.add('active');
+                solarSystem.style.animationPlayState = 'paused';
+                document.querySelectorAll('.planet-container').forEach(el => {
+                    el.style.animationPlayState = 'paused';
+                });
             } else {
-                // Late night - dark blues and cyans
-                gradient = 'linear-gradient(-45deg, #000033, #0033ff, #00ccff, #00ff88)';
-            }
-            
-            background.style.background = gradient;
-            background.style.backgroundSize = '400% 400%';
-            background.style.animation = 'gradient 15s ease infinite';
-        }
-
-        // Fetch weather data
-        async function updateWeather() {
-            try {
-                const response = await fetch(
-                    `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${WEATHER_API_KEY}&units=metric`
-                );
-                const data = await response.json();
-                
-                const temp = Math.round(data.main.temp);
-                const description = data.weather[0].main;
-                const icon = getWeatherIcon(data.weather[0].main);
-                
-                document.getElementById('weather-display').textContent = 
-                    `${description} • ${temp}°C`;
-                document.getElementById('weather-icon').textContent = icon;
-                
-                // Add weather-specific effects
-                applyWeatherEffect(data.weather[0].main);
-                
-            } catch (error) {
-                console.log('Weather update failed, retrying...');
-                setTimeout(updateWeather, 30000);
+                btn.textContent = '⏸ Pause';
+                btn.classList.remove('active');
+                solarSystem.style.animationPlayState = 'running';
+                document.querySelectorAll('.planet-container').forEach(el => {
+                    el.style.animationPlayState = 'running';
+                });
             }
         }
 
-        // Get emoji icon based on weather
-        function getWeatherIcon(weatherType) {
-            const icons = {
-                'Clear': '☀️',
-                'Clouds': '☁️',
-                'Rain': '🌧️',
-                'Drizzle': '🌦️',
-                'Thunderstorm': '⛈️',
-                'Snow': '❄️',
-                'Mist': '🌫️',
-                'Smoke': '💨',
-                'Haze': '🌫️',
-                'Dust': '🌪️',
-                'Fog': '🌫️',
-                'Sand': '🌪️',
-                'Ash': '💨',
-                'Squall': '🌪️',
-                'Tornado': '🌪️'
-            };
-            return icons[weatherType] || '🌤️';
-        }
-
-        // Apply effects based on weather
-        function applyWeatherEffect(weather) {
-            const filters = {
-                'Clear': 'brightness(1.2) saturate(1.3)',
-                'Clouds': 'brightness(0.9) saturate(0.8)',
-                'Rain': 'brightness(0.8) hue-rotate(200deg)',
-                'Thunderstorm': 'brightness(0.7) hue-rotate(180deg) contrast(1.5)',
-                'Snow': 'brightness(1.1) saturate(0.5)'
-            };
-            
-            const filter = filters[weather] || 'brightness(1) saturate(1)';
-            background.style.filter = filter;
-        }
-
-        // Interactive button effects
-        function triggerPulse() {
-            container.style.animation = 'none';
+        function resetView() {
+            document.getElementById('planetName').textContent = 'Solar System';
+            document.getElementById('planetInfo').textContent = 'Click on a planet for information';
+            const solarSystem = document.getElementById('solarSystem');
+            solarSystem.style.animation = 'none';
             setTimeout(() => {
-                container.style.animation = 'pulse-glow 0.5s ease-in-out 5';
+                solarSystem.style.animation = '';
             }, 10);
+        }
+
+        function changeSpeed() {
+            speedMultiplier = speedMultiplier === 1 ? 3 : speedMultiplier === 3 ? 0.5 : 1;
+            const speedBtn = document.getElementById('speedBtn');
             
-            // Shake effect
-            container.style.transform = 'translate(2px, 0)';
-            for (let i = 0; i < 5; i++) {
-                setTimeout(() => {
-                    container.style.transform = i % 2 === 0 ? 'translate(-2px, 0)' : 'translate(2px, 0)';
-                }, i * 50);
+            const speeds = {
+                0.5: '🐢 Slow',
+                1: '⚡ Normal',
+                3: '🚀 Fast'
+            };
+            
+            speedBtn.textContent = speeds[speedMultiplier];
+            applySpeedMultiplier();
+        }
+
+        function applySpeedMultiplier() {
+            const container = document.getElementById('solarSystem');
+            const speeds = {
+                'mercury-orbit': 8.7,
+                'venus-orbit': 22.5,
+                'earth-orbit': 36.5,
+                'mars-orbit': 68.7,
+                'jupiter-orbit': 431,
+                'saturn-orbit': 1063,
+                'uranus-orbit': 3007,
+                'neptune-orbit': 5926
+            };
+
+            for (const [className, baseDuration] of Object.entries(speeds)) {
+                const adjustedDuration = baseDuration / speedMultiplier;
+                const style = document.createElement('style');
+                style.innerHTML = `.${className} { animation-duration: ${adjustedDuration}s !important; }`;
+                document.head.appendChild(style);
             }
-            setTimeout(() => {
-                container.style.transform = 'translate(0, 0)';
-            }, 250);
         }
-
-        function randomizeColors() {
-            const colors = [
-                '#ff00ff', '#00ffff', '#ffff00', '#ff0080', '#00ff00',
-                '#ff6600', '#ff1493', '#0066ff', '#ff00aa', '#00ff88'
-            ];
-            
-            const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
-            const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
-            const randomColor3 = colors[Math.floor(Math.random() * colors.length)];
-            const randomColor4 = colors[Math.floor(Math.random() * colors.length)];
-            
-            background.style.background = 
-                `linear-gradient(-45deg, ${randomColor1}, ${randomColor2}, ${randomColor3}, ${randomColor4})`;
-            background.style.backgroundSize = '400% 400%';
-            background.style.animation = 'gradient 15s ease infinite';
-        }
-
-        // Randomize bubble positions and colors
-        function initializeBubbles() {
-            const bubbles = document.querySelectorAll('.bubble');
-            const colors = ['#ff00ff', '#00ffff', '#ffff00', '#ff0080', '#00ff00', '#ff6600'];
-            
-            bubbles.forEach((bubble, index) => {
-                bubble.style.width = (50 + Math.random() * 200) + 'px';
-                bubble.style.height = bubble.style.width;
-                bubble.style.left = Math.random() * 100 + '%';
-                bubble.style.top = Math.random() * 100 + '%';
-                bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
-            });
-        }
-
-        // Initialize on load
-        initializeBubbles();
-        updateTime();
-        updateWeather();
-
-        // Update every second
-        setInterval(updateTime, 1000);
-
-        // Update weather every 5 minutes
-        setInterval(updateWeather, 300000);
-
-        // Regenerate bubbles every 30 seconds
-        setInterval(initializeBubbles, 30000);
-
-        // Click anywhere on page for visual effect
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('interactive-button')) return;
-            
-            const ripple = document.createElement('div');
-            ripple.style.position = 'fixed';
-            ripple.style.left = e.clientX + 'px';
-            ripple.style.top = e.clientY + 'px';
-            ripple.style.width = '20px';
-            ripple.style.height = '20px';
-            ripple.style.borderRadius = '50%';
-            ripple.style.border = '2px solid #00ffff';
-            ripple.style.pointerEvents = 'none';
-            ripple.style.zIndex = '50';
-            
-            document.body.appendChild(ripple);
-            
-            const colors = ['#ff00ff', '#00ffff', '#ffff00', '#ff0080', '#00ff00'];
-            ripple.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
-            
-            const animation = ripple.animate([
-                { transform: 'scale(1)', opacity: 1 },
-                { transform: 'scale(4)', opacity: 0 }
-            ], {
-                duration: 600,
-                easing: 'ease-out'
-            });
-            
-            animation.onfinish = () => ripple.remove();
-        });
     </script>
 </body>
 </html>
