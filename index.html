@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System - Heliocentric View</title>
+    <title>Real-Time Solar System</title>
+    <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.2.0/astronomy.browser.js"></script>
     <style>
         * {
             margin: 0;
@@ -18,516 +19,152 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             overflow: hidden;
-            color: #fff;
         }
 
-        .container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .solar-system {
-            position: relative;
-            width: 1200px;
-            height: 1200px;
-            max-width: 90vw;
-            max-height: 90vh;
-        }
-
-        /* Sun */
-        .sun {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: radial-gradient(circle at 35% 35%, #FDB813, #FD8813);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 60px rgba(253, 184, 19, 0.8), 0 0 100px rgba(253, 136, 19, 0.5);
-            z-index: 10;
-        }
-
-        /* Orbit paths */
-        .orbit {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        /* Planet containers */
-        .planet-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform-origin: center;
-        }
-
-        .planet {
-            position: absolute;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: bold;
-            color: #fff;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .planet:hover {
-            filter: brightness(1.3);
-            cursor: pointer;
-        }
-
-        /* Mercury */
-        .mercury-orbit {
-            width: 160px;
-            height: 160px;
-            animation: rotate 8.7s linear infinite;
-        }
-
-        .mercury {
-            width: 12px;
-            height: 12px;
-            background: #8C7853;
-            left: 74px;
-            top: -6px;
-            box-shadow: 0 0 8px rgba(140, 120, 83, 0.6);
-        }
-
-        /* Venus */
-        .venus-orbit {
-            width: 240px;
-            height: 240px;
-            animation: rotate 22.5s linear infinite;
-        }
-
-        .venus {
-            width: 20px;
-            height: 20px;
-            background: #FFC649;
-            left: 110px;
-            top: -10px;
-            box-shadow: 0 0 12px rgba(255, 198, 73, 0.6);
-        }
-
-        /* Earth */
-        .earth-orbit {
-            width: 340px;
-            height: 340px;
-            animation: rotate 36.5s linear infinite;
-        }
-
-        .earth {
-            width: 22px;
-            height: 22px;
-            background: linear-gradient(135deg, #4A90E2, #2ECC71);
-            left: 159px;
-            top: -11px;
-            box-shadow: 0 0 14px rgba(74, 144, 226, 0.6);
-        }
-
-        /* Mars */
-        .mars-orbit {
-            width: 440px;
-            height: 440px;
-            animation: rotate 68.7s linear infinite;
-        }
-
-        .mars {
-            width: 16px;
-            height: 16px;
-            background: #E27B58;
-            left: 212px;
-            top: -8px;
-            box-shadow: 0 0 10px rgba(226, 123, 88, 0.6);
-        }
-
-        /* Jupiter */
-        .jupiter-orbit {
-            width: 640px;
-            height: 640px;
-            animation: rotate 431s linear infinite;
-        }
-
-        .jupiter {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(90deg, #C88B3A 0%, #A67035 50%, #C88B3A 100%);
-            left: 298px;
-            top: -22px;
-            box-shadow: 0 0 24px rgba(200, 139, 58, 0.6);
-        }
-
-        /* Saturn */
-        .saturn-orbit {
-            width: 820px;
-            height: 820px;
-            animation: rotate 1063s linear infinite;
-        }
-
-        .saturn {
-            width: 36px;
-            height: 36px;
-            background: #FAD5A5;
-            left: 392px;
-            top: -18px;
-            box-shadow: 0 0 20px rgba(250, 213, 165, 0.6);
-            position: relative;
-        }
-
-        .saturn::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border: 3px solid rgba(250, 213, 165, 0.4);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotateX(75deg);
-        }
-
-        /* Uranus */
-        .uranus-orbit {
-            width: 960px;
-            height: 960px;
-            animation: rotate 3007s linear infinite;
-        }
-
-        .uranus {
-            width: 24px;
-            height: 24px;
-            background: #4FD0E7;
-            left: 468px;
-            top: -12px;
-            box-shadow: 0 0 16px rgba(79, 208, 231, 0.6);
-        }
-
-        /* Neptune */
-        .neptune-orbit {
-            width: 1080px;
-            height: 1080px;
-            animation: rotate 5926s linear infinite;
-        }
-
-        .neptune {
-            width: 24px;
-            height: 24px;
-            background: #4166F5;
-            left: 528px;
-            top: -12px;
-            box-shadow: 0 0 16px rgba(65, 102, 245, 0.6);
-        }
-
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        /* Info Panel */
-        .info-panel {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(10, 14, 39, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 300px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .info-panel h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #4A90E2;
-        }
-
-        .info-text {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Speed control */
-        .controls {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(10, 14, 39, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 15px 20px;
-            border-radius: 12px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .controls button {
-            background: #4A90E2;
-            border: none;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 12px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .controls button:hover {
-            background: #357ABD;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
-        }
-
-        .controls button.active {
-            background: #2ECC71;
-        }
-
-        /* Legend */
-        .legend {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(10, 14, 39, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 15px 20px;
-            border-radius: 12px;
-            font-size: 12px;
-        }
-
-        .legend-item {
-            margin: 5px 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .legend-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .solar-system {
-                width: 100%;
-                height: 100%;
-                max-width: 100vw;
-                max-height: 100vh;
-            }
-
-            .info-panel {
-                font-size: 12px;
-                padding: 15px;
-            }
-
-            .info-panel h2 {
-                font-size: 14px;
-            }
-
-            .controls {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .controls button {
-                padding: 6px 12px;
-                font-size: 11px;
-            }
+        canvas {
+            display: block;
+            max-width: 100vw;
+            max-height: 100vh;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="solar-system" id="solarSystem">
-            <!-- Sun -->
-            <div class="sun"></div>
-
-            <!-- Orbits and Planets -->
-            <div class="orbit" style="width: 160px; height: 160px;"></div>
-            <div class="planet-container mercury-orbit">
-                <div class="planet mercury" data-planet="Mercury" data-distance="57.9M km" data-diameter="3,849 km"></div>
-            </div>
-
-            <div class="orbit" style="width: 240px; height: 240px;"></div>
-            <div class="planet-container venus-orbit">
-                <div class="planet venus" data-planet="Venus" data-distance="108.2M km" data-diameter="12,104 km"></div>
-            </div>
-
-            <div class="orbit" style="width: 340px; height: 340px;"></div>
-            <div class="planet-container earth-orbit">
-                <div class="planet earth" data-planet="Earth" data-distance="149.6M km" data-diameter="12,742 km"></div>
-            </div>
-
-            <div class="orbit" style="width: 440px; height: 440px;"></div>
-            <div class="planet-container mars-orbit">
-                <div class="planet mars" data-planet="Mars" data-distance="227.9M km" data-diameter="6,779 km"></div>
-            </div>
-
-            <div class="orbit" style="width: 640px; height: 640px;"></div>
-            <div class="planet-container jupiter-orbit">
-                <div class="planet jupiter" data-planet="Jupiter" data-distance="778.5M km" data-diameter="139,820 km"></div>
-            </div>
-
-            <div class="orbit" style="width: 820px; height: 820px;"></div>
-            <div class="planet-container saturn-orbit">
-                <div class="planet saturn" data-planet="Saturn" data-distance="1,434M km" data-diameter="116,460 km"></div>
-            </div>
-
-            <div class="orbit" style="width: 960px; height: 960px;"></div>
-            <div class="planet-container uranus-orbit">
-                <div class="planet uranus" data-planet="Uranus" data-distance="2,873M km" data-diameter="50,724 km"></div>
-            </div>
-
-            <div class="orbit" style="width: 1080px; height: 1080px;"></div>
-            <div class="planet-container neptune-orbit">
-                <div class="planet neptune" data-planet="Neptune" data-distance="4,495M km" data-diameter="49,244 km"></div>
-            </div>
-        </div>
-
-        <!-- Info Panel -->
-        <div class="info-panel">
-            <h2 id="planetName">Solar System</h2>
-            <div class="info-text">
-                <p id="planetInfo">Click on a planet for information</p>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <div class="controls">
-            <button id="pauseBtn" onclick="togglePause()">⏸ Pause</button>
-            <button id="resetBtn" onclick="resetView()">↻ Reset</button>
-            <button id="speedBtn" onclick="changeSpeed()">⚡ Speed</button>
-        </div>
-
-        <!-- Legend -->
-        <div class="legend">
-            <div style="font-weight: bold; margin-bottom: 10px;">Planets</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #8C7853;"></div> Mercury</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #FFC649;"></div> Venus</div>
-            <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(135deg, #4A90E2, #2ECC71);"></div> Earth</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #E27B58;"></div> Mars</div>
-            <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #C88B3A, #A67035);"></div> Jupiter</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #FAD5A5;"></div> Saturn</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #4FD0E7;"></div> Uranus</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #4166F5;"></div> Neptune</div>
-        </div>
-    </div>
+    <canvas id="solarSystemCanvas"></canvas>
 
     <script>
-        let isPaused = false;
-        let speedMultiplier = 1;
+        const canvas = document.getElementById('solarSystemCanvas');
+        const ctx = canvas.getContext('2d');
 
-        const planetData = {
-            'Mercury': { distance: '57.9 Million km', diameter: '3,849 km', type: 'Terrestrial', moons: 0 },
-            'Venus': { distance: '108.2 Million km', diameter: '12,104 km', type: 'Terrestrial', moons: 0 },
-            'Earth': { distance: '149.6 Million km', diameter: '12,742 km', type: 'Terrestrial', moons: 1 },
-            'Mars': { distance: '227.9 Million km', diameter: '6,779 km', type: 'Terrestrial', moons: 2 },
-            'Jupiter': { distance: '778.5 Million km', diameter: '139,820 km', type: 'Gas Giant', moons: 95 },
-            'Saturn': { distance: '1,434 Million km', diameter: '116,460 km', type: 'Gas Giant', moons: 146 },
-            'Uranus': { distance: '2,873 Million km', diameter: '50,724 km', type: 'Ice Giant', moons: 28 },
-            'Neptune': { distance: '4,495 Million km', diameter: '49,244 km', type: 'Ice Giant', moons: 16 }
-        };
+        // Set canvas size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-        // Add click listeners to planets
-        document.querySelectorAll('.planet').forEach(planet => {
-            planet.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const name = this.dataset.planet;
-                const data = planetData[name];
-                document.getElementById('planetName').textContent = name;
-                document.getElementById('planetInfo').innerHTML = `
-                    <strong>Distance from Sun:</strong> ${data.distance}<br>
-                    <strong>Diameter:</strong> ${data.diameter}<br>
-                    <strong>Type:</strong> ${data.type}<br>
-                    <strong>Moons:</strong> ${data.moons}
-                `;
-            });
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         });
 
-        function togglePause() {
-            isPaused = !isPaused;
-            const btn = document.getElementById('pauseBtn');
-            const solarSystem = document.getElementById('solarSystem');
+        // Planet data
+        const planets = [
+            { name: 'Mercury', body: 'Mercury', color: '#8C7853', size: 4 },
+            { name: 'Venus', body: 'Venus', color: '#FFC649', size: 7 },
+            { name: 'Earth', body: 'Earth', color: '#4A90E2', size: 7 },
+            { name: 'Mars', body: 'Mars', color: '#E27B58', size: 4 },
+            { name: 'Jupiter', body: 'Jupiter', color: '#C88B3A', size: 16 },
+            { name: 'Saturn', body: 'Saturn', color: '#FAD5A5', size: 14 },
+            { name: 'Uranus', body: 'Uranus', color: '#4FD0E7', size: 8 },
+            { name: 'Neptune', body: 'Neptune', color: '#4166F5', size: 8 }
+        ];
+
+        // Calculate AU to pixel conversion (dynamically scaled)
+        let auToPixel = 30;
+        let offsetX = canvas.width / 2;
+        let offsetY = canvas.height / 2;
+
+        // Draw orbit path
+        function drawOrbit(radiusAU, color = 'rgba(255, 255, 255, 0.05)') {
+            const radiusPx = radiusAU * auToPixel;
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.arc(offsetX, offsetY, radiusPx, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+
+        // Draw sun
+        function drawSun() {
+            const sunSize = 20;
+            const gradient = ctx.createRadialGradient(offsetX, offsetY, 0, offsetX, offsetY, sunSize);
+            gradient.addColorStop(0, '#FDB813');
+            gradient.addColorStop(1, '#FD8813');
             
-            if (isPaused) {
-                btn.textContent = '▶ Resume';
-                btn.classList.add('active');
-                solarSystem.style.animationPlayState = 'paused';
-                document.querySelectorAll('.planet-container').forEach(el => {
-                    el.style.animationPlayState = 'paused';
-                });
-            } else {
-                btn.textContent = '⏸ Pause';
-                btn.classList.remove('active');
-                solarSystem.style.animationPlayState = 'running';
-                document.querySelectorAll('.planet-container').forEach(el => {
-                    el.style.animationPlayState = 'running';
-                });
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(offsetX, offsetY, sunSize, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Sun glow
+            ctx.strokeStyle = 'rgba(253, 184, 19, 0.3)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.arc(offsetX, offsetY, sunSize + 10, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+
+        // Draw planet
+        function drawPlanet(x, y, radius, color) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Subtle glow
+            ctx.strokeStyle = color + '80';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.arc(x, y, radius + 2, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+
+        // Get planet position from Astronomy Engine
+        function getPlanetPosition(body) {
+            try {
+                const observer = new Astronomy.Observer(0, 0);
+                const date = new Date();
+                const vector = Astronomy.HeliocentricPosition(body, date);
+                
+                if (vector) {
+                    return {
+                        x: vector.x,
+                        y: vector.z,  // Use z as y for top-down view
+                        distance: Math.sqrt(vector.x * vector.x + vector.z * vector.z)
+                    };
+                }
+            } catch (e) {
+                console.log('Error calculating position for', body);
             }
+            return null;
         }
 
-        function resetView() {
-            document.getElementById('planetName').textContent = 'Solar System';
-            document.getElementById('planetInfo').textContent = 'Click on a planet for information';
-            const solarSystem = document.getElementById('solarSystem');
-            solarSystem.style.animation = 'none';
-            setTimeout(() => {
-                solarSystem.style.animation = '';
-            }, 10);
-        }
+        // Animation loop
+        function animate() {
+            // Clear canvas
+            ctx.fillStyle = 'rgba(10, 14, 39, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        function changeSpeed() {
-            speedMultiplier = speedMultiplier === 1 ? 3 : speedMultiplier === 3 ? 0.5 : 1;
-            const speedBtn = document.getElementById('speedBtn');
-            
-            const speeds = {
-                0.5: '🐢 Slow',
-                1: '⚡ Normal',
-                3: '🚀 Fast'
-            };
-            
-            speedBtn.textContent = speeds[speedMultiplier];
-            applySpeedMultiplier();
-        }
+            // Recalculate offsets for responsiveness
+            offsetX = canvas.width / 2;
+            offsetY = canvas.height / 2;
 
-        function applySpeedMultiplier() {
-            const container = document.getElementById('solarSystem');
-            const speeds = {
-                'mercury-orbit': 8.7,
-                'venus-orbit': 22.5,
-                'earth-orbit': 36.5,
-                'mars-orbit': 68.7,
-                'jupiter-orbit': 431,
-                'saturn-orbit': 1063,
-                'uranus-orbit': 3007,
-                'neptune-orbit': 5926
-            };
-
-            for (const [className, baseDuration] of Object.entries(speeds)) {
-                const adjustedDuration = baseDuration / speedMultiplier;
-                const style = document.createElement('style');
-                style.innerHTML = `.${className} { animation-duration: ${adjustedDuration}s !important; }`;
-                document.head.appendChild(style);
+            // Draw orbits for reference
+            for (let planet of planets) {
+                const pos = getPlanetPosition(planet.body);
+                if (pos) {
+                    drawOrbit(pos.distance);
+                }
             }
+
+            // Draw Sun
+            drawSun();
+
+            // Draw planets in correct positions
+            for (let planet of planets) {
+                const pos = getPlanetPosition(planet.body);
+                if (pos) {
+                    const screenX = offsetX + pos.x * auToPixel;
+                    const screenY = offsetY + pos.y * auToPixel;
+                    drawPlanet(screenX, screenY, planet.size, planet.color);
+                }
+            }
+
+            requestAnimationFrame(animate);
         }
+
+        // Start animation
+        animate();
     </script>
 </body>
 </html>
