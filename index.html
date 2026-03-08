@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Bio</title>
+    <title>Psychedelic Reality Portal</title>
     <style>
         * {
             margin: 0;
@@ -11,93 +11,505 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial Black', sans-serif;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            position: relative;
+            z-index: 1;
+            transition: background-color 2s ease, filter 2s ease;
         }
 
+        /* Animated background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Psychedelic overlay patterns */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            animation: shimmer 20s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Floating bubbles */
+        .bubble {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.6;
+            mix-blend-mode: screen;
+            pointer-events: none;
+        }
+
+        .bubble:nth-child(1) { animation: float 20s infinite ease-in-out; }
+        .bubble:nth-child(2) { animation: float 25s infinite ease-in-out 2s; }
+        .bubble:nth-child(3) { animation: float 30s infinite ease-in-out 4s; }
+        .bubble:nth-child(4) { animation: float 22s infinite ease-in-out 1s; }
+        .bubble:nth-child(5) { animation: float 26s infinite ease-in-out 3s; }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(100px, -100px) scale(1.2); }
+            50% { transform: translate(-100px, -200px) scale(0.8); }
+            75% { transform: translate(150px, 100px) scale(1.1); }
+        }
+
+        /* Main container */
         .container {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            max-width: 700px;
-            padding: 50px;
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 60px;
+            border-radius: 30px;
+            max-width: 600px;
             text-align: center;
+            box-shadow: 0 0 60px rgba(255, 0, 255, 0.5), inset 0 0 60px rgba(0, 255, 255, 0.1);
+            border: 3px solid rgba(255, 0, 255, 0.3);
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 60px rgba(255, 0, 255, 0.5), inset 0 0 60px rgba(0, 255, 255, 0.1); }
+            50% { box-shadow: 0 0 100px rgba(0, 255, 255, 0.7), inset 0 0 80px rgba(255, 0, 255, 0.2); }
         }
 
         .header {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            animation: bobbing 4s ease-in-out infinite;
+        }
+
+        @keyframes bobbing {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
 
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            background: #667eea;
-            margin: 0 auto 20px;
+            background: conic-gradient(#ff0080, #00ffff, #ff0080);
+            margin: 0 auto 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
+            font-size: 80px;
+            animation: spin 8s linear infinite;
+            box-shadow: 0 0 40px rgba(255, 0, 128, 0.8);
+            border: 4px solid rgba(0, 255, 255, 0.5);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         h1 {
-            color: #333;
+            color: #00ffff;
             margin-bottom: 10px;
-            font-size: 32px;
+            font-size: 48px;
+            text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ffff00;
+            animation: neon-flicker 0.15s infinite;
         }
 
-        .title {
-            color: #667eea;
+        @keyframes neon-flicker {
+            0%, 18%, 22%, 25%, 54%, 56%, 100% { text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ffff00; }
+            20%, 24%, 55% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff; }
+        }
+
+        .time-weather {
+            color: #00ff00;
             font-size: 18px;
-            margin-bottom: 20px;
+            margin: 15px 0;
+            text-shadow: 0 0 10px #00ff00;
+            font-weight: bold;
+            background: rgba(0, 255, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #00ff00;
         }
 
-        .bio {
-            text-align: left;
-            margin: 30px 0;
-            line-height: 1.8;
-            color: #555;
+        .weather-icon {
+            font-size: 48px;
+            margin: 10px 0;
+            animation: pulse-scale 2s ease-in-out infinite;
         }
 
-        .skills {
-            text-align: left;
-            margin: 30px 0;
+        @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
-        .skills h2 {
-            color: #333;
-            margin-bottom: 15px;
+        .interactive-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(255, 0, 255, 0.8); }
+        }
+
+        .interactive-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 60px rgba(0, 255, 255, 0.9);
+        }
+
+        .interactive-button:active {
+            transform: scale(0.95);
+        }
+
+        .trippy-text {
+            color: #ffff00;
             font-size: 20px;
+            margin: 20px 0;
+            animation: color-shift 4s ease-in-out infinite;
+            text-shadow: 0 0 10px #ffff00;
         }
 
-        .skill-tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin: 5px;
-            font-size: 14px;
+        @keyframes color-shift {
+            0%, 100% { color: #ffff00; text-shadow: 0 0 10px #ffff00; }
+            25% { color: #ff00ff; text-shadow: 0 0 10px #ff00ff; }
+            50% { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+            75% { color: #ff0080; text-shadow: 0 0 10px #ff0080; }
         }
 
-        .socials {
-            margin-top: 30px;
+        .cursor-tracker {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ffff;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0;
+            box-shadow: 0 0 15px #00ffff;
+            transition: opacity 0.3s ease;
         }
 
-        .social-link {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #667eea;
-            color: white;
+        .cursor-tracker.active {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+                max-width: 90%;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    
+    <!-- Floating bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <!-- Cursor tracker -->
+    <div class="cursor-tracker"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="avatar">🌀</div>
+            <h1>CONSCIOUSNESS</h1>
+        </div>
+
+        <div class="time-weather">
+            <div id="time-display">Time: --:--</div>
+            <div id="weather-display">Loading weather...</div>
+            <div class="weather-icon" id="weather-icon">🌤️</div>
+        </div>
+
+        <div class="trippy-text">
+            Reality is what you make it
+        </div>
+
+        <button class="interactive-button" onclick="triggerPulse()">💫 ENTER THE VOID 💫</button>
+        <button class="interactive-button" onclick="randomizeColors()">🌈 SHIFT SPECTRUM 🌈</button>
+
+        <p class="trippy-text" style="font-size: 14px; margin-top: 30px;">
+            Jacksonville Beach • Always Evolving
+        </p>
+    </div>
+
+    <script>
+        // Weather API key - using free OpenWeatherMap
+        const WEATHER_API_KEY = 'bb3f7e4a6d4af21c66a2948710284366';
+        const LAT = 30.3008;
+        const LON = -81.3971;
+
+        const cursorTracker = document.querySelector('.cursor-tracker');
+        const background = document.querySelector('.background');
+        const container = document.querySelector('.container');
+
+        // Cursor tracker
+        document.addEventListener('mousemove', (e) => {
+            cursorTracker.style.left = e.clientX - 10 + 'px';
+            cursorTracker.style.top = e.clientY - 10 + 'px';
+            cursorTracker.classList.add('active');
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursorTracker.classList.remove('active');
+        });
+
+        // Update time display
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            document.getElementById('time-display').textContent = `🕐 ${hours}:${minutes}:${seconds}`;
+            
+            // Update background based on time of day
+            updateBackgroundByTime(now.getHours());
+        }
+
+        // Update background colors based on time of day
+        function updateBackgroundByTime(hour) {
+            let gradient;
+            
+            if (hour >= 5 && hour < 8) {
+                // Early morning - oranges and pinks
+                gradient = 'linear-gradient(-45deg, #ff6a3d, #ff1493, #ffff00, #ff0000)';
+            } else if (hour >= 8 && hour < 12) {
+                // Morning - bright colors
+                gradient = 'linear-gradient(-45deg, #00ffff, #00ff00, #ffff00, #ff00ff)';
+            } else if (hour >= 12 && hour < 17) {
+                // Afternoon - vibrant and intense
+                gradient = 'linear-gradient(-45deg, #ff0080, #00ffff, #ffff00, #ff6600)';
+            } else if (hour >= 17 && hour < 20) {
+                // Evening/sunset - oranges, purples, pinks
+                gradient = 'linear-gradient(-45deg, #ff6600, #ff00ff, #ff1493, #ff69b4)';
+            } else if (hour >= 20 && hour < 23) {
+                // Night - deep purples and blues
+                gradient = 'linear-gradient(-45deg, #1a0033, #330066, #0066ff, #00ffff)';
+            } else {
+                // Late night - dark blues and cyans
+                gradient = 'linear-gradient(-45deg, #000033, #0033ff, #00ccff, #00ff88)';
+            }
+            
+            background.style.background = gradient;
+            background.style.backgroundSize = '400% 400%';
+            background.style.animation = 'gradient 15s ease infinite';
+        }
+
+        // Fetch weather data
+        async function updateWeather() {
+            try {
+                const response = await fetch(
+                    `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${WEATHER_API_KEY}&units=metric`
+                );
+                const data = await response.json();
+                
+                const temp = Math.round(data.main.temp);
+                const description = data.weather[0].main;
+                const icon = getWeatherIcon(data.weather[0].main);
+                
+                document.getElementById('weather-display').textContent = 
+                    `${description} • ${temp}°C`;
+                document.getElementById('weather-icon').textContent = icon;
+                
+                // Add weather-specific effects
+                applyWeatherEffect(data.weather[0].main);
+                
+            } catch (error) {
+                console.log('Weather update failed, retrying...');
+                setTimeout(updateWeather, 30000);
+            }
+        }
+
+        // Get emoji icon based on weather
+        function getWeatherIcon(weatherType) {
+            const icons = {
+                'Clear': '☀️',
+                'Clouds': '☁️',
+                'Rain': '🌧️',
+                'Drizzle': '🌦️',
+                'Thunderstorm': '⛈️',
+                'Snow': '❄️',
+                'Mist': '🌫️',
+                'Smoke': '💨',
+                'Haze': '🌫️',
+                'Dust': '🌪️',
+                'Fog': '🌫️',
+                'Sand': '🌪️',
+                'Ash': '💨',
+                'Squall': '🌪️',
+                'Tornado': '🌪️'
+            };
+            return icons[weatherType] || '🌤️';
+        }
+
+        // Apply effects based on weather
+        function applyWeatherEffect(weather) {
+            const filters = {
+                'Clear': 'brightness(1.2) saturate(1.3)',
+                'Clouds': 'brightness(0.9) saturate(0.8)',
+                'Rain': 'brightness(0.8) hue-rotate(200deg)',
+                'Thunderstorm': 'brightness(0.7) hue-rotate(180deg) contrast(1.5)',
+                'Snow': 'brightness(1.1) saturate(0.5)'
+            };
+            
+            const filter = filters[weather] || 'brightness(1) saturate(1)';
+            background.style.filter = filter;
+        }
+
+        // Interactive button effects
+        function triggerPulse() {
+            container.style.animation = 'none';
+            setTimeout(() => {
+                container.style.animation = 'pulse-glow 0.5s ease-in-out 5';
+            }, 10);
+            
+            // Shake effect
+            container.style.transform = 'translate(2px, 0)';
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    container.style.transform = i % 2 === 0 ? 'translate(-2px, 0)' : 'translate(2px, 0)';
+                }, i * 50);
+            }
+            setTimeout(() => {
+                container.style.transform = 'translate(0, 0)';
+            }, 250);
+        }
+
+        function randomizeColors() {
+            const colors = [
+                '#ff00ff', '#00ffff', '#ffff00', '#ff0080', '#00ff00',
+                '#ff6600', '#ff1493', '#0066ff', '#ff00aa', '#00ff88'
+            ];
+            
+            const randomColor1 = colors[Math.floor(Math.random() * colors.length)];
+            const randomColor2 = colors[Math.floor(Math.random() * colors.length)];
+            const randomColor3 = colors[Math.floor(Math.random() * colors.length)];
+            const randomColor4 = colors[Math.floor(Math.random() * colors.length)];
+            
+            background.style.background = 
+                `linear-gradient(-45deg, ${randomColor1}, ${randomColor2}, ${randomColor3}, ${randomColor4})`;
+            background.style.backgroundSize = '400% 400%';
+            background.style.animation = 'gradient 15s ease infinite';
+        }
+
+        // Randomize bubble positions and colors
+        function initializeBubbles() {
+            const bubbles = document.querySelectorAll('.bubble');
+            const colors = ['#ff00ff', '#00ffff', '#ffff00', '#ff0080', '#00ff00', '#ff6600'];
+            
+            bubbles.forEach((bubble, index) => {
+                bubble.style.width = (50 + Math.random() * 200) + 'px';
+                bubble.style.height = bubble.style.width;
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.top = Math.random() * 100 + '%';
+                bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
+            });
+        }
+
+        // Initialize on load
+        initializeBubbles();
+        updateTime();
+        updateWeather();
+
+        // Update every second
+        setInterval(updateTime, 1000);
+
+        // Update weather every 5 minutes
+        setInterval(updateWeather, 300000);
+
+        // Regenerate bubbles every 30 seconds
+        setInterval(initializeBubbles, 30000);
+
+        // Click anywhere on page for visual effect
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('interactive-button')) return;
+            
+            const ripple = document.createElement('div');
+            ripple.style.position = 'fixed';
+            ripple.style.left = e.clientX + 'px';
+            ripple.style.top = e.clientY + 'px';
+            ripple.style.width = '20px';
+            ripple.style.height = '20px';
+            ripple.style.borderRadius = '50%';
+            ripple.style.border = '2px solid #00ffff';
+            ripple.style.pointerEvents = 'none';
+            ripple.style.zIndex = '50';
+            
+            document.body.appendChild(ripple);
+            
+            const colors = ['#ff00ff', '#00ffff', '#ffff00', '#ff0080', '#00ff00'];
+            ripple.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            const animation = ripple.animate([
+                { transform: 'scale(1)', opacity: 1 },
+                { transform: 'scale(4)', opacity: 0 }
+            ], {
+                duration: 600,
+                easing: 'ease-out'
+            });
+            
+            animation.onfinish = () => ripple.remove();
+        });
+    </script>
+</body>
+</html>
             border-radius: 50%;
             text-decoration: none;
             margin: 0 10px;
