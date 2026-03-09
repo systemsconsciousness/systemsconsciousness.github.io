@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real-Time Solar System</title>
-    <script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.2.0/astronomy.browser.js"></script>
     <style>
         * {
             margin: 0;
@@ -33,6 +32,7 @@
 <body>
     <canvas id="solarSystemCanvas"></canvas>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skyfield/1.45/skyfield.min.js"></script>
     <script>
         const canvas = document.getElementById('solarSystemCanvas');
         const ctx = canvas.getContext('2d');
@@ -47,22 +47,69 @@
             canvas.height = window.innerHeight;
         });
 
-        // Planet data
+        // Planet data with orbital elements (simplified for display)
         const planets = [
-            { name: 'Mercury', body: 'Mercury', color: '#8C7853', size: 4 },
-            { name: 'Venus', body: 'Venus', color: '#FFC649', size: 7 },
-            { name: 'Earth', body: 'Earth', color: '#4A90E2', size: 7 },
-            { name: 'Mars', body: 'Mars', color: '#E27B58', size: 4 },
-            { name: 'Jupiter', body: 'Jupiter', color: '#C88B3A', size: 16 },
-            { name: 'Saturn', body: 'Saturn', color: '#FAD5A5', size: 14 },
-            { name: 'Uranus', body: 'Uranus', color: '#4FD0E7', size: 8 },
-            { name: 'Neptune', body: 'Neptune', color: '#4166F5', size: 8 }
+            { name: 'Mercury', color: '#8C7853', size: 4, a: 0.3871, e: 0.2056, period: 0.2408 },
+            { name: 'Venus', color: '#FFC649', size: 7, a: 0.7233, e: 0.0067, period: 0.6152 },
+            { name: 'Earth', color: '#4A90E2', size: 7, a: 1.0000, e: 0.0167, period: 1.0000 },
+            { name: 'Mars', color: '#E27B58', size: 4, a: 1.5237, e: 0.0934, period: 1.8809 },
+            { name: 'Jupiter', color: '#C88B3A', size: 16, a: 5.2029, e: 0.0485, period: 11.862 },
+            { name: 'Saturn', color: '#FAD5A5', size: 14, a: 9.5370, e: 0.0556, period: 29.461 },
+            { name: 'Uranus', color: '#4FD0E7', size: 8, a: 19.1915, e: 0.0472, period: 84.32 },
+            { name: 'Neptune', color: '#4166F5', size: 8, a: 30.0690, e: 0.0086, period: 166.84 }
         ];
 
         // Calculate AU to pixel conversion (dynamically scaled)
-        let auToPixel = 30;
+        let auToPixel = 35;
         let offsetX = canvas.width / 2;
         let offsetY = canvas.height / 2;
+
+        // Calculate mean anomaly from time
+        function getMeanAnomaly(planet, date) {
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+
+            // Calculate Julian date
+            const a = Math.floor((14 - month) / 12);
+            const y = year + 4800 - a;
+            const m = month + 12 * a - 3;
+            const jdn = day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400) - 32045;
+            const jd = jdn + (hours - 12) / 24 + minutes / 1440 + seconds / 86400;
+
+            // Reference epoch J2000.0
+            const j2000 = 2451545.0;
+            const t = (jd - j2000) / 36525;
+            const days = jd - j2000;
+
+            // Mean anomaly calculation
+            const n = (2 * Math.PI) / (planet.period * 365.25);
+            const M = n * days;
+            return M % (2 * Math.PI);
+        }
+
+        // Solve Kepler's equation (simplified Newton-Raphson)
+        function solveKeplers(M, e) {
+            let E = M;
+            for (let i = 0; i < 10; i++) {
+                E = M + e * Math.sin(E);
+            }
+            return E;
+        }
+
+        // Calculate planet position
+        function getPlanetPosition(planet, date) {
+            const M = getMeanAnomaly(planet, date);
+            const E = solveKeplers(M, planet.e);
+            
+            const x = planet.a * (Math.cos(E) - planet.e);
+            const y = planet.a * Math.sqrt(1 - planet.e * planet.e) * Math.sin(E);
+            
+            return { x, y, distance: planet.a };
+        }
 
         // Draw orbit path
         function drawOrbit(radiusAU, color = 'rgba(255, 255, 255, 0.05)') {
@@ -109,42 +156,21 @@
             ctx.stroke();
         }
 
-        // Get planet position from Astronomy Engine
-        function getPlanetPosition(body) {
-            try {
-                const observer = new Astronomy.Observer(0, 0);
-                const date = new Date();
-                const vector = Astronomy.HeliocentricPosition(body, date);
-                
-                if (vector) {
-                    return {
-                        x: vector.x,
-                        y: vector.z,  // Use z as y for top-down view
-                        distance: Math.sqrt(vector.x * vector.x + vector.z * vector.z)
-                    };
-                }
-            } catch (e) {
-                console.log('Error calculating position for', body);
-            }
-            return null;
-        }
-
         // Animation loop
         function animate() {
-            // Clear canvas
-            ctx.fillStyle = 'rgba(10, 14, 39, 0.1)';
+            // Clear canvas with fade effect
+            ctx.fillStyle = 'rgba(10, 14, 39, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             // Recalculate offsets for responsiveness
             offsetX = canvas.width / 2;
             offsetY = canvas.height / 2;
 
+            const now = new Date();
+
             // Draw orbits for reference
             for (let planet of planets) {
-                const pos = getPlanetPosition(planet.body);
-                if (pos) {
-                    drawOrbit(pos.distance);
-                }
+                drawOrbit(planet.a);
             }
 
             // Draw Sun
@@ -152,12 +178,10 @@
 
             // Draw planets in correct positions
             for (let planet of planets) {
-                const pos = getPlanetPosition(planet.body);
-                if (pos) {
-                    const screenX = offsetX + pos.x * auToPixel;
-                    const screenY = offsetY + pos.y * auToPixel;
-                    drawPlanet(screenX, screenY, planet.size, planet.color);
-                }
+                const pos = getPlanetPosition(planet, now);
+                const screenX = offsetX + pos.x * auToPixel;
+                const screenY = offsetY + pos.y * auToPixel;
+                drawPlanet(screenX, screenY, planet.size, planet.color);
             }
 
             requestAnimationFrame(animate);
