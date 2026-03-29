@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start simple and shape the site as you go. | Tetractys</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <style>
+        @keyframes fade-shift {
+            0% { color: #80cbc4; }
+            50% { color: #c42b8c; }
+            100% { color: #80cbc4; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        header {
+            padding: 8rem 0 12rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 1.125rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            margin-bottom: 6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+            animation: fade-shift 15s infinite ease-in-out;
+            transition: color 0.5s;
+        }
+
+        h1 {
+            font-size: 5.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            max-width: 900px;
+            margin-bottom: 3rem;
+        }
+
+        .intro {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #666;
+            max-width: 700px;
+        }
+
+        section {
+            padding: 8rem 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-label {
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 4rem;
+        }
+
+        .contact-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .email {
+            font-size: 1.75rem;
+            font-weight: 300;
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .email:hover {
+            color: #666;
+        }
+
+        .copy-btn {
+            background: none;
+            border: 1px solid #e5e5e5;
+            padding: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .copy-btn:hover {
+            border-color: #000;
+            background: #000;
+        }
+
+        .copy-btn:hover svg {
+            stroke: #fff;
+        }
+
+        .copy-btn svg {
+            transition: stroke 0.3s ease;
+        }
+
+        .copy-feedback {
+            position: absolute;
+            left: 0;
+            top: -2rem;
+            font-size: 0.875rem;
+            color: #000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .copy-feedback.show {
+            opacity: 1;
+        }
+
+        footer {
+            padding: 4rem 0;
+            font-size: 0.875rem;
+            color: #999;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 4rem 0 6rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .intro {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+        }
+    </style>
+    <script>
+        function copyEmail() {
+            const email = 'hello@example.com';
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(() => {
+                    showCopyFeedback();
+                }).catch(err => {
+                    console.error('Could not copy text: ', err);
+                    fallbackCopyTextToClipboard(email);
+                });
+            } else {
+                fallbackCopyTextToClipboard(email);
+            }
+        }
+
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.opacity = "0";
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showCopyFeedback();
+                }
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showCopyFeedback() {
+            const feedback = document.getElementById('copyFeedback');
+            feedback.classList.add('show');
+            setTimeout(() => {
+                feedback.classList.remove('show');
+            }, 2000);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="material-symbols-outlined logo-icon">spa</span>
+                Tetractys
+            </div>
+            <h1>Start simple and shape the site as you go.</h1>
+            <p class="intro">This starter keeps the structure light while still giving you pages, a stream, and a shared design system to build from.</p>
+        </header>
+
+        <section>
+            <div class="section-label">About</div>
+            <p class="intro">Use this page to explain the site, the project, or the organization behind it. Tetractys is set up so you can begin with a minimal set of content and expand naturally as the site grows.</p>
+        </section>
+
+        <section>
+            <div class="section-label">Get in Touch</div>
+            <div class="contact-container">
+                <a href="mailto:hello@example.com" class="email">hello@example.com</a>
+                <button class="copy-btn" onclick="copyEmail()" aria-label="Copy email address">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </button>
+                <span class="copy-feedback" id="copyFeedback">Copied</span>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 Tetractys
+        </footer>
+    </div>
+</body>
+
+</html>

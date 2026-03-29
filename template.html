@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Tetractys Site</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 2rem;
+        }
+
+        h1 {
+            color: #4f46e5;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .content {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                {{navigation}}
+            </ul>
+        </nav>
+        <h1>{{title}}</h1>
+
+        <!-- Pre-rendered image (hidden if no URL provided) -->
+        <div id="image-container">
+            <img src="{{imageUrl}}" alt="Featured Image" style="display: {{imageUrl ? 'block' : 'none'}};">
+        </div>
+
+        <div class="content">{{body}}</div>
+    </div>
+</body>
+
+</html>

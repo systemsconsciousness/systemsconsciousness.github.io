@@ -1,0 +1,20 @@
+<svg viewBox="0 0 337.667 282.667" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#80cbc4">
+        <polygon opacity="0.6" points="30.816,257.756 76.417,178.774 122.016,257.756"></polygon>
+        <polygon opacity="0.6" points="122.885,257.756 168.484,178.774 214.083,257.756"></polygon>
+        <polygon opacity="0.6" points="214.528,257.756 260.127,178.774 305.727,257.756"></polygon>
+        <polygon opacity="0.6" points="76.892,177.973 122.491,98.993 168.092,177.973"></polygon>
+        <polygon opacity="0.6" points="168.658,177.973 214.258,98.993 259.858,177.973"></polygon>
+        <polygon opacity="0.6" points="122.921,98.396 168.521,19.416 214.118,98.396"></polygon>
+        <circle cx="168.317" cy="18.147" r="10"></circle>
+        <circle cx="214.102" cy="98.498" r="10"></circle>
+        <circle cx="259.858" cy="178.241" r="10"></circle>
+        <circle cx="305.727" cy="257.757" r="10"></circle>
+        <circle cx="214.102" cy="257.757" r="10"></circle>
+        <circle cx="123.237" cy="257.757" r="10"></circle>
+        <circle cx="30.816" cy="257.757" r="10"></circle>
+        <circle cx="76.892" cy="178.241" r="10"></circle>
+        <circle cx="168.317" cy="178.241" r="10"></circle>
+        <circle cx="123.237" cy="98.498" r="10"></circle>
+    </g>
+</svg>

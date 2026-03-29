@@ -1,0 +1,544 @@
+{
+  "schemas": {
+    "default": {
+      "name": "Standard Page Schema",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "eyebrow",
+          "label": "Section Label",
+          "type": "text"
+        },
+        {
+          "name": "intro",
+          "label": "Intro Text",
+          "type": "textarea"
+        },
+        {
+          "name": "body",
+          "label": "Body Content",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "name": "contactLabel",
+          "label": "Contact Label",
+          "type": "text"
+        },
+        {
+          "name": "contactEmail",
+          "label": "Contact Email",
+          "type": "text"
+        },
+        {
+          "name": "footerText",
+          "label": "Footer Text",
+          "type": "text"
+        }
+      ]
+    },
+    "article": {
+      "name": "Article Schema",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "eyebrow",
+          "label": "Section Label",
+          "type": "text"
+        },
+        {
+          "name": "excerpt",
+          "label": "Excerpt",
+          "type": "textarea"
+        },
+        {
+          "name": "publishedAt",
+          "label": "Published Date",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "label": "Body",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "name": "footerText",
+          "label": "Footer Text",
+          "type": "text"
+        }
+      ]
+    },
+    "feature-grid": {
+      "name": "Feature Grid Schema",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Page Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "eyebrow",
+          "label": "Section Label",
+          "type": "text"
+        },
+        {
+          "name": "intro",
+          "label": "Intro Text",
+          "type": "textarea"
+        },
+        {
+          "name": "product1Name",
+          "label": "Card 1 Name",
+          "type": "text"
+        },
+        {
+          "name": "product1Description",
+          "label": "Card 1 Description",
+          "type": "textarea"
+        },
+        {
+          "name": "product1Link",
+          "label": "Card 1 Link",
+          "type": "text"
+        },
+        {
+          "name": "product1LinkLabel",
+          "label": "Card 1 Link Label",
+          "type": "text"
+        },
+        {
+          "name": "product1Icon",
+          "label": "Card 1 Icon",
+          "type": "text"
+        },
+        {
+          "name": "product2Name",
+          "label": "Card 2 Name",
+          "type": "text"
+        },
+        {
+          "name": "product2Description",
+          "label": "Card 2 Description",
+          "type": "textarea"
+        },
+        {
+          "name": "product2Link",
+          "label": "Card 2 Link",
+          "type": "text"
+        },
+        {
+          "name": "product2LinkLabel",
+          "label": "Card 2 Link Label",
+          "type": "text"
+        },
+        {
+          "name": "product2Icon",
+          "label": "Card 2 Icon",
+          "type": "text"
+        },
+        {
+          "name": "product3Name",
+          "label": "Card 3 Name",
+          "type": "text"
+        },
+        {
+          "name": "product3Description",
+          "label": "Card 3 Description",
+          "type": "textarea"
+        },
+        {
+          "name": "product3Link",
+          "label": "Card 3 Link",
+          "type": "text"
+        },
+        {
+          "name": "product3LinkLabel",
+          "label": "Card 3 Link Label",
+          "type": "text"
+        },
+        {
+          "name": "product3Icon",
+          "label": "Card 3 Icon",
+          "type": "text"
+        },
+        {
+          "name": "footerText",
+          "label": "Footer Text",
+          "type": "text"
+        }
+      ]
+    },
+    "landing": {
+      "name": "Landing Page Schema",
+      "fields": [
+        {
+          "name": "brandName",
+          "label": "Brand Name",
+          "type": "text"
+        },
+        {
+          "name": "title",
+          "label": "Hero Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "heroText",
+          "label": "Intro Text",
+          "type": "textarea"
+        },
+        {
+          "name": "practice1",
+          "label": "Practice 1",
+          "type": "text"
+        },
+        {
+          "name": "practice2",
+          "label": "Practice 2",
+          "type": "text"
+        },
+        {
+          "name": "practice3",
+          "label": "Practice 3",
+          "type": "text"
+        },
+        {
+          "name": "practice4",
+          "label": "Practice 4",
+          "type": "text"
+        },
+        {
+          "name": "practice5",
+          "label": "Practice 5",
+          "type": "text"
+        },
+        {
+          "name": "practice6",
+          "label": "Practice 6",
+          "type": "text"
+        },
+        {
+          "name": "practice7",
+          "label": "Practice 7",
+          "type": "text"
+        },
+        {
+          "name": "practice8",
+          "label": "Practice 8",
+          "type": "text"
+        },
+        {
+          "name": "practice9",
+          "label": "Practice 9",
+          "type": "text"
+        },
+        {
+          "name": "product1Name",
+          "label": "Product 1 Name",
+          "type": "text"
+        },
+        {
+          "name": "product1Description",
+          "label": "Product 1 Description",
+          "type": "textarea"
+        },
+        {
+          "name": "product1Link",
+          "label": "Product 1 Link",
+          "type": "text"
+        },
+        {
+          "name": "product2Name",
+          "label": "Product 2 Name",
+          "type": "text"
+        },
+        {
+          "name": "product2Description",
+          "label": "Product 2 Description",
+          "type": "textarea"
+        },
+        {
+          "name": "product2Link",
+          "label": "Product 2 Link",
+          "type": "text"
+        },
+        {
+          "name": "product3Name",
+          "label": "Product 3 Name",
+          "type": "text"
+        },
+        {
+          "name": "product3Description",
+          "label": "Product 3 Description",
+          "type": "textarea"
+        },
+        {
+          "name": "product3Link",
+          "label": "Product 3 Link",
+          "type": "text"
+        },
+        {
+          "name": "retired1Label",
+          "label": "Link 1 Label",
+          "type": "text"
+        },
+        {
+          "name": "retired1Link",
+          "label": "Link 1 URL",
+          "type": "text"
+        },
+        {
+          "name": "retired2Label",
+          "label": "Link 2 Label",
+          "type": "text"
+        },
+        {
+          "name": "retired2Link",
+          "label": "Link 2 URL",
+          "type": "text"
+        },
+        {
+          "name": "retired2Badge",
+          "label": "Link 2 Badge",
+          "type": "text"
+        },
+        {
+          "name": "retired3Label",
+          "label": "Link 3 Label",
+          "type": "text"
+        },
+        {
+          "name": "retired3Link",
+          "label": "Link 3 URL",
+          "type": "text"
+        },
+        {
+          "name": "contactEmail",
+          "label": "Contact Email",
+          "type": "text"
+        },
+        {
+          "name": "footerText",
+          "label": "Footer Text",
+          "type": "text"
+        }
+      ]
+    },
+    "stream": {
+      "name": "Content Stream Schema",
+      "fields": [
+        {
+          "name": "eyebrow",
+          "label": "Section Label",
+          "type": "text"
+        },
+        {
+          "name": "title",
+          "label": "Stream Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "intro",
+          "label": "Intro Text",
+          "type": "textarea"
+        },
+        {
+          "name": "footerText",
+          "label": "Footer Text",
+          "type": "text"
+        }
+      ]
+    }
+  },
+  "templates": {
+    "default": "registry/templates/default.html",
+    "article": "registry/templates/article.html",
+    "feature-grid": "registry/templates/feature-grid.html",
+    "landing": "registry/templates/landing.html",
+    "stream": "registry/templates/stream.html"
+  },
+  "streams": {
+    "journal": {
+      "title": "Journal",
+      "slug": "journal",
+      "schema": "stream",
+      "template": "stream",
+      "publishedAt": "",
+      "updatedAt": "",
+      "content": {
+        "eyebrow": "Stream",
+        "title": "Journal",
+        "intro": "A simple stream for dated posts. Use it for notes, essays, updates, or any ongoing body of writing.",
+        "footerText": "© 2026 Tetractys"
+      },
+      "posts": {
+        "hello-tetractys": {
+          "title": "Hello Tetractys",
+          "slug": "hello-tetractys",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-03-29T09:00",
+          "updatedAt": "",
+          "content": {
+            "title": "Hello Tetractys",
+            "eyebrow": "Journal",
+            "excerpt": "The starter ships with a content stream so the site feels alive from the first deploy.",
+            "publishedAt": "2026-03-29 09:00",
+            "body": "This sample post shows how streams and posts work inside Tetractys. Each post is rendered into the stream folder, and the stream index automatically lists entries in publish order.",
+            "footerText": "© 2026 Tetractys"
+          }
+        },
+        "building-with-structure": {
+          "title": "Building with structure",
+          "slug": "building-with-structure",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-03-30T10:30",
+          "updatedAt": "",
+          "content": {
+            "title": "Building with structure",
+            "eyebrow": "Journal",
+            "excerpt": "Schemas and templates give a site consistency without forcing it into a rigid shape.",
+            "publishedAt": "2026-03-30 10:30",
+            "body": "The goal of this starter is to stay minimal while still demonstrating the full Tetractys model. You get a landing page, supporting pages, a stream, and sample posts that you can keep, revise, or replace.",
+            "footerText": "© 2026 Tetractys"
+          }
+        }
+      }
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "A minimal starter for structured sites.",
+      "slug": "index",
+      "schema": "landing",
+      "template": "landing",
+      "publishedAt": "",
+      "updatedAt": "",
+      "content": {
+        "brandName": "TETRACTYS",
+        "title": "A minimal starter for structured sites.",
+        "heroText": "Tetractys is a clean starting point for pages, streams, and posts. It gives you a thoughtful publishing structure without getting in the way of your content.",
+        "practice1": "Write",
+        "practice2": "Design",
+        "practice3": "Build",
+        "practice4": "Publish",
+        "practice5": "Organize",
+        "practice6": "Evolve",
+        "practice7": "Streams",
+        "practice8": "Schemas",
+        "practice9": "Templates",
+        "product1Name": "Pages",
+        "product1Description": "Create polished standalone pages for your site structure, story, and key information.",
+        "product1Link": "about",
+        "product2Name": "Journal",
+        "product2Description": "Publish dated posts inside a stream and keep writing organized as your site grows.",
+        "product2Link": "journal",
+        "product3Name": "Starter Kit",
+        "product3Description": "Use the included templates, schemas, and content patterns as a base and adapt them to your needs.",
+        "product3Link": "starter-kit",
+        "retired1Label": "about",
+        "retired1Link": "about",
+        "retired2Label": "journal/hello-tetractys",
+        "retired2Link": "journal/hello-tetractys",
+        "retired2Badge": "NEW",
+        "retired3Label": "starter-kit",
+        "retired3Link": "starter-kit",
+        "contactEmail": "hello@example.com",
+        "footerText": "© 2026 Tetractys"
+      }
+    },
+    "about": {
+      "title": "Start simple and shape the site as you go.",
+      "slug": "about",
+      "schema": "default",
+      "template": "default",
+      "publishedAt": "",
+      "updatedAt": "",
+      "content": {
+        "title": "Start simple and shape the site as you go.",
+        "eyebrow": "About",
+        "intro": "This starter keeps the structure light while still giving you pages, a stream, and a shared design system to build from.",
+        "body": "Use this page to explain the site, the project, or the organization behind it. Tetractys is set up so you can begin with a minimal set of content and expand naturally as the site grows.",
+        "contactLabel": "Get in Touch",
+        "contactEmail": "hello@example.com",
+        "footerText": "© 2026 Tetractys"
+      }
+    },
+    "starter-kit": {
+      "title": "Everything in the starter works together.",
+      "slug": "starter-kit",
+      "schema": "feature-grid",
+      "template": "feature-grid",
+      "publishedAt": "",
+      "updatedAt": "",
+      "content": {
+        "title": "Everything in the starter works together.",
+        "eyebrow": "Starter Kit",
+        "intro": "The default setup includes a homepage, standard pages, a content stream, and sample posts so you can publish immediately.",
+        "product1Name": "Schemas",
+        "product1Description": "Define fields for each content type and keep structure consistent as your site evolves.",
+        "product1Link": "index",
+        "product1LinkLabel": "Back to home",
+        "product1Icon": "schema",
+        "product2Name": "Templates",
+        "product2Description": "Use shared layouts and a consistent visual system across landing pages, posts, and streams.",
+        "product2Link": "journal",
+        "product2LinkLabel": "Visit Journal",
+        "product2Icon": "dashboard_customize",
+        "product3Name": "Streams",
+        "product3Description": "Organize posts into a dedicated folder and publish them as a coherent body of work.",
+        "product3Link": "journal/hello-tetractys",
+        "product3LinkLabel": "Open sample post",
+        "product3Icon": "edit_note",
+        "footerText": "© 2026 Tetractys"
+      }
+    }
+  },
+  "navigation": {
+    "primary": {
+      "menu_items": [
+        {
+          "label": "Home",
+          "slug": "index"
+        },
+        {
+          "label": "About",
+          "slug": "/about"
+        },
+        {
+          "label": "Starter Kit",
+          "slug": "/starter-kit"
+        },
+        {
+          "label": "Journal",
+          "slug": "/journal"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "siteTitle": "Tetractys",
+    "siteUrl": "",
+    "branch": "main",
+    "universalTags": {},
+    "navigation": "primary",
+    "deploy": {
+      "target": "gh-pages",
+      "baseUrl": ""
+    }
+  }
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | {{siteTitle}}</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <style>
+        @keyframes fade-shift {
+            0% { color: #80cbc4; }
+            50% { color: #c42b8c; }
+            100% { color: #80cbc4; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        header {
+            padding: 8rem 0 12rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .logo {
+            font-size: 1.125rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            margin-bottom: 6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+            animation: fade-shift 15s infinite ease-in-out;
+            transition: color 0.5s;
+        }
+
+        h1 {
+            font-size: 5.5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            max-width: 900px;
+            margin-bottom: 3rem;
+        }
+
+        .intro {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #666;
+            max-width: 700px;
+        }
+
+        section {
+            padding: 8rem 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-label {
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 4rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 4rem;
+        }
+
+        .product {
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 3rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.4s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .product-icon {
+            font-size: 2.25rem;
+            line-height: 1;
+            flex-shrink: 0;
+            padding-top: 0.1rem;
+        }
+
+        .product-photobop .product-icon {
+            color: #c42b8c;
+        }
+
+        .product-surfy .product-icon {
+            color: #80cbc4;
+        }
+
+        .product-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .product-link .material-symbols-outlined {
+            font-size: 1.1em;
+        }
+
+        .product:nth-child(3n) {
+            border-right: none;
+        }
+
+        .product:hover {
+            background: #fafafa;
+        }
+
+        .product:hover .product-link {
+            color: #000;
+        }
+
+        footer {
+            padding: 4rem 0;
+            font-size: 0.875rem;
+            color: #999;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product:nth-child(3n) {
+                border-right: 1px solid #e5e5e5;
+            }
+
+            .product:nth-child(2n) {
+                border-right: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 4rem 0 6rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .intro {
+                font-size: 1.25rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product,
+            .product:nth-child(3n),
+            .product:nth-child(2n) {
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="material-symbols-outlined logo-icon">spa</span>
+                {{siteTitle}}
+            </div>
+            <h1>{{title}}</h1>
+            <p class="intro">{{intro}}</p>
+        </header>
+
+        <section>
+            <div class="section-label">{{eyebrow}}</div>
+            <div class="products-grid">
+                {{streamPosts}}
+            </div>
+        </section>
+
+        <footer>
+            {{footerText}}
+        </footer>
+    </div>
+</body>
+
+</html>
