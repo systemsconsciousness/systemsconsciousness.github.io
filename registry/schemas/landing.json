@@ -1,0 +1,156 @@
+{
+  "name": "Landing Page Schema",
+  "fields": [
+    {
+      "name": "brandName",
+      "label": "Brand Name",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "label": "Hero Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "heroText",
+      "label": "Intro Text",
+      "type": "textarea"
+    },
+    {
+      "name": "practice1",
+      "label": "Practice 1",
+      "type": "text"
+    },
+    {
+      "name": "practice2",
+      "label": "Practice 2",
+      "type": "text"
+    },
+    {
+      "name": "practice3",
+      "label": "Practice 3",
+      "type": "text"
+    },
+    {
+      "name": "practice4",
+      "label": "Practice 4",
+      "type": "text"
+    },
+    {
+      "name": "practice5",
+      "label": "Practice 5",
+      "type": "text"
+    },
+    {
+      "name": "practice6",
+      "label": "Practice 6",
+      "type": "text"
+    },
+    {
+      "name": "practice7",
+      "label": "Practice 7",
+      "type": "text"
+    },
+    {
+      "name": "practice8",
+      "label": "Practice 8",
+      "type": "text"
+    },
+    {
+      "name": "practice9",
+      "label": "Practice 9",
+      "type": "text"
+    },
+    {
+      "name": "product1Name",
+      "label": "Product 1 Name",
+      "type": "text"
+    },
+    {
+      "name": "product1Description",
+      "label": "Product 1 Description",
+      "type": "textarea"
+    },
+    {
+      "name": "product1Link",
+      "label": "Product 1 Link",
+      "type": "text"
+    },
+    {
+      "name": "product2Name",
+      "label": "Product 2 Name",
+      "type": "text"
+    },
+    {
+      "name": "product2Description",
+      "label": "Product 2 Description",
+      "type": "textarea"
+    },
+    {
+      "name": "product2Link",
+      "label": "Product 2 Link",
+      "type": "text"
+    },
+    {
+      "name": "product3Name",
+      "label": "Product 3 Name",
+      "type": "text"
+    },
+    {
+      "name": "product3Description",
+      "label": "Product 3 Description",
+      "type": "textarea"
+    },
+    {
+      "name": "product3Link",
+      "label": "Product 3 Link",
+      "type": "text"
+    },
+    {
+      "name": "retired1Label",
+      "label": "Link 1 Label",
+      "type": "text"
+    },
+    {
+      "name": "retired1Link",
+      "label": "Link 1 URL",
+      "type": "text"
+    },
+    {
+      "name": "retired2Label",
+      "label": "Link 2 Label",
+      "type": "text"
+    },
+    {
+      "name": "retired2Link",
+      "label": "Link 2 URL",
+      "type": "text"
+    },
+    {
+      "name": "retired2Badge",
+      "label": "Link 2 Badge",
+      "type": "text"
+    },
+    {
+      "name": "retired3Label",
+      "label": "Link 3 Label",
+      "type": "text"
+    },
+    {
+      "name": "retired3Link",
+      "label": "Link 3 URL",
+      "type": "text"
+    },
+    {
+      "name": "contactEmail",
+      "label": "Contact Email",
+      "type": "text"
+    },
+    {
+      "name": "footerText",
+      "label": "Footer Text",
+      "type": "text"
+    }
+  ]
+}

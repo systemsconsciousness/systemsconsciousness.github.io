@@ -370,56 +370,7 @@
     "landing": "registry/templates/landing.html",
     "stream": "registry/templates/stream.html"
   },
-  "streams": {
-    "journal": {
-      "title": "Journal",
-      "slug": "journal",
-      "schema": "stream",
-      "template": "stream",
-      "publishedAt": "",
-      "updatedAt": "",
-      "content": {
-        "eyebrow": "Stream",
-        "title": "Journal",
-        "intro": "A simple stream for dated posts. Use it for notes, essays, updates, or any ongoing body of writing.",
-        "footerText": "© 2026 Tetractys"
-      },
-      "posts": {
-        "hello-tetractys": {
-          "title": "Hello Tetractys",
-          "slug": "hello-tetractys",
-          "schema": "article",
-          "template": "article",
-          "publishedAt": "2026-03-29T09:00",
-          "updatedAt": "",
-          "content": {
-            "title": "Hello Tetractys",
-            "eyebrow": "Journal",
-            "excerpt": "The starter ships with a content stream so the site feels alive from the first deploy.",
-            "publishedAt": "2026-03-29 09:00",
-            "body": "This sample post shows how streams and posts work inside Tetractys. Each post is rendered into the stream folder, and the stream index automatically lists entries in publish order.",
-            "footerText": "© 2026 Tetractys"
-          }
-        },
-        "building-with-structure": {
-          "title": "Building with structure",
-          "slug": "building-with-structure",
-          "schema": "article",
-          "template": "article",
-          "publishedAt": "2026-03-30T10:30",
-          "updatedAt": "",
-          "content": {
-            "title": "Building with structure",
-            "eyebrow": "Journal",
-            "excerpt": "Schemas and templates give a site consistency without forcing it into a rigid shape.",
-            "publishedAt": "2026-03-30 10:30",
-            "body": "The goal of this starter is to stay minimal while still demonstrating the full Tetractys model. You get a landing page, supporting pages, a stream, and sample posts that you can keep, revise, or replace.",
-            "footerText": "© 2026 Tetractys"
-          }
-        }
-      }
-    }
-  },
+  "scripts": {},
   "pages": {
     "index": {
       "title": "A minimal starter for structured sites.",
@@ -508,6 +459,56 @@
       }
     }
   },
+  "streams": {
+    "journal": {
+      "title": "Journal",
+      "slug": "journal",
+      "schema": "stream",
+      "template": "stream",
+      "publishedAt": "",
+      "updatedAt": "",
+      "content": {
+        "eyebrow": "Stream",
+        "title": "Journal",
+        "intro": "A simple stream for dated posts. Use it for notes, essays, updates, or any ongoing body of writing.",
+        "footerText": "© 2026 Tetractys"
+      },
+      "posts": {
+        "hello-tetractys": {
+          "title": "Hello Tetractys",
+          "slug": "hello-tetractys",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-03-29T09:00",
+          "updatedAt": "",
+          "content": {
+            "title": "Hello Tetractys",
+            "eyebrow": "Journal",
+            "excerpt": "The starter ships with a content stream so the site feels alive from the first deploy.",
+            "publishedAt": "2026-03-29 09:00",
+            "body": "This sample post shows how streams and posts work inside Tetractys. Each post is rendered into the stream folder, and the stream index automatically lists entries in publish order.",
+            "footerText": "© 2026 Tetractys"
+          }
+        },
+        "building-with-structure": {
+          "title": "Building with structure",
+          "slug": "building-with-structure",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-03-30T10:30",
+          "updatedAt": "",
+          "content": {
+            "title": "Building with structure",
+            "eyebrow": "Journal",
+            "excerpt": "Schemas and templates give a site consistency without forcing it into a rigid shape.",
+            "publishedAt": "2026-03-30 10:30",
+            "body": "The goal of this starter is to stay minimal while still demonstrating the full Tetractys model. You get a landing page, supporting pages, a stream, and sample posts that you can keep, revise, or replace.",
+            "footerText": "© 2026 Tetractys"
+          }
+        }
+      }
+    }
+  },
   "navigation": {
     "primary": {
       "menu_items": [
@@ -531,13 +532,13 @@
     }
   },
   "settings": {
-    "siteTitle": "Tetractys",
-    "siteUrl": "",
+    "siteTitle": "Systemsconsciousness GitHub Pages Site",
+    "siteUrl": "https://systemsconsciousness.github.io/",
     "branch": "main",
     "universalTags": {},
     "navigation": "primary",
     "deploy": {
-      "target": "gh-pages",
+      "target": "github-pages",
       "baseUrl": ""
     }
   }

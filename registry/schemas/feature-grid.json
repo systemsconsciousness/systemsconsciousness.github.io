@@ -1,0 +1,101 @@
+{
+  "name": "Feature Grid Schema",
+  "fields": [
+    {
+      "name": "title",
+      "label": "Page Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "eyebrow",
+      "label": "Section Label",
+      "type": "text"
+    },
+    {
+      "name": "intro",
+      "label": "Intro Text",
+      "type": "textarea"
+    },
+    {
+      "name": "product1Name",
+      "label": "Card 1 Name",
+      "type": "text"
+    },
+    {
+      "name": "product1Description",
+      "label": "Card 1 Description",
+      "type": "textarea"
+    },
+    {
+      "name": "product1Link",
+      "label": "Card 1 Link",
+      "type": "text"
+    },
+    {
+      "name": "product1LinkLabel",
+      "label": "Card 1 Link Label",
+      "type": "text"
+    },
+    {
+      "name": "product1Icon",
+      "label": "Card 1 Icon",
+      "type": "text"
+    },
+    {
+      "name": "product2Name",
+      "label": "Card 2 Name",
+      "type": "text"
+    },
+    {
+      "name": "product2Description",
+      "label": "Card 2 Description",
+      "type": "textarea"
+    },
+    {
+      "name": "product2Link",
+      "label": "Card 2 Link",
+      "type": "text"
+    },
+    {
+      "name": "product2LinkLabel",
+      "label": "Card 2 Link Label",
+      "type": "text"
+    },
+    {
+      "name": "product2Icon",
+      "label": "Card 2 Icon",
+      "type": "text"
+    },
+    {
+      "name": "product3Name",
+      "label": "Card 3 Name",
+      "type": "text"
+    },
+    {
+      "name": "product3Description",
+      "label": "Card 3 Description",
+      "type": "textarea"
+    },
+    {
+      "name": "product3Link",
+      "label": "Card 3 Link",
+      "type": "text"
+    },
+    {
+      "name": "product3LinkLabel",
+      "label": "Card 3 Link Label",
+      "type": "text"
+    },
+    {
+      "name": "product3Icon",
+      "label": "Card 3 Icon",
+      "type": "text"
+    },
+    {
+      "name": "footerText",
+      "label": "Footer Text",
+      "type": "text"
+    }
+  ]
+}
