@@ -1,24 +1,44 @@
-# Tetractys
+# Systemsconsciousness GitHub Pages Site
 
-Welcome to your new site, generated with [Tetractys](https://github.com/systemsconsciousness/tetractys).
+This repository is a [Tetractys](https://tetractys.zazenlabs.com) site designed to be forked, remixed, and adapted into your own version.
 
-## Project Overview
-This repository contains a self-contained, manifest-driven static site.
+## Site Model
+- `tetractys.json` is the source of truth for content structure, templates, navigation, and settings.
+- Templates live in `registry/templates/` and render HTML with `{{tag}}` placeholders.
+- Schemas define which fields a page, stream, or post can edit in Tetractys.
+- Content entries choose a schema and a template, then supply values for those fields.
 
-- **Manifest:** `tetractys.json` - The "brain" of your site. It defines all pages, schemas, and templates.
-- **Content:** Each page has its own generated `.html` file.
-- **Design:** Custom templates can be found in `registry/templates/`.
-- **Data Structures:** Custom schemas are defined inside the manifest to power the CMS.
+## Templates In This Site
+- `default`
+- `article`
+- `feature-grid`
+- `landing`
+- `stream`
 
-## CMS & Editing
-To edit this site, open it in the [Tetractys Editor](https://tetractys.zazenlabs.com). 
-1. Select this repository.
-2. Make your changes in the **Content**, **Schemas**, or **Templates** tabs.
-3. Save your changes (Draft).
-4. Click **Deploy** 🚀 to push updates to GitHub and rebuild the static site.
+## Schemas In This Site
+- `default`: Standard Page Schema
+- `article`: Article Schema
+- `feature-grid`: Feature Grid Schema
+- `landing`: Landing Page Schema
+- `stream`: Content Stream Schema
 
-## Developer Skills (AI-Friendly)
-We've included a comprehensive developer skill folder in `.agent/skills/`. If you're using an AI-powered IDE (like Cursor or Windsurf), it can read these files to understand the Tetractys architecture and help you build new schemas and components instantly.
+## Canonical Site Tags
+- `{{siteTitle}}`
+- `{{siteUrl}}`
+- `{{siteLatestCommitMessage}}`
+- `{{siteGithubRepoLink}}`
 
----
-*Tetractys starter site*
+## Custom Universal Tags
+- No custom universal tags are configured yet.
+
+## Forking And Customizing
+1. Fork this repository.
+2. Open the fork in the Tetractys editor.
+3. Update the content, schemas, templates, and universal tags to match your own project.
+4. Deploy to regenerate the site from the manifest.
+
+## Repository Metadata
+- GitHub repository: https://github.com/systemsconsciousness/systemsconsciousness.github.io
+- Latest commit message: Promote all drafts to production
+
+The goal is simple: if you like this site, fork it, keep the structure you want, and evolve the rest into your own design and publishing system.
