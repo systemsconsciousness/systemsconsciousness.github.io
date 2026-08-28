@@ -373,15 +373,15 @@
   "scripts": {},
   "pages": {
     "index": {
-      "title": "A minimal starter for structured sites!",
+      "title": "A minimal starter for structured sites",
       "slug": "index",
       "schema": "landing",
       "template": "landing",
       "publishedAt": "",
-      "updatedAt": "2026-08-27T12:56:22.215Z",
+      "updatedAt": "2026-08-28T01:04:38.997Z",
       "content": {
         "brandName": "TETRACTYS",
-        "title": "A minimal starter for structured sites!",
+        "title": "A minimal starter for structured sites",
         "heroText": "Tetractys is a clean starting point for pages, streams, and posts. It gives you a thoughtful publishing structure without getting in the way of your content.",
         "practice1": "Write",
         "practice2": "Design",
