@@ -1,11 +1,11 @@
-# Systemsconsciousness GitHub Pages Site
+# Zazen
 
-This repository is a [Tetractys](https://tetractys.zazenlabs.com) site designed to be forked, remixed, and adapted into your own version.
+This repository is a [Zazen](https://zazen.dev) site designed to be forked, remixed, and adapted into your own version.
 
 ## Site Model
-- `tetractys.json` is the source of truth for content structure, templates, navigation, and settings.
+- `zazen.json` is the source of truth for content structure, templates, navigation, and settings.
 - Templates live in `registry/templates/` and render HTML with `{{tag}}` placeholders.
-- Schemas define which fields a page, stream, or post can edit in Tetractys.
+- Schemas define which fields a page, stream, or post can edit in Zazen.
 - Content entries choose a schema and a template, then supply values for those fields.
 
 ## Templates In This Site
@@ -33,12 +33,12 @@ This repository is a [Tetractys](https://tetractys.zazenlabs.com) site designed 
 
 ## Forking And Customizing
 1. Fork this repository.
-2. Open the fork in the Tetractys editor.
+2. Open the fork in the Zazen Builder editor.
 3. Update the content, schemas, templates, and universal tags to match your own project.
 4. Deploy to regenerate the site from the manifest.
 
 ## Repository Metadata
 - GitHub repository: https://github.com/systemsconsciousness/systemsconsciousness.github.io
-- Latest commit message: Promote all drafts to production
+- Latest commit message: 🔥 Full Repository Reset & Purge via Zazen
 
 The goal is simple: if you like this site, fork it, keep the structure you want, and evolve the rest into your own design and publishing system.

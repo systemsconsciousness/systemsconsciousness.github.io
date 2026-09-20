@@ -370,19 +370,68 @@
     "landing": "registry/templates/landing.html",
     "stream": "registry/templates/stream.html"
   },
-  "scripts": {},
+  "streams": {
+    "journal": {
+      "title": "Journal",
+      "slug": "journal",
+      "schema": "stream",
+      "template": "stream",
+      "publishedAt": "",
+      "updatedAt": "",
+      "content": {
+        "eyebrow": "Stream",
+        "title": "Journal",
+        "intro": "A simple stream for dated posts. Use it for notes, essays, updates, or any ongoing body of writing.",
+        "footerText": "© 2026 Zazen"
+      },
+      "posts": {
+        "hello-zazen": {
+          "title": "Hello Zazen",
+          "slug": "hello-zazen",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-03-29T09:00",
+          "updatedAt": "",
+          "content": {
+            "title": "Hello Zazen",
+            "eyebrow": "Journal",
+            "excerpt": "The starter ships with a content stream so the site feels alive from the first deploy.",
+            "publishedAt": "2026-03-29 09:00",
+            "body": "This sample post shows how streams and posts work inside Zazen. Each post is rendered into the stream folder, and the stream index automatically lists entries in publish order.",
+            "footerText": "© 2026 Zazen"
+          }
+        },
+        "building-with-structure": {
+          "title": "Building with structure",
+          "slug": "building-with-structure",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-03-30T10:30",
+          "updatedAt": "",
+          "content": {
+            "title": "Building with structure",
+            "eyebrow": "Journal",
+            "excerpt": "Schemas and templates give a site consistency without forcing it into a rigid shape.",
+            "publishedAt": "2026-03-30 10:30",
+            "body": "The goal of this starter is to stay minimal while still demonstrating the full Zazen model. You get a landing page, supporting pages, a stream, and sample posts that you can keep, revise, or replace.",
+            "footerText": "© 2026 Zazen"
+          }
+        }
+      }
+    }
+  },
   "pages": {
     "index": {
-      "title": "A minimal starter for structured sites",
+      "title": "A minimal starter for structured sites.",
       "slug": "index",
       "schema": "landing",
       "template": "landing",
       "publishedAt": "",
-      "updatedAt": "2026-08-28T01:04:38.997Z",
+      "updatedAt": "",
       "content": {
-        "brandName": "TETRACTYS",
-        "title": "A minimal starter for structured sites",
-        "heroText": "Tetractys is a clean starting point for pages, streams, and posts. It gives you a thoughtful publishing structure without getting in the way of your content.",
+        "brandName": "ZAZEN",
+        "title": "A minimal starter for structured sites.",
+        "heroText": "Zazen is a clean starting point for pages, streams, and posts. It gives you a thoughtful publishing structure without getting in the way of your content.",
         "practice1": "Write",
         "practice2": "Design",
         "practice3": "Build",
@@ -403,13 +452,13 @@
         "product3Link": "starter-kit",
         "retired1Label": "about",
         "retired1Link": "about",
-        "retired2Label": "journal/hello-tetractys",
-        "retired2Link": "journal/hello-tetractys",
+        "retired2Label": "journal/hello-zazen",
+        "retired2Link": "journal/hello-zazen",
         "retired2Badge": "NEW",
         "retired3Label": "starter-kit",
         "retired3Link": "starter-kit",
         "contactEmail": "hello@example.com",
-        "footerText": "© 2026 Tetractys"
+        "footerText": "© 2026 Zazen"
       }
     },
     "about": {
@@ -423,10 +472,10 @@
         "title": "Start simple and shape the site as you go.",
         "eyebrow": "About",
         "intro": "This starter keeps the structure light while still giving you pages, a stream, and a shared design system to build from.",
-        "body": "Use this page to explain the site, the project, or the organization behind it. Tetractys is set up so you can begin with a minimal set of content and expand naturally as the site grows.",
+        "body": "Use this page to explain the site, the project, or the organization behind it. Zazen is set up so you can begin with a minimal set of content and expand naturally as the site grows.",
         "contactLabel": "Get in Touch",
         "contactEmail": "hello@example.com",
-        "footerText": "© 2026 Tetractys"
+        "footerText": "© 2026 Zazen"
       }
     },
     "starter-kit": {
@@ -452,60 +501,10 @@
         "product2Icon": "dashboard_customize",
         "product3Name": "Streams",
         "product3Description": "Organize posts into a dedicated folder and publish them as a coherent body of work.",
-        "product3Link": "journal/hello-tetractys",
+        "product3Link": "journal/hello-zazen",
         "product3LinkLabel": "Open sample post",
         "product3Icon": "edit_note",
-        "footerText": "© 2026 Tetractys"
-      }
-    }
-  },
-  "streams": {
-    "journal": {
-      "title": "Journal",
-      "slug": "journal",
-      "schema": "stream",
-      "template": "stream",
-      "publishedAt": "",
-      "updatedAt": "",
-      "content": {
-        "eyebrow": "Stream",
-        "title": "Journal",
-        "intro": "A simple stream for dated posts. Use it for notes, essays, updates, or any ongoing body of writing.",
-        "footerText": "© 2026 Tetractys"
-      },
-      "posts": {
-        "hello-tetractys": {
-          "title": "Hello Tetractys",
-          "slug": "hello-tetractys",
-          "schema": "article",
-          "template": "article",
-          "publishedAt": "2026-03-29T09:00",
-          "updatedAt": "",
-          "content": {
-            "title": "Hello Tetractys",
-            "eyebrow": "Journal",
-            "excerpt": "The starter ships with a content stream so the site feels alive from the first deploy.",
-            "publishedAt": "2026-03-29 09:00",
-            "body": "This sample post shows how streams and posts work inside Tetractys. Each post is rendered into the stream folder, and the stream index automatically lists entries in publish order.",
-            "footerText": "© 2026 Tetractys"
-          }
-        },
-        "building-with-structure": {
-          "title": "Building with structure",
-          "slug": "building-with-structure",
-          "schema": "article",
-          "template": "article",
-          "publishedAt": "2026-03-30T10:30",
-          "updatedAt": "",
-          "content": {
-            "title": "Building with structure",
-            "eyebrow": "Journal",
-            "excerpt": "Schemas and templates give a site consistency without forcing it into a rigid shape.",
-            "publishedAt": "2026-03-30 10:30",
-            "body": "The goal of this starter is to stay minimal while still demonstrating the full Tetractys model. You get a landing page, supporting pages, a stream, and sample posts that you can keep, revise, or replace.",
-            "footerText": "© 2026 Tetractys"
-          }
-        }
+        "footerText": "© 2026 Zazen"
       }
     }
   },
@@ -532,16 +531,26 @@
     }
   },
   "settings": {
-    "siteTitle": "Systemsconsciousness GitHub Pages Site",
-    "siteUrl": "https://systemsconsciousness.github.io/",
+    "siteTitle": "Zazen",
+    "siteUrl": "",
+    "siteLatestCommitMessage": "🔥 Full Repository Reset & Purge via Zazen",
+    "siteGithubRepoLink": "https://github.com/systemsconsciousness/systemsconsciousness.github.io",
     "branch": "main",
     "universalTags": {},
     "navigation": "primary",
     "deploy": {
       "target": "github-pages",
       "baseUrl": ""
-    },
-    "siteGithubRepoLink": "https://github.com/systemsconsciousness/systemsconsciousness.github.io",
-    "siteLatestCommitMessage": "Promote all drafts to production"
+    }
+  },
+  "components": {
+    "header": "registry/components/header.html",
+    "footer": "registry/components/footer.html"
+  },
+  "styles": {
+    "main.css": "registry/styles/main.css"
+  },
+  "scripts": {
+    "theme.js": "registry/scripts/theme.js"
   }
 }

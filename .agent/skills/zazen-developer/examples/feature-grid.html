@@ -1,0 +1,28 @@
+<section class="feature-grid" style="background-color: {{bgColor}}">
+  <div class="container">
+    <h2 class="section-title">{{sectionTitle}}</h2>
+    
+    <div class="grid">
+      <div class="feature-item">
+        <div class="icon">{{feature1_icon}}</div>
+        <h3>{{feature1_title}}</h3>
+        <p>{{feature1_desc}}</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="icon">{{feature2_icon}}</div>
+        <h3>{{feature2_title}}</h3>
+        <p>{{feature2_desc}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-grid { padding: 4rem 2rem; border-radius: 12px; margin: 2rem 0; }
+  .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+  .feature-item { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px; backdrop-filter: blur(5px); }
+  .feature-item .icon { font-size: 3rem; margin-bottom: 1rem; }
+  .feature-item h3 { margin: 0 0 1rem 0; }
+</style>

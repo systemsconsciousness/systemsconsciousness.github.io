@@ -1,0 +1,46 @@
+{
+  "name": "Feature Grid Schema",
+  "fields": [
+    {
+      "name": "sectionTitle",
+      "label": "Section Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "bgColor",
+      "label": "Background Color",
+      "type": "color"
+    },
+    {
+      "name": "feature1_icon",
+      "label": "Feature 1 Icon (Emoji)",
+      "type": "text"
+    },
+    {
+      "name": "feature1_title",
+      "label": "Feature 1 Title",
+      "type": "text"
+    },
+    {
+      "name": "feature1_desc",
+      "label": "Feature 1 Description",
+      "type": "textarea"
+    },
+    {
+      "name": "feature2_icon",
+      "label": "Feature 2 Icon (Emoji)",
+      "type": "text"
+    },
+    {
+      "name": "feature2_title",
+      "label": "Feature 2 Title",
+      "type": "text"
+    },
+    {
+      "name": "feature2_desc",
+      "label": "Feature 2 Description",
+      "type": "textarea"
+    }
+  ]
+}
