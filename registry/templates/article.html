@@ -20,29 +20,29 @@
             {{component:header}}
         </header>
 
-        <div style="margin-bottom: 2rem;">
-            <a href="/journal" class="pixel-btn">
-                ← RETURN TO VESSEL STREAM
+        <div style="margin-bottom: 3rem;">
+            <a href="/journal" class="product-link">
+                ← Return to stream
             </a>
         </div>
 
-        <article class="question-block-frame">
+        <article class="question-block-frame" style="border-bottom: none; padding-top: 0;">
             <div class="pixel-box-header">
-                <span>{{eyebrow || 'TRANSMISSION'}} // {{publishedAt}}</span>
-                <span>CATALOG NO. #{{postTitle || title}}</span>
+                <span>{{eyebrow || 'TRANSMISSION'}}</span>
+                <span>{{publishedAt}}</span>
             </div>
 
-            <h1 style="margin-top: 1rem;">{{title}}</h1>
+            <h1 style="margin-top: 1.5rem; font-size: 3.5rem;">{{title}}</h1>
             
             {{excerpt ? '<div class="quote-highlight">' + excerpt + '</div>' : ''}}
 
-            <div class="body" style="margin-top: 2.5rem;">
+            <div class="body" style="margin-top: 3.5rem;">
                 {{body}}
             </div>
         </article>
 
         <section>
-            <div class="section-label">Adjacent Sculptural Vessels</div>
+            <div class="section-label">Related Inscriptions</div>
             <div class="products-grid">
                 {{nextPosts}}
             </div>

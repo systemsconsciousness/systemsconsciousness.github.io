@@ -1,13 +1,13 @@
 (function () {
     try {
-        const storedTheme = localStorage.getItem('barney-site-theme') || localStorage.getItem('systems-site-theme');
+        const storedTheme = localStorage.getItem('sc-theme');
         if (storedTheme === 'light' || storedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', storedTheme);
         }
     } catch (error) { }
 }());
 
-const THEME_STORAGE_KEY = 'barney-site-theme';
+const THEME_STORAGE_KEY = 'sc-theme';
 
 function applyThemePreference(theme) {
     if (theme === 'light' || theme === 'dark') {
@@ -30,10 +30,8 @@ function syncThemeToggle() {
     if (!themeToggle) return;
 
     const isDark = getActiveTheme() === 'dark';
-    const label = isDark ? 'PEARL' : 'ZINC';
-
-    themeToggle.textContent = label;
-    themeToggle.setAttribute('aria-label', isDark ? 'Switch to Prosthetic Pearl (Light)' : 'Switch to Subterranean Zinc (Dark)');
+    themeToggle.textContent = isDark ? 'Light' : 'Dark';
+    themeToggle.setAttribute('aria-label', isDark ? 'Switch to Light' : 'Switch to Dark');
     themeToggle.setAttribute('aria-pressed', String(isDark));
 }
 
@@ -66,7 +64,7 @@ function initializeThemeToggle() {
     syncThemeToggle();
 }
 
-// Stream Category & Restraint Classification Engine
+// Client-Side Stream Filter
 function initializeStreamFilter() {
     const filterPills = document.querySelectorAll('.filter-pill');
     const posts = document.querySelectorAll('.product, .stream-card');
@@ -76,7 +74,7 @@ function initializeStreamFilter() {
 
     function updateCount(visibleCount, totalCount) {
         if (countHud) {
-            countHud.textContent = `[ LOT NO. ${visibleCount} / ${totalCount} VESSELS ]`;
+            countHud.textContent = `${visibleCount} of ${totalCount} entries`;
         }
     }
 
@@ -177,7 +175,7 @@ function showCopyFeedback(btn) {
         feedback = document.getElementById('copyFeedback') || document.querySelector('.copy-feedback');
     }
     if (!feedback) return;
-    feedback.textContent = "[ ACCESSION COORD RECORDED ]";
+    feedback.textContent = "[ Copied to clipboard ]";
     feedback.classList.add('show');
     setTimeout(() => {
         feedback.classList.remove('show');
@@ -190,15 +188,10 @@ function initializeMobileNav() {
     const headerMeta = document.querySelector('.header-meta');
     if (!navToggle || !navLinks) return;
 
-    const icon = navToggle.querySelector('.material-symbols-outlined') || navToggle.querySelector('.nav-toggle-icon');
-
     function setNavOpen(isOpen) {
         navLinks.classList.toggle('open', isOpen);
         if (headerMeta) headerMeta.classList.toggle('nav-open', isOpen);
         navToggle.setAttribute('aria-expanded', String(isOpen));
-        if (icon) {
-            icon.textContent = isOpen ? 'close' : 'menu';
-        }
     }
 
     navToggle.addEventListener('click', (e) => {

@@ -17,86 +17,66 @@
 <body>
     <div class="container">
         <header>
-            <div class="retro-hud-bar">
-    <div class="hud-stat-group">
-        <span class="hud-stat"><span class="hud-pulse"></span> <span class="hud-stat-label">RESTRAINT CONDITION:</span> <span class="hud-stat-val">ACTIVE</span></span>
-        <span class="hud-stat"><span class="hud-stat-label">FIELD EMBLEM:</span> <span class="hud-stat-val">BALANCED</span></span>
-        <span class="hud-stat"><span class="hud-stat-label">MEDIUM:</span> <span class="hud-stat-val">CAST SUCROSE & RECURSIVE LOOPS</span></span>
-        <span class="hud-stat"><span class="hud-stat-label">EQUILIBRIUM:</span> <span class="hud-stat-val">1.0</span></span>
-    </div>
-    <div class="hud-stat-group">
-        <span class="hud-stat"><span class="hud-stat-label">ACCESSION:</span> <span class="hud-stat-val">SYS // CREMASTER-00</span></span>
-    </div>
-</div>
-
-<div class="header-meta">
+            <div class="header-meta">
     <div class="logo">
-        <a href="/">
-            <svg class="field-emblem-icon" viewBox="0 0 54 26">
-                <rect x="1.5" y="1.5" width="51" height="23" rx="11.5" stroke-width="2"/>
-                <line x1="1.5" y1="13" x2="52.5" y2="13" stroke-width="2"/>
-            </svg>
-            <span>Systems Consciousness</span>
-        </a>
+        <a href="/">Systems Consciousness</a>
     </div>
     <div class="header-nav-wrapper">
         <nav class="nav-links" id="mainNavLinks" aria-label="Main Navigation">
-            <li class="nav-item"><a href="/" class="nav-link">I. Home</a></li><li class="nav-item"><a href="/journal" class="nav-link active">II. Transmissions</a></li><li class="nav-item"><a href="/about" class="nav-link">III. Codex</a></li><li class="nav-item"><a href="/starter-kit" class="nav-link">IV. Apparatus</a></li>
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li><li class="nav-item"><a href="/journal" class="nav-link active">Stream</a></li><li class="nav-item"><a href="/about" class="nav-link">Codex</a></li><li class="nav-item"><a href="/starter-kit" class="nav-link">Toolkits</a></li>
         </nav>
     </div>
     <div class="header-actions">
-        <button type="button" class="pixel-btn" id="themeToggle" aria-label="Switch studio theme">
-            ZINC
+        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Toggle visual theme">
+            Dark
         </button>
-        <button type="button" class="pixel-btn nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavLinks">
-            <span class="material-symbols-outlined nav-toggle-icon" style="font-size: 16px;">menu</span>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavLinks">
+            <span class="material-symbols-outlined" style="font-size: 20px;">menu</span>
         </button>
     </div>
 </div>
         </header>
 
-        <div style="margin-bottom: 2rem;">
-            <a href="/journal" class="pixel-btn">
-                ← RETURN TO VESSEL STREAM
+        <div style="margin-bottom: 3rem;">
+            <a href="/journal" class="product-link">
+                ← Return to stream
             </a>
         </div>
 
-        <article class="question-block-frame">
+        <article class="question-block-frame" style="border-bottom: none; padding-top: 0;">
             <div class="pixel-box-header">
-                <span>TRANSMISSION // 2026-09-08</span>
-                <span>CATALOG NO. #{{postTitle || title}}</span>
+                <span>TRANSMISSION</span>
+                <span>Sep 08, 2026</span>
             </div>
 
-            <h1 style="margin-top: 1rem;">Gall's Law & The Tao of Complexity</h1>
+            <h1 style="margin-top: 1.5rem; font-size: 3.5rem;">Gall's Law & The Tao of Complexity</h1>
             
-            <div class="quote-highlight">"A complex system that works is invariably found to have evolved from a simple system that worked."</div>
+            <div class="quote-highlight">“A complex system that works is invariably found to have evolved from a simple system that worked.”</div>
 
-            <div class="body" style="margin-top: 2.5rem;">
-                <p>John Gall formulated the law of evolutionary restraint:</p><blockquote>A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.</blockquote><p>This mirrors Chapter 64 of the <em>Tao Te Ching</em>:</p><blockquote>A tree that can fill the span of a man's arms grows from a tiny sprout. A journey of a thousand miles begins with a single step. Tackle the difficult while it is still easy; achieve great things through the smallest actions.</blockquote><p>Bottom-up cellular growth under continuous physical constraint produces enduring structures; top-down unconstrained engineering produces catastrophic collapse.</p>
+            <div class="body" style="margin-top: 3.5rem;">
+                <p>John Gall formulated the law of evolutionary simplicity:</p><blockquote>A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.</blockquote><p>This mirrors Chapter 64 of the <em>Tao Te Ching</em>:</p><blockquote>A tree that can fill the span of a man's arms grows from a tiny sprout. A journey of a thousand miles begins with a single step. Tackle the difficult while it is still easy; achieve great things through the smallest actions.</blockquote><p>Bottom-up growth under continuous feedback produces enduring harmony; top-down unconstrained engineering produces collapse.</p>
             </div>
         </article>
 
         <section>
-            <div class="section-label">Adjacent Sculptural Vessels</div>
+            <div class="section-label">Related Inscriptions</div>
             <div class="products-grid">
                 <div class="product">
                     <div class="product-content">
+                        <span class="card-category-badge">Systems Thinking</span>
                         <div class="product-name"><a href="/journal/dancing-with-systems">Dancing With Systems</a></div>
-                        <div class="card-date">Vessel 01 // Resistance & Rhythm</div>
                         <p class="product-description">Remember that the goal is not to control the system, but to participate in its dance.</p>
                         <a href="/journal/dancing-with-systems" class="product-link">
-                            READ LOG
-                            <span class="material-symbols-outlined">arrow_outward</span>
+                            Read reflection ⟶
                         </a>
                     </div>
                 </div><div class="product">
                     <div class="product-content">
+                        <span class="card-category-badge">Zen Non-Duality</span>
                         <div class="product-name"><a href="/journal/mountains-and-waters">Mountains and Waters</a></div>
-                        <div class="card-date">Vessel 02 // Undifferentiated Form</div>
                         <p class="product-description">Before one studies Zen, mountains are mountains and waters are waters; after a glimpse, mountains are no longer mountains; upon realization, mountains are once again mountains.</p>
                         <a href="/journal/mountains-and-waters" class="product-link">
-                            READ LOG
-                            <span class="material-symbols-outlined">arrow_outward</span>
+                            Read reflection ⟶
                         </a>
                     </div>
                 </div>
@@ -105,14 +85,11 @@
 
         <footer>
     <div>
-        ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK
-    </div>
-    <div class="footer-coin">
-        ( — ) RESTRAINT PHASE V: COMPLETED
+        Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes.
     </div>
     <div>
-        <a href="https://github.com/systemsconsciousness/systemsconsciousness.github.io" target="_blank" rel="noopener" class="pixel-btn" style="padding: 0.4rem 0.8rem; font-size: 0.65rem;">
-            SOURCE ARCHIVE [GITHUB]
+        <a href="https://github.com/systemsconsciousness/systemsconsciousness.github.io" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; border-bottom: 1px solid var(--line);">
+            GitHub
         </a>
     </div>
 </footer>

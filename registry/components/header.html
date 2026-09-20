@@ -1,24 +1,6 @@
-<div class="retro-hud-bar">
-    <div class="hud-stat-group">
-        <span class="hud-stat"><span class="hud-pulse"></span> <span class="hud-stat-label">RESTRAINT CONDITION:</span> <span class="hud-stat-val">ACTIVE</span></span>
-        <span class="hud-stat"><span class="hud-stat-label">FIELD EMBLEM:</span> <span class="hud-stat-val">BALANCED</span></span>
-        <span class="hud-stat"><span class="hud-stat-label">MEDIUM:</span> <span class="hud-stat-val">CAST SUCROSE & RECURSIVE LOOPS</span></span>
-        <span class="hud-stat"><span class="hud-stat-label">EQUILIBRIUM:</span> <span class="hud-stat-val">1.0</span></span>
-    </div>
-    <div class="hud-stat-group">
-        <span class="hud-stat"><span class="hud-stat-label">ACCESSION:</span> <span class="hud-stat-val">SYS // CREMASTER-00</span></span>
-    </div>
-</div>
-
 <div class="header-meta">
     <div class="logo">
-        <a href="{{siteUrl || '/'}}">
-            <svg class="field-emblem-icon" viewBox="0 0 54 26">
-                <rect x="1.5" y="1.5" width="51" height="23" rx="11.5" stroke-width="2"/>
-                <line x1="1.5" y1="13" x2="52.5" y2="13" stroke-width="2"/>
-            </svg>
-            <span>{{siteTitle || 'Systems Consciousness'}}</span>
-        </a>
+        <a href="{{siteUrl || '/'}}">{{siteTitle || 'Systems Consciousness'}}</a>
     </div>
     <div class="header-nav-wrapper">
         <nav class="nav-links" id="mainNavLinks" aria-label="Main Navigation">
@@ -26,11 +8,11 @@
         </nav>
     </div>
     <div class="header-actions">
-        <button type="button" class="pixel-btn" id="themeToggle" aria-label="Switch studio theme">
-            ZINC
+        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Toggle visual theme">
+            Dark
         </button>
-        <button type="button" class="pixel-btn nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavLinks">
-            <span class="material-symbols-outlined nav-toggle-icon" style="font-size: 16px;">menu</span>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavLinks">
+            <span class="material-symbols-outlined" style="font-size: 20px;">menu</span>
         </button>
     </div>
 </div>

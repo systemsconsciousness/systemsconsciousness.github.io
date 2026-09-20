@@ -332,17 +332,17 @@
   },
   "streams": {
     "journal": {
-      "title": "Restraint Transmissions",
+      "title": "The Stream",
       "slug": "journal",
       "schema": "stream",
       "template": "stream",
       "publishedAt": "",
       "updatedAt": "",
       "content": {
-        "eyebrow": "Drawing Restraint Archive",
-        "title": "Zen & Systems Stream",
-        "intro": "A continuous sculptural stream of Zen awareness, cybernetic feedback loops, and biological morphology exploring the emergence of living form through physical restraint.",
-        "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+        "eyebrow": "Archive",
+        "title": "The Stream",
+        "intro": "A continuous stream of Zen awareness, recursive feedback loops, and living form exploring the architecture of consciousness.",
+        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
       },
       "posts": {
         "dancing-with-systems": {
@@ -350,17 +350,17 @@
           "slug": "dancing-with-systems",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-09-18",
+          "publishedAt": "Sep 18, 2026",
           "updatedAt": "",
           "content": {
             "title": "Dancing With Systems",
-            "eyebrow": "Vessel 01 // Resistance & Rhythm",
+            "eyebrow": "Systems Thinking",
             "excerpt": "Remember that the goal is not to control the system, but to participate in its dance.",
             "author": "Donella Meadows",
             "sourceUrl": "https://donellameadows.org/archives/dancing-with-systems/",
-            "publishedAt": "2026-09-18",
-            "body": "<p>Systems can’t be controlled, but they can be designed and redesigned. We can’t surge forward with certainty into a world of no surprises, but we can expect surprises and learn from them and even profit from them.</p><p>We can’t impose our will on a system. We can listen to what the system tells us, and discover how its properties and our values can work together to bring forth something much better than could ever be produced by our will alone.</p><p><strong>Core Restraint Heuristics:</strong></p><ul><li>Get the beat of the system before you try to change it.</li><li>Expose your mental models to the light of day.</li><li>Honor and respect information above all else.</li><li>Locate responsibility in the system.</li><li>Stay humble — stay a learner.</li></ul>",
-            "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+            "publishedAt": "Sep 18, 2026",
+            "body": "<p>Systems can’t be controlled, but they can be designed and redesigned. We can’t surge forward with certainty into a world of no surprises, but we can expect surprises and learn from them and even profit from them.</p><p>We can’t impose our will on a system. We can listen to what the system tells us, and discover how its properties and our values can work together to bring forth something much better than could ever be produced by our will alone.</p><p><strong>Core Heuristics:</strong></p><ul><li>Get the beat of the system before you try to change it.</li><li>Expose your mental models to the light of day.</li><li>Honor and respect information above all else.</li><li>Locate responsibility in the system.</li><li>Stay humble — stay a learner.</li></ul>",
+            "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
           }
         },
         "mountains-and-waters": {
@@ -368,17 +368,17 @@
           "slug": "mountains-and-waters",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-09-15",
+          "publishedAt": "Sep 15, 2026",
           "updatedAt": "",
           "content": {
             "title": "Mountains and Waters",
-            "eyebrow": "Vessel 02 // Undifferentiated Form",
+            "eyebrow": "Zen Non-Duality",
             "excerpt": "Before one studies Zen, mountains are mountains and waters are waters; after a glimpse, mountains are no longer mountains; upon realization, mountains are once again mountains.",
             "author": "Dōgen Zenji",
             "sourceUrl": "",
-            "publishedAt": "2026-09-15",
-            "body": "<p>In systems inquiry, the novice sees isolated components (reductionism). In intermediate inquiry, all boundaries dissolve into an undifferentiated sea of interconnectedness (holism).</p><p>In true systems consciousness—the third stage of Zen realization—boundaries and organs reappear. Not as isolated absolutes, but as functional, relational membranes in dynamic morphological equilibrium.</p><p>Form is emptiness; emptiness is form. The mountain stands solid precisely because it is fluidly continuous with the rain, the mantle, and the sky.</p>",
-            "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+            "publishedAt": "Sep 15, 2026",
+            "body": "<p>In systems inquiry, the novice sees isolated components (reductionism). In intermediate inquiry, all boundaries dissolve into an undifferentiated sea of interconnectedness (holism).</p><p>In true systems consciousness—the third stage of Zen realization—boundaries and organs reappear. Not as isolated absolutes, but as relational membranes in dynamic equilibrium.</p><p>Form is emptiness; emptiness is form. The mountain stands solid precisely because it is fluidly continuous with the rain, the mantle, and the sky.</p>",
+            "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
           }
         },
         "pattern-which-connects": {
@@ -386,17 +386,17 @@
           "slug": "pattern-which-connects",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-09-12",
+          "publishedAt": "Sep 12, 2026",
           "updatedAt": "",
           "content": {
             "title": "The Pattern Which Connects",
-            "eyebrow": "Vessel 03 // Cybernetic Circuit",
+            "eyebrow": "Cybernetics",
             "excerpt": "What pattern connects the crab to the lobster and the orchid to the primrose and all the four of them to me? And me to you?",
             "author": "Gregory Bateson",
             "sourceUrl": "https://en.wikipedia.org/wiki/Gregory_Bateson",
-            "publishedAt": "2026-09-12",
+            "publishedAt": "Sep 12, 2026",
             "body": "<p>Gregory Bateson in <em>Mind and Nature</em> argued that the foundational pathology of human thought is dividing the creature from its environment.</p><p>Mind is not located inside the cranium. Mind is the total recursive feedback circuit that flows through the creature, its physical environment, its motor actions, and its sensory reflections.</p><p>When you sever an ecological relationship, you do not damage an external object—you sever part of the neural circuitry of your own systemic anatomy.</p>",
-            "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+            "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
           }
         },
         "galls-law-and-tao": {
@@ -404,17 +404,17 @@
           "slug": "galls-law-and-tao",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-09-08",
+          "publishedAt": "Sep 08, 2026",
           "updatedAt": "",
           "content": {
             "title": "Gall's Law & The Tao of Complexity",
-            "eyebrow": "Vessel 04 // Emergent Morphology",
+            "eyebrow": "Emergence & Complexity",
             "excerpt": "A complex system that works is invariably found to have evolved from a simple system that worked.",
-            "author": "John Gall (Systemantics)",
+            "author": "John Gall",
             "sourceUrl": "",
-            "publishedAt": "2026-09-08",
-            "body": "<p>John Gall formulated the law of evolutionary restraint:</p><blockquote>A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.</blockquote><p>This mirrors Chapter 64 of the <em>Tao Te Ching</em>:</p><blockquote>A tree that can fill the span of a man's arms grows from a tiny sprout. A journey of a thousand miles begins with a single step. Tackle the difficult while it is still easy; achieve great things through the smallest actions.</blockquote><p>Bottom-up cellular growth under continuous physical constraint produces enduring structures; top-down unconstrained engineering produces catastrophic collapse.</p>",
-            "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+            "publishedAt": "Sep 08, 2026",
+            "body": "<p>John Gall formulated the law of evolutionary simplicity:</p><blockquote>A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.</blockquote><p>This mirrors Chapter 64 of the <em>Tao Te Ching</em>:</p><blockquote>A tree that can fill the span of a man's arms grows from a tiny sprout. A journey of a thousand miles begins with a single step. Tackle the difficult while it is still easy; achieve great things through the smallest actions.</blockquote><p>Bottom-up growth under continuous feedback produces enduring harmony; top-down unconstrained engineering produces collapse.</p>",
+            "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
           }
         },
         "cybernetic-equilibrium": {
@@ -422,17 +422,17 @@
           "slug": "cybernetic-equilibrium",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-09-03",
+          "publishedAt": "Sep 03, 2026",
           "updatedAt": "",
           "content": {
             "title": "Equilibrium, Feedback, and Mind",
-            "eyebrow": "Vessel 05 // Dynamic Homeostasis",
+            "eyebrow": "Cybernetics",
             "excerpt": "We are not the stuff that abides, but patterns that perpetuate themselves. A pattern is a message.",
             "author": "Norbert Wiener",
             "sourceUrl": "https://en.wikipedia.org/wiki/Norbert_Wiener",
-            "publishedAt": "2026-09-03",
+            "publishedAt": "Sep 03, 2026",
             "body": "<p>Norbert Wiener, the father of Cybernetics, recognized that all purposeful organisms, sculptures, and societies sustain their boundaries through balancing negative feedback loops.</p><p>Zen meditation is physical homeostatic regulation in its purest form: noticing divergence, relaxing tension, returning to the breath. When the feedback loop is frictionless, the system enters the state of pure living form.</p>",
-            "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+            "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
           }
         },
         "interbeing-and-wholes": {
@@ -440,17 +440,17 @@
           "slug": "interbeing-and-wholes",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-08-29",
+          "publishedAt": "Aug 29, 2026",
           "updatedAt": "",
           "content": {
             "title": "Interbeing and Systems Wholeness",
-            "eyebrow": "Vessel 06 // Dependent Co-Arising",
+            "eyebrow": "Zen Non-Duality",
             "excerpt": "If you are a poet, you will see clearly that there is a cloud floating in this sheet of paper.",
             "author": "Thich Nhat Hanh",
             "sourceUrl": "",
-            "publishedAt": "2026-08-29",
+            "publishedAt": "Aug 29, 2026",
             "body": "<p>Thich Nhat Hanh formulated <em>Interbeing</em> to express Pratītyasamutpāda (dependent co-arising):</p><blockquote>Without a cloud, there will be no rain; without rain, the trees cannot grow; and without trees, we cannot make paper. The cloud is essential for the paper to exist. If the cloud is not here, the sheet of paper cannot be here either. So we can say that the cloud and the paper inter-are.</blockquote><p>In modern systems dynamics, this is the reality of stock-and-flow networks: every stock is an accumulation of flowing relationships with the whole biosphere.</p>",
-            "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+            "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
           }
         }
       }
@@ -458,7 +458,7 @@
   },
   "pages": {
     "index": {
-      "title": "Systems Consciousness // The Matthew Barney Sculptural Codex",
+      "title": "Systems Consciousness — Zen Awareness & Cybernetic Wholes",
       "slug": "index",
       "schema": "landing",
       "template": "landing",
@@ -466,17 +466,17 @@
       "updatedAt": "",
       "content": {
         "brandName": "SYSTEMS CONSCIOUSNESS",
-        "title": "Form Derived Through Restraint and Feedback.",
-        "heroText": "A continuous codex of Zen awareness, morphological cybernetics, and systems dynamics. Matter and consciousness seeking form against physical resistance.",
-        "practice1": "Phase I: Physical Resistance",
-        "practice2": "Phase II: Undifferentiated Form",
-        "practice3": "Phase III: Cellular Emergence",
-        "practice4": "Phase IV: Dynamic Homeostasis",
-        "practice5": "Phase V: Shoshin / Virgin Vessel",
-        "practice6": "Phase VI: Requisite Variety",
-        "practice7": "Phase VII: Interbeing / Synthesis",
-        "practice8": "Phase VIII: The Tao of Gall",
-        "practice9": "Phase IX: Morphological Equilibrium",
+        "title": "A Stream of Zen Awareness & Systems Dynamics.",
+        "heroText": "An ongoing stream exploring the architecture of consciousness, recursive feedback loops, and how living wholes emerge from relational parts.",
+        "practice1": "Feedback Loops",
+        "practice2": "Non-Duality",
+        "practice3": "Emergence",
+        "practice4": "Cybernetics",
+        "practice5": "Beginner's Mind",
+        "practice6": "Requisite Variety",
+        "practice7": "Interbeing",
+        "practice8": "Gall's Law",
+        "practice9": "Dynamic Equilibrium",
         "product1Name": "Dancing With Systems",
         "product1Description": "Donella Meadows on navigating unpredictable complexity with humility, agility, and systemic rhythm.",
         "product1Link": "journal/dancing-with-systems",
@@ -486,29 +486,29 @@
         "product3Name": "The Pattern Which Connects",
         "product3Description": "Gregory Bateson on cybernetic ecology and mind as an interactive feedback loop with nature.",
         "product3Link": "journal/pattern-which-connects",
-        "contactEmail": "accession@systemsconsciousness.org",
-        "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+        "contactEmail": "dialogue@systemsconsciousness.org",
+        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
       }
     },
     "about": {
-      "title": "The Matthew Barney Systems Codex",
+      "title": "The Codex — Systems Consciousness",
       "slug": "about",
       "schema": "default",
       "template": "default",
       "publishedAt": "",
       "updatedAt": "",
       "content": {
-        "title": "The Intersection of Ancient Zen & Morphological Cybernetics",
-        "eyebrow": "Treatise // Section 01",
-        "intro": "Why unite Zen Buddhism, Systems Dynamics, and the sculptural language of Matthew Barney? Because form only develops when raw undifferentiated potential meets boundary resistance.",
-        "body": "<h2>The Philosophy of Restraint</h2><p>In Matthew Barney’s <em>Drawing Restraint</em>, athletic resistance and biological restraint are the primary engines of physical development. Energy unconstrained dissipates into chaotic entropy; energy forced through restraint condenses into differentiated muscle, organ, and sculpture.</p><h2>The Cybernetic Feedback Loop</h2><p>This is the fundamental law of <strong>Systems Dynamics</strong>: a living system maintains its boundary (homeostasis) through balancing and reinforcing loops of information. The observer is never separate from the field emblem; perception is an internal feedback loop.</p><h2>The Zen Realization</h2><p>In <strong>Zen Awareness</strong>, sitting on the zafu in motionless physical discipline produces internal energetic crystallization. Emptiness (<em>śūnyatā</em>) and Form (<em>rūpa</em>) are not opposites, but two states of the continuous field emblem.</p>",
-        "contactLabel": "Accession Relay",
-        "contactEmail": "accession@systemsconsciousness.org",
-        "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+        "title": "The Intersection of Ancient Zen & Modern Systems Inquiry",
+        "eyebrow": "Treatise",
+        "intro": "Why unite Zen Buddhism and Systems Dynamics? Because both recognize that isolation is an illusion, boundaries are functional conventions, and the observer is always inside the loop.",
+        "body": "<h2>The Philosophy</h2><p><strong>Systems Thinking</strong> provides the formal language of stocks, flows, balancing loops, reinforcing cascades, delays, and emergence. It allows us to analyze how ecologies, organizations, and networks behave across time.</p><p><strong>Zen Awareness</strong> provides the direct experiential realization of non-duality (advaita / shunya)—loosening attachment to rigid mental models, embracing uncertainty, and acting with effortless responsiveness (wu wei).</p><h2>The Stream</h2><p>This archive is structured as a quiet, enduring stream capable of holding hundreds of quotes, papers, reflections, and links over decades with timeless typographic serenity.</p>",
+        "contactLabel": "Dialogue",
+        "contactEmail": "dialogue@systemsconsciousness.org",
+        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
       }
     },
     "starter-kit": {
-      "title": "Sculptural Apparatus & Systems Toolkits",
+      "title": "Toolkits & Frameworks — Systems Consciousness",
       "slug": "starter-kit",
       "schema": "feature-grid",
       "template": "feature-grid",
@@ -516,21 +516,21 @@
       "updatedAt": "",
       "content": {
         "title": "Essential Frameworks for Systems Inquiry",
-        "eyebrow": "Apparatus // Toolkits",
-        "intro": "Contemplative apparatus, simulation models, and heuristics for observing whole systems.",
-        "product1Name": "Causal Loop Diagrams (Restraint Geometry)",
+        "eyebrow": "Frameworks",
+        "intro": "Contemplative practices, simulation models, and heuristics for seeing whole systems.",
+        "product1Name": "Causal Loop Diagrams",
         "product1Description": "Mapping balancing and reinforcing circuits to reveal hidden leverage points in complex organizations.",
         "product1Link": "journal/dancing-with-systems",
-        "product1LinkLabel": "Inspect Specification",
+        "product1LinkLabel": "Read reflection",
         "product2Name": "Ashby's Law of Requisite Variety",
         "product2Description": "Only variety can absorb variety. A control apparatus must possess equal complexity to the system it regulates.",
         "product2Link": "journal/cybernetic-equilibrium",
-        "product2LinkLabel": "Inspect Specification",
+        "product2LinkLabel": "Read reflection",
         "product3Name": "Zazen / Open Monitoring",
         "product3Description": "Quieting the narrative self to perceive the continuous feedback loop between stimulus and reaction.",
         "product3Link": "journal/mountains-and-waters",
-        "product3LinkLabel": "Inspect Specification",
-        "footerText": "ACCESSION // SYSTEMS CONSCIOUSNESS • FORM THROUGH RESTRAINT & FEEDBACK"
+        "product3LinkLabel": "Read reflection",
+        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
       }
     }
   },
@@ -538,19 +538,19 @@
     "primary": {
       "menu_items": [
         {
-          "label": "I. Home",
+          "label": "Home",
           "slug": "/"
         },
         {
-          "label": "II. Transmissions",
+          "label": "Stream",
           "slug": "/journal"
         },
         {
-          "label": "III. Codex",
+          "label": "Codex",
           "slug": "/about"
         },
         {
-          "label": "IV. Apparatus",
+          "label": "Toolkits",
           "slug": "/starter-kit"
         }
       ]
@@ -559,11 +559,11 @@
   "settings": {
     "siteTitle": "Systems Consciousness",
     "siteUrl": "/",
-    "siteLatestCommitMessage": "🏛️ Matthew Barney Sculptural Codex Overhaul",
+    "siteLatestCommitMessage": "✨ Quiet Luxury & Minimal Editorial Redesign",
     "siteGithubRepoLink": "https://github.com/systemsconsciousness/systemsconsciousness.github.io",
     "branch": "main",
     "universalTags": {
-      "genre": "matthew-barney-sculptural-zen-stream",
+      "genre": "quiet-luxury-zen-systems-stream",
       "author": "Systems Consciousness Collective"
     },
     "navigation": "primary",
