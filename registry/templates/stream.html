@@ -18,12 +18,31 @@
     <div class="container">
         <header>
             {{component:header}}
-            <h1>{{title}}</h1>
-            <p class="intro">{{intro}}</p>
         </header>
 
+        <div class="pixel-box pixel-box-accent">
+            <div class="pixel-box-header">
+                <span>QUEST LOG // STREAM ARCHIVE</span>
+                <span>STATUS: READY</span>
+            </div>
+            <h1>{{title}}</h1>
+            <p class="intro">{{intro}}<span class="dialog-cursor"></span></p>
+        </div>
+
         <section>
-            <div class="section-label">{{eyebrow}}</div>
+            <div class="section-label">Active Transmissions Feed</div>
+            <div class="stream-controls">
+                <div class="filter-pills">
+                    <button type="button" class="filter-pill active" data-filter="all">[ALL TRANSMISSIONS]</button>
+                    <button type="button" class="filter-pill" data-filter="systems">[SYSTEMS THINKING]</button>
+                    <button type="button" class="filter-pill" data-filter="zen">[ZEN AWARENESS]</button>
+                    <button type="button" class="filter-pill" data-filter="quote">[WISDOM QUOTES]</button>
+                    <button type="button" class="filter-pill" data-filter="loop">[FEEDBACK LOOPS]</button>
+                    <button type="button" class="filter-pill" data-filter="link">[HYPERLINKS]</button>
+                </div>
+                <div class="stream-count-hud" id="streamCount">[ALL POSTS]</div>
+            </div>
+
             <div class="products-grid">
                 {{streamPosts}}
             </div>

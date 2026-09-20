@@ -53,13 +53,23 @@
         },
         {
           "name": "eyebrow",
-          "label": "Section Label",
+          "label": "Section Label / Category",
           "type": "text"
         },
         {
           "name": "excerpt",
-          "label": "Excerpt",
+          "label": "Quote / Excerpt",
           "type": "textarea"
+        },
+        {
+          "name": "author",
+          "label": "Author / Speaker",
+          "type": "text"
+        },
+        {
+          "name": "sourceUrl",
+          "label": "Source URL",
+          "type": "text"
         },
         {
           "name": "publishedAt",
@@ -119,11 +129,6 @@
           "type": "text"
         },
         {
-          "name": "product1Icon",
-          "label": "Card 1 Icon",
-          "type": "text"
-        },
-        {
           "name": "product2Name",
           "label": "Card 2 Name",
           "type": "text"
@@ -144,11 +149,6 @@
           "type": "text"
         },
         {
-          "name": "product2Icon",
-          "label": "Card 2 Icon",
-          "type": "text"
-        },
-        {
           "name": "product3Name",
           "label": "Card 3 Name",
           "type": "text"
@@ -166,11 +166,6 @@
         {
           "name": "product3LinkLabel",
           "label": "Card 3 Link Label",
-          "type": "text"
-        },
-        {
-          "name": "product3Icon",
-          "label": "Card 3 Icon",
           "type": "text"
         },
         {
@@ -201,127 +196,92 @@
         },
         {
           "name": "practice1",
-          "label": "Practice 1",
+          "label": "Matrix 1",
           "type": "text"
         },
         {
           "name": "practice2",
-          "label": "Practice 2",
+          "label": "Matrix 2",
           "type": "text"
         },
         {
           "name": "practice3",
-          "label": "Practice 3",
+          "label": "Matrix 3",
           "type": "text"
         },
         {
           "name": "practice4",
-          "label": "Practice 4",
+          "label": "Matrix 4",
           "type": "text"
         },
         {
           "name": "practice5",
-          "label": "Practice 5",
+          "label": "Matrix 5",
           "type": "text"
         },
         {
           "name": "practice6",
-          "label": "Practice 6",
+          "label": "Matrix 6",
           "type": "text"
         },
         {
           "name": "practice7",
-          "label": "Practice 7",
+          "label": "Matrix 7",
           "type": "text"
         },
         {
           "name": "practice8",
-          "label": "Practice 8",
+          "label": "Matrix 8",
           "type": "text"
         },
         {
           "name": "practice9",
-          "label": "Practice 9",
+          "label": "Matrix 9",
           "type": "text"
         },
         {
           "name": "product1Name",
-          "label": "Product 1 Name",
+          "label": "Featured 1 Name",
           "type": "text"
         },
         {
           "name": "product1Description",
-          "label": "Product 1 Description",
+          "label": "Featured 1 Description",
           "type": "textarea"
         },
         {
           "name": "product1Link",
-          "label": "Product 1 Link",
+          "label": "Featured 1 Link",
           "type": "text"
         },
         {
           "name": "product2Name",
-          "label": "Product 2 Name",
+          "label": "Featured 2 Name",
           "type": "text"
         },
         {
           "name": "product2Description",
-          "label": "Product 2 Description",
+          "label": "Featured 2 Description",
           "type": "textarea"
         },
         {
           "name": "product2Link",
-          "label": "Product 2 Link",
+          "label": "Featured 2 Link",
           "type": "text"
         },
         {
           "name": "product3Name",
-          "label": "Product 3 Name",
+          "label": "Featured 3 Name",
           "type": "text"
         },
         {
           "name": "product3Description",
-          "label": "Product 3 Description",
+          "label": "Featured 3 Description",
           "type": "textarea"
         },
         {
           "name": "product3Link",
-          "label": "Product 3 Link",
-          "type": "text"
-        },
-        {
-          "name": "retired1Label",
-          "label": "Link 1 Label",
-          "type": "text"
-        },
-        {
-          "name": "retired1Link",
-          "label": "Link 1 URL",
-          "type": "text"
-        },
-        {
-          "name": "retired2Label",
-          "label": "Link 2 Label",
-          "type": "text"
-        },
-        {
-          "name": "retired2Link",
-          "label": "Link 2 URL",
-          "type": "text"
-        },
-        {
-          "name": "retired2Badge",
-          "label": "Link 2 Badge",
-          "type": "text"
-        },
-        {
-          "name": "retired3Label",
-          "label": "Link 3 Label",
-          "type": "text"
-        },
-        {
-          "name": "retired3Link",
-          "label": "Link 3 URL",
+          "label": "Featured 3 Link",
           "type": "text"
         },
         {
@@ -372,49 +332,125 @@
   },
   "streams": {
     "journal": {
-      "title": "Journal",
+      "title": "Transmissions",
       "slug": "journal",
       "schema": "stream",
       "template": "stream",
       "publishedAt": "",
       "updatedAt": "",
       "content": {
-        "eyebrow": "Stream",
-        "title": "Journal",
-        "intro": "A simple stream for dated posts. Use it for notes, essays, updates, or any ongoing body of writing.",
-        "footerText": "© 2026 Zazen"
+        "eyebrow": "Transmission Log",
+        "title": "Zen & Systems Stream",
+        "intro": "A persistent feed of quotes, cybernetic models, zen insights, and feedback loops exploring the living architecture of consciousness.",
+        "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
       },
       "posts": {
-        "hello-zazen": {
-          "title": "Hello Zazen",
-          "slug": "hello-zazen",
+        "dancing-with-systems": {
+          "title": "Dancing With Systems",
+          "slug": "dancing-with-systems",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-03-29T09:00",
+          "publishedAt": "2026-09-18",
           "updatedAt": "",
           "content": {
-            "title": "Hello Zazen",
-            "eyebrow": "Journal",
-            "excerpt": "The starter ships with a content stream so the site feels alive from the first deploy.",
-            "publishedAt": "2026-03-29 09:00",
-            "body": "This sample post shows how streams and posts work inside Zazen. Each post is rendered into the stream folder, and the stream index automatically lists entries in publish order.",
-            "footerText": "© 2026 Zazen"
+            "title": "Dancing With Systems",
+            "eyebrow": "Systems Thinking / Quote",
+            "excerpt": "Remember that the goal is not to control the system, but to participate in its dance.",
+            "author": "Donella Meadows",
+            "sourceUrl": "https://donellameadows.org/archives/dancing-with-systems/",
+            "publishedAt": "2026-09-18",
+            "body": "<p>Systems can’t be controlled, but they can be designed and redesigned. We can’t surge forward with certainty into a world of no surprises, but we can expect surprises and learn from them and even profit from them.</p><p>We can’t impose our will on a system. We can listen to what the system tells us, and discover how its properties and our values can work together to bring forth something much better than could ever be produced by our will alone.</p><p><strong>Core Wisdom:</strong></p><ul><li>Get the beat of the system before you try to change it.</li><li>Expose your mental models to the light of day.</li><li>Honor and respect information above all else.</li><li>Locate responsibility in the system.</li><li>Stay humble — stay a learner.</li></ul>",
+            "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
           }
         },
-        "building-with-structure": {
-          "title": "Building with structure",
-          "slug": "building-with-structure",
+        "mountains-and-waters": {
+          "title": "Mountains and Waters",
+          "slug": "mountains-and-waters",
           "schema": "article",
           "template": "article",
-          "publishedAt": "2026-03-30T10:30",
+          "publishedAt": "2026-09-15",
           "updatedAt": "",
           "content": {
-            "title": "Building with structure",
-            "eyebrow": "Journal",
-            "excerpt": "Schemas and templates give a site consistency without forcing it into a rigid shape.",
-            "publishedAt": "2026-03-30 10:30",
-            "body": "The goal of this starter is to stay minimal while still demonstrating the full Zazen model. You get a landing page, supporting pages, a stream, and sample posts that you can keep, revise, or replace.",
-            "footerText": "© 2026 Zazen"
+            "title": "Mountains and Waters",
+            "eyebrow": "Zen / Non-Duality",
+            "excerpt": "Before one studies Zen, mountains are mountains and waters are waters; after a glimpse, mountains are no longer mountains; upon realization, mountains are once again mountains.",
+            "author": "Dogen Zenji",
+            "sourceUrl": "",
+            "publishedAt": "2026-09-15",
+            "body": "<p>In systems science, the novice sees individual components (reductionism). In intermediate inquiry, they see that nothing is separate, dissolving all boundaries into a sea of interconnectedness (holism).</p><p>In true systems consciousness, like the third stage of Zen realization, boundaries and components reappear — not as isolated absolutes, but as functional, relational nodes in dynamic equilibrium.</p><p>Form is emptiness; emptiness is form. The mountain stands solid precisely because it is fluidly continuous with the rain, the mantle, and the sky.</p>",
+            "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
+          }
+        },
+        "pattern-which-connects": {
+          "title": "The Pattern Which Connects",
+          "slug": "pattern-which-connects",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-09-12",
+          "updatedAt": "",
+          "content": {
+            "title": "The Pattern Which Connects",
+            "eyebrow": "Cybernetics / Epistemology",
+            "excerpt": "What pattern connects the crab to the lobster and the orchid to the primrose and all the four of them to me? And me to you?",
+            "author": "Gregory Bateson",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Gregory_Bateson",
+            "publishedAt": "2026-09-12",
+            "body": "<p>Gregory Bateson in <em>Mind and Nature</em> argued that the greatest error of human civilization is thinking of parts rather than wholes, objects rather than relationships.</p><p>Mind is not located inside the skull. Mind is the recursive feedback circuit that flows through the creature, its environment, its actions, and its sensory reflections.</p><p>When you chop down a forest, you do not destroy an external resource — you sever part of the neural circuitry of your own systemic body.</p>",
+            "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
+          }
+        },
+        "galls-law-and-tao": {
+          "title": "Gall's Law & The Tao of Complexity",
+          "slug": "galls-law-and-tao",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-09-08",
+          "updatedAt": "",
+          "content": {
+            "title": "Gall's Law & The Tao of Complexity",
+            "eyebrow": "Systems Law / Taoism",
+            "excerpt": "A complex system that works is invariably found to have evolved from a simple system that worked.",
+            "author": "John Gall (Systemantics)",
+            "sourceUrl": "",
+            "publishedAt": "2026-09-08",
+            "body": "<p>John Gall formulated the golden rule of systems engineering:</p><blockquote>A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.</blockquote><p>This mirrors Chapter 64 of the <em>Tao Te Ching</em>:</p><blockquote>A tree that can fill the span of a man's arms grows from a tiny sprout. A journey of a thousand miles begins with a single step. Tackle the difficult while it is still easy; achieve great things through the smallest actions.</blockquote><p>Evolutionary adaptation, modularity, and quiet patience defeat top-down grandiosity every single time.</p>",
+            "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
+          }
+        },
+        "cybernetic-equilibrium": {
+          "title": "Equilibrium, Feedback, and Mind",
+          "slug": "cybernetic-equilibrium",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-09-03",
+          "updatedAt": "",
+          "content": {
+            "title": "Equilibrium, Feedback, and Mind",
+            "eyebrow": "Cybernetics / Feedback Loops",
+            "excerpt": "We are not the stuff that abides, but patterns that perpetuate themselves. A pattern is a message.",
+            "author": "Norbert Wiener",
+            "sourceUrl": "https://en.wikipedia.org/wiki/Norbert_Wiener",
+            "publishedAt": "2026-09-03",
+            "body": "<p>Norbert Wiener, the father of Cybernetics, recognized that all purposeful organisms, machines, and societies operate through negative (balancing) feedback loops.</p><p>Zen meditation is the ultimate real-time homeostatic regulator: noticing drift, relaxing tension, returning to breath. When the feedback loop is instantaneous and frictionless, the system enters pure flow.</p>",
+            "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
+          }
+        },
+        "interbeing-and-wholes": {
+          "title": "Interbeing and Systems Wholeness",
+          "slug": "interbeing-and-wholes",
+          "schema": "article",
+          "template": "article",
+          "publishedAt": "2026-08-29",
+          "updatedAt": "",
+          "content": {
+            "title": "Interbeing and Systems Wholeness",
+            "eyebrow": "Zen / Interdependence",
+            "excerpt": "If you are a poet, you will see clearly that there is a cloud floating in this sheet of paper.",
+            "author": "Thich Nhat Hanh",
+            "sourceUrl": "",
+            "publishedAt": "2026-08-29",
+            "body": "<p>Thich Nhat Hanh coined the word <em>Interbeing</em> to express the Buddhist principle of Pratītyasamutpāda (dependent co-arising):</p><blockquote>Without a cloud, there will be no rain; without rain, the trees cannot grow; and without trees, we cannot make paper. The cloud is essential for the paper to exist. If the cloud is not here, the sheet of paper cannot be here either. So we can say that the cloud and the paper inter-are.</blockquote><p>In modern systems dynamics, this is the foundational truth of stock-and-flow networks: every stock is an accumulation of flowing relationships with the whole biosphere.</p>",
+            "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
           }
         }
       }
@@ -422,89 +458,79 @@
   },
   "pages": {
     "index": {
-      "title": "A minimal starter for structured sites.",
+      "title": "Systems Consciousness // 16-Bit Zen & Cybernetics Stream",
       "slug": "index",
       "schema": "landing",
       "template": "landing",
       "publishedAt": "",
       "updatedAt": "",
       "content": {
-        "brandName": "ZAZEN",
-        "title": "A minimal starter for structured sites.",
-        "heroText": "Zazen is a clean starting point for pages, streams, and posts. It gives you a thoughtful publishing structure without getting in the way of your content.",
-        "practice1": "Write",
-        "practice2": "Design",
-        "practice3": "Build",
-        "practice4": "Publish",
-        "practice5": "Organize",
-        "practice6": "Evolve",
-        "practice7": "Streams",
-        "practice8": "Schemas",
-        "practice9": "Templates",
-        "product1Name": "Pages",
-        "product1Description": "Create polished standalone pages for your site structure, story, and key information.",
-        "product1Link": "about",
-        "product2Name": "Journal",
-        "product2Description": "Publish dated posts inside a stream and keep writing organized as your site grows.",
-        "product2Link": "journal",
-        "product3Name": "Starter Kit",
-        "product3Description": "Use the included templates, schemas, and content patterns as a base and adapt them to your needs.",
-        "product3Link": "starter-kit",
-        "retired1Label": "about",
-        "retired1Link": "about",
-        "retired2Label": "journal/hello-zazen",
-        "retired2Link": "journal/hello-zazen",
-        "retired2Badge": "NEW",
-        "retired3Label": "starter-kit",
-        "retired3Link": "starter-kit",
-        "contactEmail": "hello@example.com",
-        "footerText": "© 2026 Zazen"
+        "brandName": "SYSTEMS CONSCIOUSNESS",
+        "title": "A Stream of Zen Awareness & Systems Dynamics.",
+        "heroText": "Welcome to Systems Consciousness. This site is a live transmission feed of quotes, feedback loops, cybernetic models, zen insights, and media exploring how wholes emerge from parts.",
+        "practice1": "Feedback Loops",
+        "practice2": "Non-Duality",
+        "practice3": "Emergence",
+        "practice4": "Cybernetics",
+        "practice5": "Beginner's Mind",
+        "practice6": "Requisite Variety",
+        "practice7": "Interbeing",
+        "practice8": "The Tao of Gall",
+        "practice9": "Dynamic Balance",
+        "product1Name": "Dancing With Systems",
+        "product1Description": "Donella Meadows on navigating unpredictable complexity with humility, agility, and systemic rhythm.",
+        "product1Link": "journal/dancing-with-systems",
+        "product2Name": "Mountains and Waters",
+        "product2Description": "Dogen Zenji's classic exploration of non-duality and recursive perception in Zen practice.",
+        "product2Link": "journal/mountains-and-waters",
+        "product3Name": "The Pattern Which Connects",
+        "product3Description": "Gregory Bateson on cybernetic ecology and mind as an interactive feedback loop with nature.",
+        "product3Link": "journal/pattern-which-connects",
+        "contactEmail": "transmissions@systemsconsciousness.org",
+        "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
       }
     },
     "about": {
-      "title": "Start simple and shape the site as you go.",
+      "title": "The Systems Consciousness Codex",
       "slug": "about",
       "schema": "default",
       "template": "default",
       "publishedAt": "",
       "updatedAt": "",
       "content": {
-        "title": "Start simple and shape the site as you go.",
-        "eyebrow": "About",
-        "intro": "This starter keeps the structure light while still giving you pages, a stream, and a shared design system to build from.",
-        "body": "Use this page to explain the site, the project, or the organization behind it. Zazen is set up so you can begin with a minimal set of content and expand naturally as the site grows.",
-        "contactLabel": "Get in Touch",
-        "contactEmail": "hello@example.com",
-        "footerText": "© 2026 Zazen"
+        "title": "The Intersection of Ancient Zen & Cybernetic Thought",
+        "eyebrow": "Codex / Philosophy",
+        "intro": "Why combine Zen Buddhism and Systems Dynamics? Because both recognize that isolation is an illusion, boundaries are functional conventions, and the observer is always inside the loop.",
+        "body": "<h2>The Philosophy</h2><p><strong>Systems Thinking</strong> gives us the formal language of stocks, flows, balancing loops, reinforcing cascades, delays, and emergence. It allows us to analyze how economies, ecologies, organizations, and networks behave over time.</p><p><strong>Zen Awareness</strong> gives us the direct experiential realization of non-duality (advaita / shunya) — loosening attachment to rigid mental models, embracing uncertainty, and acting with effortless responsiveness (wu wei).</p><h2>The Stream Architecture</h2><p>This archive is designed as a persistent, low-overhead transmission log capable of storing hundreds of quotes, papers, diagrams, links, and reflections over decades without bit-rot or dependency lock-in.</p><h2>16-Bit Aesthetic</h2><p>The 16-bit video game interface reflects our reverence for crisp, constraint-driven craft: low-latency, modular pixels, scanlines, and tactile controls from the golden era of personal computing.</p>",
+        "contactLabel": "Transmission Relay",
+        "contactEmail": "transmissions@systemsconsciousness.org",
+        "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
       }
     },
     "starter-kit": {
-      "title": "Everything in the starter works together.",
+      "title": "Systems Thinking & Zen Toolkits",
       "slug": "starter-kit",
       "schema": "feature-grid",
       "template": "feature-grid",
       "publishedAt": "",
       "updatedAt": "",
       "content": {
-        "title": "Everything in the starter works together.",
-        "eyebrow": "Starter Kit",
-        "intro": "The default setup includes a homepage, standard pages, a content stream, and sample posts so you can publish immediately.",
-        "product1Name": "Schemas",
-        "product1Description": "Define fields for each content type and keep structure consistent as your site evolves.",
-        "product1Link": "index",
-        "product1LinkLabel": "Back to home",
-        "product1Icon": "schema",
-        "product2Name": "Templates",
-        "product2Description": "Use shared layouts and a consistent visual system across landing pages, posts, and streams.",
-        "product2Link": "journal",
-        "product2LinkLabel": "Visit Journal",
-        "product2Icon": "dashboard_customize",
-        "product3Name": "Streams",
-        "product3Description": "Organize posts into a dedicated folder and publish them as a coherent body of work.",
-        "product3Link": "journal/hello-zazen",
-        "product3LinkLabel": "Open sample post",
-        "product3Icon": "edit_note",
-        "footerText": "© 2026 Zazen"
+        "title": "Essential Frameworks for Systems Inquiry",
+        "eyebrow": "Toolkits & Models",
+        "intro": "Core heuristics, simulation mental models, and contemplative practices for seeing wholes.",
+        "product1Name": "Causal Loop Diagrams",
+        "product1Description": "Mapping balancing and reinforcing loops to reveal hidden leverage points and unintended consequences in complex organizations.",
+        "product1Link": "journal/dancing-with-systems",
+        "product1LinkLabel": "Explore Meadow's Heuristics",
+        "product2Name": "Ashby's Law of Requisite Variety",
+        "product2Description": "Only variety can absorb variety. A control system must possess at least as many states as the system it seeks to regulate.",
+        "product2Link": "journal/cybernetic-equilibrium",
+        "product2LinkLabel": "Explore Cybernetics",
+        "product3Name": "Zazen / Open Monitoring",
+        "product3Description": "Quieting the narrative self to perceive the feedback loop between stimulus and reaction with total clarity.",
+        "product3Link": "journal/mountains-and-waters",
+        "product3LinkLabel": "Explore Zen Post",
+        "footerText": "© 198X-2026 SYSTEMS CONSCIOUSNESS • ALL LOOPS BALANCED"
       }
     }
   },
@@ -513,30 +539,33 @@
       "menu_items": [
         {
           "label": "Home",
-          "slug": "index"
+          "slug": "/"
         },
         {
-          "label": "About",
+          "label": "Stream Feed",
+          "slug": "/journal"
+        },
+        {
+          "label": "Codex / About",
           "slug": "/about"
         },
         {
-          "label": "Starter Kit",
+          "label": "Toolkits",
           "slug": "/starter-kit"
-        },
-        {
-          "label": "Journal",
-          "slug": "/journal"
         }
       ]
     }
   },
   "settings": {
-    "siteTitle": "Zazen",
-    "siteUrl": "",
-    "siteLatestCommitMessage": "🔥 Full Repository Reset & Purge via Zazen",
+    "siteTitle": "Systems Consciousness",
+    "siteUrl": "/",
+    "siteLatestCommitMessage": "🕹️ 16-Bit Retro Overhaul & Zen Systems Stream",
     "siteGithubRepoLink": "https://github.com/systemsconsciousness/systemsconsciousness.github.io",
     "branch": "main",
-    "universalTags": {},
+    "universalTags": {
+      "genre": "16-bit cybernetic zen stream",
+      "author": "Systems Consciousness Collective"
+    },
     "navigation": "primary",
     "deploy": {
       "target": "github-pages",

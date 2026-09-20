@@ -18,12 +18,16 @@
     <div class="container">
         <header>
             {{component:header}}
-            <h1>{{title}}</h1>
-            <p class="intro">{{intro}}</p>
         </header>
 
+        <div class="hero-dialog">
+            <div class="hero-speaker-badge">{{eyebrow || 'TOOLKIT'}} // SYSTEMS MATRIX</div>
+            <h1>{{title}}</h1>
+            <p class="intro">{{intro}}<span class="dialog-cursor"></span></p>
+        </div>
+
         <section>
-            <div class="section-label">{{eyebrow}}</div>
+            <div class="section-label">Modular Systems Architecture</div>
             <div class="products-grid">
                 <div class="product">
                     <div class="product-content">

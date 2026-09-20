@@ -1,7 +1,19 @@
+<div class="retro-hud-bar">
+    <div class="hud-stat-group">
+        <span class="hud-stat"><span class="hud-pulse"></span> <span class="hud-stat-label">STATUS:</span> <span class="hud-stat-val">CONSCIOUS</span></span>
+        <span class="hud-stat"><span class="hud-stat-label">HP:</span> <span class="hud-stat-val">99/99</span></span>
+        <span class="hud-stat"><span class="hud-stat-label">ZEN:</span> <span class="hud-stat-val">∞</span></span>
+        <span class="hud-stat"><span class="hud-stat-label">CYBERNETICS:</span> <span class="hud-stat-val">BALANCED</span></span>
+    </div>
+    <div class="hud-stat-group">
+        <span class="hud-stat"><span class="hud-stat-label">MODE:</span> <span class="hud-stat-val">16-BIT RETRO</span></span>
+    </div>
+</div>
+
 <div class="header-meta">
     <div class="logo">
-        <span class="material-symbols-outlined logo-icon">spa</span>
-        <a href="{{siteUrl}}">{{siteTitle}}</a>
+        <span class="logo-symbol">☯</span>
+        <a href="{{siteUrl || '/'}}">{{siteTitle || 'Systems Consciousness'}}</a>
     </div>
     <div class="header-nav-wrapper">
         <nav class="nav-links" id="mainNavLinks" aria-label="Main Navigation">
@@ -9,11 +21,14 @@
         </nav>
     </div>
     <div class="header-actions">
-        <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch theme">
-            <span class="material-symbols-outlined">dark_mode</span>
+        <button type="button" class="pixel-btn" id="scanlineToggle" title="Toggle CRT Scanlines" aria-label="Toggle CRT Scanlines">
+            <span class="material-symbols-outlined" style="font-size: 14px;">tv</span> CRT
         </button>
-        <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavLinks">
-            <span class="material-symbols-outlined nav-toggle-icon">menu</span>
+        <button type="button" class="pixel-btn" id="themeToggle" aria-label="Switch theme">
+            <span class="material-symbols-outlined" style="font-size: 14px;">dark_mode</span> THEME
+        </button>
+        <button type="button" class="pixel-btn nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNavLinks">
+            <span class="material-symbols-outlined nav-toggle-icon" style="font-size: 14px;">menu</span>
         </button>
     </div>
 </div>

@@ -18,16 +18,35 @@
     <div class="container">
         <header>
             {{component:header}}
-            <h1>{{title}}</h1>
-            <p class="intro">{{excerpt}}</p>
         </header>
 
-        <section>
-            <div class="section-label">Post / {{publishedAt}}</div>
-            <div class="body">{{body}}</div>
-        </section>
+        <div style="margin-bottom: 1.5rem;">
+            <a href="/journal" class="pixel-btn">
+                ◀ BACK TO STREAM FEED
+            </a>
+        </div>
 
-        {{nextPosts}}
+        <article class="pixel-box pixel-box-accent">
+            <div class="pixel-box-header">
+                <span>{{eyebrow || 'TRANSMISSION'}} // {{publishedAt}}</span>
+                <span>ENTRY ID: #{{postTitle || title}}</span>
+            </div>
+
+            <h1 style="margin-top: 1rem;">{{title}}</h1>
+            
+            {{excerpt ? '<div class="quote-highlight">' + excerpt + '</div>' : ''}}
+
+            <div class="body" style="margin-top: 2rem;">
+                {{body}}
+            </div>
+        </article>
+
+        <section>
+            <div class="section-label">Related Codex Logs</div>
+            <div class="products-grid">
+                {{nextPosts}}
+            </div>
+        </section>
 
         {{component:footer}}
     </div>
