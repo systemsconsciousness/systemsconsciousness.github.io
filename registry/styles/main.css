@@ -5,86 +5,97 @@
 }
 
 :root {
-    color-scheme: dark;
+    color-scheme: light;
     --font-pixel: 'Press Start 2P', monospace;
     --font-retro-read: 'VT323', 'DotGothic16', monospace;
     --font-mono: 'Space Mono', monospace, sans-serif;
 
-    /* 16-Bit Dark Mode (Midnight Arcade / SNES Dungeon / Cyber-Zen) */
-    --bg: #0b0d14;
-    --bg-pattern: radial-gradient(circle at 50% 50%, #151b2b 0%, #0b0d14 100%);
-    --surface: #121826;
-    --surface-box: #0f1628;
-    --surface-hover: #18233c;
-    --text: #e6edf3;
-    --text-bright: #ffffff;
-    --muted: #8b9bb4;
-    --subtle: #57657a;
-    
-    /* 16-Bit Pixel Borders & Shadows */
-    --border-pixel: #3b4d6b;
-    --border-pixel-outer: #05070a;
-    --border-pixel-highlight: #607b9e;
-    --border-accent: #00f0ff;
+    /* Alex Kidd in Miracle World - Sega Master System Saturated Palette */
+    /* Miracle World Day (Mt. Eternal / Lake Fathom / Radaxian Plains) */
+    --sms-sky-blue: #0088fc;
+    --sms-sky-light: #54b4fc;
+    --sms-grass-green: #00a800;
+    --sms-grass-dark: #007000;
+    --sms-dirt-orange: #fc7400;
+    --sms-dirt-dark: #a84800;
+    --sms-block-yellow: #fcd800;
+    --sms-block-yellow-shadow: #b89800;
+    --sms-block-yellow-light: #fcfc54;
+    --sms-kidd-red: #fc0000;
+    --sms-kidd-red-shadow: #a80000;
+    --sms-castle-purple: #7400a8;
+    --sms-castle-dark: #380054;
+    --sms-white: #fcfcfc;
+    --sms-black: #000000;
 
-    /* 16-Bit Neon & Cartridge Accents */
-    --accent-cyan: #00f0ff;
-    --accent-green: #39ff14;
-    --accent-gold: #ffb700;
-    --accent-magenta: #ff2a85;
-    --accent-purple: #9d4edd;
-    --accent-zen: #2ee6a8;
+    /* Theme Variables - Default: Miracle World Daylight */
+    --bg: #0088fc;
+    --bg-pattern: linear-gradient(180deg, #0088fc 0%, #54b4fc 60%, #00a800 60%, #00a800 64%, #fc7400 64%, #fc7400 100%);
+    --surface: #fcfcfc;
+    --surface-box: #fcfcfc;
+    --surface-hover: #fff3a8;
+    --text: #000000;
+    --text-bright: #000000;
+    --muted: #383838;
+    --subtle: #606060;
 
-    --btn-bg: #1c263c;
-    --btn-border: #4f658a;
-    --btn-text: #00f0ff;
-    --btn-hover-bg: #00f0ff;
-    --btn-hover-text: #0b0d14;
+    --border-pixel: #000000;
+    --border-pixel-outer: #000000;
+    --border-pixel-highlight: #fcfcfc;
+    --border-accent: #fc0000;
 
-    --hud-bg: rgba(11, 15, 25, 0.92);
-    --hud-border: #00f0ff;
-    --hud-text: #39ff14;
+    --hud-bg: #000000;
+    --hud-border: #fcd800;
+    --hud-text: #fcfcfc;
+    --hud-val: #fcd800;
 
-    --scanline-opacity: 0.15;
-    --pixel-step: 4px;
+    --btn-bg: #fcd800;
+    --btn-border: #000000;
+    --btn-text: #000000;
+    --btn-hover-bg: #fc0000;
+    --btn-hover-text: #fcfcfc;
+
+    --card-bg: #fcfcfc;
+    --card-header-bg: #fcd800;
+    --card-header-text: #000000;
+
+    --scanline-opacity: 0.08;
 }
 
-/* 16-Bit Light Mode (Famicom Cream / Game Boy Golden Era) */
-:root[data-theme="light"] {
-    color-scheme: light;
-    --bg: #ece5d8;
-    --bg-pattern: radial-gradient(circle at 50% 50%, #f7f3ea 0%, #ece5d8 100%);
-    --surface: #ded5c2;
-    --surface-box: #e5dcce;
-    --surface-hover: #d3c9b3;
-    --text: #1d2021;
-    --text-bright: #0c0d0e;
-    --muted: #5c6063;
-    --subtle: #878c91;
+/* Radaxian Castle / Cave / Night Mode */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #180028;
+    --bg-pattern: linear-gradient(180deg, #180028 0%, #380054 60%, #005474 60%, #003854 100%);
+    --surface: #241434;
+    --surface-box: #241434;
+    --surface-hover: #38204c;
+    --text: #fcfcfc;
+    --text-bright: #fcfc54;
+    --muted: #a898b8;
+    --subtle: #746484;
 
-    --border-pixel: #8f7e68;
-    --border-pixel-outer: #383028;
-    --border-pixel-highlight: #c7b9a5;
-    --border-accent: #b84a00;
+    --border-pixel: #000000;
+    --border-pixel-outer: #000000;
+    --border-pixel-highlight: #7400a8;
+    --border-accent: #fcd800;
 
-    --accent-cyan: #007799;
-    --accent-green: #1a7f37;
-    --accent-gold: #b36200;
-    --accent-magenta: #a8134a;
-    --accent-purple: #5c2d91;
-    --accent-zen: #00875a;
+    --hud-bg: #000000;
+    --hud-border: #7400a8;
+    --hud-text: #fcfcfc;
+    --hud-val: #00f0ff;
 
-    --btn-bg: #dbd0be;
-    --btn-border: #8f7e68;
-    --btn-text: #1d2021;
-    --btn-hover-bg: #383028;
-    --btn-hover-text: #f7f3ea;
+    --btn-bg: #7400a8;
+    --btn-border: #000000;
+    --btn-text: #fcfcfc;
+    --btn-hover-bg: #fcd800;
+    --btn-hover-text: #000000;
 
-    --hud-bg: rgba(236, 229, 216, 0.94);
-    --hud-border: #8f7e68;
-    --hud-text: #1a7f37;
+    --card-bg: #201030;
+    --card-header-bg: #501878;
+    --card-header-text: #fcd800;
 
-    --scanline-opacity: 0.06;
+    --scanline-opacity: 0.14;
 }
 
 * {
@@ -100,9 +111,9 @@ body::before {
     display: block;
     position: fixed;
     top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
     z-index: 999;
-    background-size: 100% 3px, 6px 100%;
+    background-size: 100% 4px, 8px 100%;
     pointer-events: none;
     opacity: var(--scanline-opacity);
     transition: opacity 0.3s ease;
@@ -115,88 +126,58 @@ body.scanlines-disabled::before {
 body {
     font-family: var(--font-retro-read), var(--font-mono), monospace;
     font-size: 1.35rem;
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--text);
     background: var(--bg);
     background-image: var(--bg-pattern);
     background-attachment: fixed;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
+    padding-bottom: 3rem;
 }
 
-/* Custom 16-Bit Pixel Scrollbar */
+/* Custom Alex Kidd Pixel Scrollbar */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 14px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--bg);
-    border-left: 2px solid var(--border-pixel);
+    background: var(--sms-block-yellow);
+    border-left: 3px solid #000;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--border-pixel-highlight);
-    border: 2px solid var(--border-pixel-outer);
-    box-shadow: inset -2px -2px 0px var(--border-pixel), inset 2px 2px 0px #fff;
+    background: var(--sms-kidd-red);
+    border: 3px solid #000;
+    box-shadow: inset -2px -2px 0px var(--sms-kidd-red-shadow), inset 2px 2px 0px var(--sms-white);
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-cyan);
+    background: var(--sms-block-yellow-light);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     position: relative;
     z-index: 2;
 }
 
-/* 16-Bit Pixel Window Framework */
-.pixel-box {
-    background: var(--surface-box);
-    border: 4px solid var(--border-pixel-outer);
-    box-shadow: 
-        inset 4px 4px 0px var(--border-pixel-highlight),
-        inset -4px -4px 0px var(--border-pixel),
-        0 6px 0px var(--border-pixel-outer);
-    padding: 1.5rem;
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.pixel-box-header {
-    background: var(--btn-bg);
-    border-bottom: 3px solid var(--border-pixel);
-    margin: -1.5rem -1.5rem 1.25rem -1.5rem;
-    padding: 0.6rem 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: var(--font-pixel);
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-    color: var(--accent-gold);
-    text-transform: uppercase;
-}
-
-.pixel-box-accent {
-    border-color: var(--border-pixel-outer);
-    box-shadow: 
-        inset 4px 4px 0px var(--accent-cyan),
-        inset -4px -4px 0px #005f73,
-        0 6px 0px var(--border-pixel-outer);
-}
-
-/* TOP STATUS HUD BAR */
+/* =========================================================
+   ALEX KIDD SEGA MASTER SYSTEM TOP HUD BAR
+   ========================================================= */
 .retro-hud-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--hud-bg);
-    border: 3px solid var(--border-pixel-outer);
-    box-shadow: inset 2px 2px 0px var(--border-pixel-highlight), inset -2px -2px 0px var(--border-pixel), 0 4px 0px var(--border-pixel-outer);
-    padding: 0.5rem 1rem;
-    margin-top: 1.5rem;
+    border: 4px solid var(--border-pixel-outer);
+    box-shadow: 
+        inset 3px 3px 0px var(--hud-border),
+        inset -3px -3px 0px #404040,
+        0 6px 0px rgba(0, 0, 0, 0.4);
+    padding: 0.6rem 1.25rem;
+    margin-top: 1.25rem;
     font-family: var(--font-pixel);
     font-size: 0.65rem;
     color: var(--hud-text);
@@ -219,39 +200,122 @@ body {
 }
 
 .hud-stat-label {
-    color: var(--accent-gold);
+    color: var(--hud-val);
 }
 
 .hud-stat-val {
-    color: var(--text-bright);
+    color: #ffffff;
+}
+
+.hud-alex-icon {
+    font-size: 0.9rem;
 }
 
 .hud-pulse {
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: var(--accent-green);
-    box-shadow: 0 0 6px var(--accent-green);
-    animation: pixel-blink 1s steps(2, start) infinite;
+    width: 10px;
+    height: 10px;
+    background: var(--sms-block-yellow);
+    box-shadow: 0 0 6px var(--sms-block-yellow);
+    animation: alex-coin-spin 1s steps(2, start) infinite;
 }
 
-@keyframes pixel-blink {
+@keyframes alex-coin-spin {
     to { visibility: hidden; }
 }
 
-/* HEADER & NAVIGATION */
+/* =========================================================
+   SEGA / ALEX KIDD QUESTION BLOCK & STONE BOX SYSTEM
+   ========================================================= */
+.pixel-box,
+.hero-dialog {
+    background: var(--surface-box);
+    border: 4px solid #000000;
+    box-shadow: 
+        inset 4px 4px 0px #ffffff,
+        inset -4px -4px 0px #a0a0a0,
+        0 8px 0px rgba(0, 0, 0, 0.45);
+    padding: 2rem 1.75rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+/* Alex Kidd Yellow Question Block Frame */
+.question-block-frame {
+    background: var(--sms-block-yellow);
+    border: 4px solid #000000;
+    box-shadow: 
+        inset 4px 4px 0px var(--sms-block-yellow-light),
+        inset -4px -4px 0px var(--sms-block-yellow-shadow),
+        0 8px 0px rgba(0, 0, 0, 0.45);
+    padding: 2rem 1.75rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    color: #000000;
+}
+
+.hero-dialog {
+    background: var(--sms-block-yellow);
+    color: #000000;
+}
+
+.hero-speaker-badge {
+    position: absolute;
+    top: -16px;
+    left: 20px;
+    background: var(--sms-kidd-red);
+    color: #ffffff;
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    border: 3px solid #000000;
+    box-shadow: 
+        inset 2px 2px 0px #ff7070,
+        inset -2px -2px 0px var(--sms-kidd-red-shadow),
+        2px 2px 0px #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.pixel-box-header {
+    background: var(--card-header-bg);
+    color: var(--card-header-text);
+    border: 3px solid #000000;
+    margin: -2rem -1.75rem 1.5rem -1.75rem;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: inset 2px 2px 0px #ffffff, inset -2px -2px 0px rgba(0,0,0,0.3);
+}
+
+/* =========================================================
+   HEADER & NAVIGATION
+   ========================================================= */
 header {
-    padding: 2rem 0 3rem 0;
+    padding: 1.5rem 0 2rem 0;
 }
 
 .header-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 3px dashed var(--border-pixel);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--sms-block-yellow);
+    border: 4px solid #000000;
+    box-shadow: 
+        inset 3px 3px 0px var(--sms-block-yellow-light),
+        inset -3px -3px 0px var(--sms-block-yellow-shadow),
+        0 6px 0px rgba(0, 0, 0, 0.4);
     position: relative;
     flex-wrap: wrap;
 }
@@ -261,11 +325,11 @@ header {
     align-items: center;
     gap: 0.75rem;
     font-family: var(--font-pixel);
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--accent-cyan);
-    text-shadow: 2px 2px 0px var(--border-pixel-outer);
+    color: #000000;
+    text-shadow: 2px 2px 0px var(--sms-block-yellow-light);
 }
 
 .logo a {
@@ -273,19 +337,23 @@ header {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
 }
 
 .logo-symbol {
     display: inline-block;
-    width: 28px;
-    height: 28px;
-    background: var(--accent-cyan);
-    color: var(--bg);
-    line-height: 28px;
+    width: 32px;
+    height: 32px;
+    background: var(--sms-kidd-red);
+    color: #ffffff;
+    line-height: 30px;
     text-align: center;
-    font-size: 0.9rem;
-    box-shadow: 2px 2px 0px var(--border-pixel-outer), inset 2px 2px 0px #fff;
+    font-size: 1.1rem;
+    border: 3px solid #000000;
+    box-shadow: 
+        inset 2px 2px 0px #ff7070,
+        inset -2px -2px 0px var(--sms-kidd-red-shadow),
+        2px 2px 0px #000000;
 }
 
 .header-nav-wrapper {
@@ -296,7 +364,7 @@ header {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 0.6rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -304,227 +372,233 @@ header {
 
 .nav-links a {
     font-family: var(--font-pixel);
-    font-size: 0.7rem;
-    color: var(--text);
+    font-size: 0.65rem;
+    color: #000000;
+    background: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 
+        inset 2px 2px 0px #ffffff,
+        inset -2px -2px 0px #a0a0a0,
+        2px 2px 0px #000000;
     text-decoration: none;
-    padding: 0.5rem 0.75rem;
-    border: 2px solid transparent;
-    transition: all 0.15s ease;
+    padding: 0.5rem 0.7rem;
+    transition: all 0.1s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
     text-transform: uppercase;
 }
 
-.nav-links a::before {
-    content: " ";
-    display: inline-block;
-    width: 8px;
-}
-
 .nav-links a:hover,
 .nav-links a.active,
 .nav-links a:focus-visible {
-    color: var(--accent-cyan);
-    background: var(--surface);
-    border-color: var(--border-pixel);
-    box-shadow: 2px 2px 0px var(--border-pixel-outer);
+    background: var(--sms-kidd-red);
+    color: #ffffff;
+    transform: translate(-1px, -1px);
+    box-shadow: 
+        inset 2px 2px 0px #ff7070,
+        inset -2px -2px 0px var(--sms-kidd-red-shadow),
+        3px 3px 0px #000000;
 }
 
 .nav-links a:hover::before,
 .nav-links a.active::before {
-    content: "▶";
-    color: var(--accent-gold);
-    animation: cursor-bob 0.6s infinite steps(2);
-}
-
-@keyframes cursor-bob {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(2px); }
+    content: "★";
+    color: var(--sms-block-yellow);
 }
 
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
-/* 16-Bit RETRO BUTTONS */
+/* =========================================================
+   ALEX KIDD RETRO BUTTONS (PUNCH / ITEM BOX BUTTONS)
+   ========================================================= */
 .pixel-btn {
     appearance: none;
     font-family: var(--font-pixel);
     font-size: 0.65rem;
-    padding: 0.6rem 0.9rem;
+    padding: 0.6rem 0.85rem;
     background: var(--btn-bg);
     color: var(--btn-text);
-    border: 3px solid var(--border-pixel-outer);
+    border: 3px solid #000000;
     box-shadow: 
-        inset 2px 2px 0px var(--border-pixel-highlight),
-        inset -2px -2px 0px var(--border-pixel),
-        0 3px 0px var(--border-pixel-outer);
+        inset 2px 2px 0px rgba(255,255,255,0.7),
+        inset -2px -2px 0px rgba(0,0,0,0.4),
+        0 4px 0px #000000;
     cursor: pointer;
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
     text-decoration: none;
     line-height: 1;
-    transition: all 0.1s ease;
+    transition: all 0.08s ease;
     user-select: none;
 }
 
 .pixel-btn:hover {
     background: var(--btn-hover-bg);
     color: var(--btn-hover-text);
+    transform: translateY(-2px);
+    box-shadow: 
+        inset 2px 2px 0px rgba(255,255,255,0.7),
+        inset -2px -2px 0px rgba(0,0,0,0.4),
+        0 6px 0px #000000;
 }
 
 .pixel-btn:active {
-    transform: translate(0px, 3px);
+    transform: translate(0px, 4px);
     box-shadow: 
-        inset 2px 2px 0px var(--border-pixel),
-        inset -2px -2px 0px var(--border-pixel-highlight),
-        0 0px 0px var(--border-pixel-outer);
+        inset 2px 2px 0px rgba(0,0,0,0.4),
+        inset -2px -2px 0px rgba(255,255,255,0.7),
+        0 0px 0px #000000;
 }
 
 .pixel-btn-accent {
-    background: var(--accent-gold);
-    color: #0b0d14;
-    border-color: #000;
+    background: var(--sms-kidd-red);
+    color: #ffffff;
     box-shadow: 
-        inset 2px 2px 0px #ffe57f,
-        inset -2px -2px 0px #b87b00,
-        0 3px 0px #000;
+        inset 2px 2px 0px #ff7070,
+        inset -2px -2px 0px var(--sms-kidd-red-shadow),
+        0 4px 0px #000000;
 }
 
 .pixel-btn-accent:hover {
-    background: #ffcc00;
-    color: #000;
+    background: #ff3030;
+    color: #ffffff;
 }
 
 .nav-toggle {
     display: none;
 }
 
-/* HERO DIALOG BOX */
-.hero-dialog {
-    background: var(--surface-box);
-    border: 4px solid var(--border-pixel-outer);
-    box-shadow: 
-        inset 4px 4px 0px var(--border-pixel-highlight),
-        inset -4px -4px 0px var(--border-pixel),
-        0 8px 0px var(--border-pixel-outer);
-    padding: 2.5rem 2rem;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-.hero-speaker-badge {
-    position: absolute;
-    top: -14px;
-    left: 24px;
-    background: var(--accent-gold);
-    color: #0b0d14;
-    font-family: var(--font-pixel);
-    font-size: 0.7rem;
-    padding: 4px 12px;
-    border: 2px solid var(--border-pixel-outer);
-    box-shadow: 2px 2px 0px var(--border-pixel-outer);
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
 h1 {
     font-family: var(--font-pixel);
-    font-size: 1.85rem;
+    font-size: 1.6rem;
     line-height: 1.45;
-    color: var(--text-bright);
-    margin-bottom: 1.5rem;
+    color: inherit;
+    margin-bottom: 1.25rem;
     letter-spacing: -0.02em;
-    text-shadow: 3px 3px 0px var(--border-pixel-outer);
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.4);
+}
+
+:root[data-theme="dark"] h1 {
+    text-shadow: 2px 2px 0px #000000;
 }
 
 h2 {
     font-family: var(--font-pixel);
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.4;
-    color: var(--accent-cyan);
-    margin-bottom: 1.25rem;
+    color: var(--sms-kidd-red);
+    margin-bottom: 1rem;
+}
+
+:root[data-theme="dark"] h2 {
+    color: var(--sms-block-yellow);
 }
 
 h3 {
     font-family: var(--font-pixel);
-    font-size: 0.95rem;
-    color: var(--accent-gold);
+    font-size: 0.9rem;
+    color: #000000;
     margin-bottom: 0.75rem;
+}
+
+:root[data-theme="dark"] h3 {
+    color: #ffffff;
 }
 
 .intro {
     font-family: var(--font-retro-read), var(--font-mono), monospace;
     font-size: 1.6rem;
-    line-height: 1.5;
-    color: var(--text);
-    margin-bottom: 1.5rem;
+    line-height: 1.45;
+    color: inherit;
+    margin-bottom: 1.25rem;
 }
 
 .dialog-cursor {
     display: inline-block;
-    width: 12px;
+    width: 14px;
     height: 18px;
-    background: var(--accent-cyan);
+    background: var(--sms-kidd-red);
     vertical-align: middle;
     margin-left: 6px;
-    animation: pixel-blink 0.8s steps(2, start) infinite;
+    animation: alex-coin-spin 0.8s steps(2, start) infinite;
 }
 
-/* STREAM FILTER BAR */
+/* =========================================================
+   STREAM FILTER BAR (ITEM INVENTORY / JANKEN SELECTOR)
+   ========================================================= */
 .stream-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
     margin-bottom: 2rem;
-    padding: 1rem 1.25rem;
-    background: var(--surface);
-    border: 3px solid var(--border-pixel-outer);
-    box-shadow: inset 2px 2px 0px var(--border-pixel-highlight), inset -2px -2px 0px var(--border-pixel), 0 4px 0px var(--border-pixel-outer);
+    padding: 0.85rem 1rem;
+    background: var(--sms-block-yellow);
+    border: 4px solid #000000;
+    box-shadow: 
+        inset 3px 3px 0px var(--sms-block-yellow-light),
+        inset -3px -3px 0px var(--sms-block-yellow-shadow),
+        0 6px 0px rgba(0, 0, 0, 0.4);
 }
 
 .filter-pills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
     align-items: center;
 }
 
 .filter-pill {
     font-family: var(--font-pixel);
     font-size: 0.6rem;
-    padding: 0.4rem 0.75rem;
-    background: var(--surface-box);
-    color: var(--muted);
-    border: 2px solid var(--border-pixel);
+    padding: 0.45rem 0.65rem;
+    background: #ffffff;
+    color: #000000;
+    border: 3px solid #000000;
+    box-shadow: 
+        inset 1px 1px 0px #ffffff,
+        inset -1px -1px 0px #a0a0a0,
+        2px 2px 0px #000000;
     cursor: pointer;
     text-transform: uppercase;
-    transition: all 0.15s ease;
+    transition: all 0.1s ease;
     user-select: none;
 }
 
 .filter-pill:hover,
 .filter-pill.active {
-    background: var(--accent-cyan);
-    color: #0b0d14;
-    border-color: var(--border-pixel-outer);
-    box-shadow: 2px 2px 0px var(--border-pixel-outer);
+    background: var(--sms-kidd-red);
+    color: #ffffff;
+    box-shadow: 
+        inset 2px 2px 0px #ff7070,
+        inset -2px -2px 0px var(--sms-kidd-red-shadow),
+        2px 2px 0px #000000;
+    transform: translateY(-1px);
 }
 
 .stream-count-hud {
     font-family: var(--font-pixel);
     font-size: 0.65rem;
-    color: var(--accent-gold);
+    color: #000000;
+    background: #ffffff;
+    padding: 4px 8px;
+    border: 2px solid #000000;
 }
 
-/* STREAM CARDS & POSTS GRID */
+/* =========================================================
+   STREAM CARDS (RADAXIAN QUEST CARDS & JANKEN BLOCKS)
+   ========================================================= */
 .products-grid,
 .stream-posts-grid {
     display: grid;
@@ -535,61 +609,73 @@ h3 {
 
 .product,
 .stream-card {
-    background: var(--surface-box);
-    border: 4px solid var(--border-pixel-outer);
+    background: var(--card-bg);
+    color: var(--text);
+    border: 4px solid #000000;
     box-shadow: 
-        inset 3px 3px 0px var(--border-pixel-highlight),
-        inset -3px -3px 0px var(--border-pixel),
-        0 6px 0px var(--border-pixel-outer);
+        inset 3px 3px 0px #ffffff,
+        inset -3px -3px 0px #a0a0a0,
+        0 8px 0px rgba(0, 0, 0, 0.45);
     padding: 1.75rem;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+:root[data-theme="dark"] .product,
+:root[data-theme="dark"] .stream-card {
+    box-shadow: 
+        inset 3px 3px 0px #501878,
+        inset -3px -3px 0px #100820,
+        0 8px 0px rgba(0, 0, 0, 0.6);
 }
 
 .product:hover,
 .stream-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     box-shadow: 
-        inset 3px 3px 0px var(--accent-cyan),
-        inset -3px -3px 0px #005f73,
-        0 9px 0px var(--border-pixel-outer);
+        inset 3px 3px 0px var(--sms-block-yellow),
+        inset -3px -3px 0px #b89800,
+        0 12px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card-category-badge {
     position: absolute;
-    top: -12px;
-    right: 18px;
+    top: -14px;
+    right: 16px;
     font-family: var(--font-pixel);
     font-size: 0.55rem;
-    padding: 3px 8px;
-    background: var(--accent-magenta);
-    color: #fff;
-    border: 2px solid var(--border-pixel-outer);
-    box-shadow: 2px 2px 0px var(--border-pixel-outer);
+    padding: 4px 8px;
+    background: var(--sms-kidd-red);
+    color: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 
+        inset 1px 1px 0px #ff7070,
+        inset -1px -1px 0px var(--sms-kidd-red-shadow),
+        2px 2px 0px #000000;
     text-transform: uppercase;
 }
 
 .card-category-zen {
-    background: var(--accent-zen);
-    color: #0b0d14;
+    background: var(--sms-grass-green);
+    color: #ffffff;
 }
 
 .card-category-systems {
-    background: var(--accent-cyan);
-    color: #0b0d14;
+    background: var(--sms-sky-blue);
+    color: #ffffff;
 }
 
 .card-category-quote {
-    background: var(--accent-gold);
-    color: #0b0d14;
+    background: var(--sms-block-yellow);
+    color: #000000;
 }
 
 .card-category-loop {
-    background: var(--accent-purple);
-    color: #fff;
+    background: var(--sms-castle-purple);
+    color: #ffffff;
 }
 
 .product-content {
@@ -608,14 +694,19 @@ h3 {
 
 .product-name a,
 .card-title a {
-    color: var(--text-bright);
+    color: inherit;
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: color 0.1s ease;
 }
 
 .product-name a:hover,
 .card-title a:hover {
-    color: var(--accent-cyan);
+    color: var(--sms-kidd-red);
+}
+
+:root[data-theme="dark"] .product-name a:hover,
+:root[data-theme="dark"] .card-title a:hover {
+    color: var(--sms-block-yellow);
 }
 
 .card-date {
@@ -626,30 +717,44 @@ h3 {
 }
 
 .quote-highlight {
-    background: rgba(0, 240, 255, 0.05);
-    border-left: 4px solid var(--accent-gold);
-    padding: 0.75rem 1rem;
+    background: #fff8d0;
+    border: 3px solid #000000;
+    border-left: 6px solid var(--sms-kidd-red);
+    box-shadow: 
+        inset 2px 2px 0px #ffffff,
+        inset -2px -2px 0px #d8c890,
+        2px 2px 0px #000000;
+    padding: 0.85rem 1rem;
     margin: 0.5rem 0;
-    font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     line-height: 1.4;
-    color: var(--text-bright);
+    color: #000000;
+}
+
+:root[data-theme="dark"] .quote-highlight {
+    background: #301844;
+    color: #ffffff;
+    border-left-color: var(--sms-block-yellow);
 }
 
 .quote-author {
     font-family: var(--font-pixel);
     font-size: 0.65rem;
-    color: var(--accent-gold);
+    color: var(--sms-kidd-red);
     text-align: right;
-    margin-top: 0.35rem;
+    margin-top: 0.4rem;
     font-style: normal;
+}
+
+:root[data-theme="dark"] .quote-author {
+    color: var(--sms-block-yellow);
 }
 
 .product-description,
 .card-excerpt {
     font-size: 1.35rem;
     color: var(--muted);
-    line-height: 1.5;
+    line-height: 1.45;
     flex-grow: 1;
 }
 
@@ -657,26 +762,33 @@ h3 {
 .card-action-link {
     font-family: var(--font-pixel);
     font-size: 0.65rem;
-    color: var(--accent-cyan);
+    color: #000000;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     margin-top: 1rem;
     text-transform: uppercase;
-    padding: 0.4rem 0.6rem;
-    background: var(--surface);
-    border: 2px solid var(--border-pixel);
-    box-shadow: 2px 2px 0px var(--border-pixel-outer);
+    padding: 0.45rem 0.75rem;
+    background: var(--sms-block-yellow);
+    border: 3px solid #000000;
+    box-shadow: 
+        inset 2px 2px 0px var(--sms-block-yellow-light),
+        inset -2px -2px 0px var(--sms-block-yellow-shadow),
+        0 3px 0px #000000;
     align-self: flex-start;
-    transition: all 0.15s ease;
+    transition: all 0.1s ease;
 }
 
 .product-link:hover,
 .card-action-link:hover {
-    background: var(--accent-cyan);
-    color: #0b0d14;
-    border-color: var(--border-pixel-outer);
+    background: var(--sms-kidd-red);
+    color: #ffffff;
+    box-shadow: 
+        inset 2px 2px 0px #ff7070,
+        inset -2px -2px 0px var(--sms-kidd-red-shadow),
+        0 4px 0px #000000;
+    transform: translateY(-1px);
 }
 
 .product-link .material-symbols-outlined,
@@ -684,10 +796,12 @@ h3 {
     font-size: 1rem;
 }
 
-/* RETRO SECTION LABELS */
+/* =========================================================
+   SECTIONS & SEGA MASTER SYSTEM SECTION HEADERS
+   ========================================================= */
 section {
-    padding: 3rem 0;
-    border-bottom: 3px dashed var(--border-pixel);
+    padding: 2.5rem 0;
+    border-bottom: 4px dashed #000000;
 }
 
 section:last-of-type {
@@ -696,80 +810,31 @@ section:last-of-type {
 
 .section-label {
     font-family: var(--font-pixel);
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--accent-gold);
+    color: #000000;
+    background: var(--sms-block-yellow);
+    border: 3px solid #000000;
+    box-shadow: 
+        inset 2px 2px 0px var(--sms-block-yellow-light),
+        inset -2px -2px 0px var(--sms-block-yellow-shadow),
+        0 4px 0px #000000;
+    padding: 0.5rem 1rem;
     margin-bottom: 2rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
 }
 
 .section-label::before {
-    content: "◆";
-    color: var(--accent-cyan);
+    content: "🍙";
+    font-size: 1rem;
 }
 
-.section-label::after {
-    content: "";
-    flex-grow: 1;
-    height: 2px;
-    background: var(--border-pixel);
-}
-
-/* SYSTEMS CONSCIOUSNESS CODEX / ARTICLE DETAIL VIEW */
-.article-header {
-    margin-bottom: 2rem;
-}
-
-.article-body,
-.body {
-    font-size: 1.5rem;
-    line-height: 1.7;
-    color: var(--text);
-}
-
-.article-body p,
-.body p {
-    margin-bottom: 1.5rem;
-}
-
-.article-body blockquote,
-.body blockquote {
-    background: var(--surface);
-    border: 3px solid var(--border-pixel-outer);
-    border-left: 6px solid var(--accent-gold);
-    box-shadow: inset 2px 2px 0px var(--border-pixel-highlight), 0 4px 0px var(--border-pixel-outer);
-    padding: 1.5rem;
-    margin: 2rem 0;
-    font-size: 1.6rem;
-    font-style: italic;
-    color: var(--text-bright);
-}
-
-.article-body h2,
-.body h2,
-.article-body h3,
-.body h3 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.article-body ul,
-.body ul,
-.article-body ol,
-.body ol {
-    margin-left: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.article-body li,
-.body li {
-    margin-bottom: 0.5rem;
-}
-
-/* CAPABILITIES / KEY CONCEPTS MATRIX (3x3 Retro Grid) */
+/* =========================================================
+   CAPABILITIES / 3x3 QUEST MATRIX (Alex Kidd Item Grid)
+   ========================================================= */
 .capabilities {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -777,35 +842,109 @@ section:last-of-type {
 }
 
 .capability {
-    background: var(--surface-box);
-    border: 3px solid var(--border-pixel-outer);
+    background: #ffffff;
+    color: #000000;
+    border: 3px solid #000000;
     box-shadow: 
-        inset 2px 2px 0px var(--border-pixel-highlight),
-        inset -2px -2px 0px var(--border-pixel),
-        0 4px 0px var(--border-pixel-outer);
+        inset 2px 2px 0px #ffffff,
+        inset -2px -2px 0px #a0a0a0,
+        0 4px 0px #000000;
     padding: 1.25rem;
     font-family: var(--font-pixel);
-    font-size: 0.75rem;
-    color: var(--accent-zen);
+    font-size: 0.72rem;
     display: flex;
     align-items: center;
     gap: 0.6rem;
     line-height: 1.4;
-    transition: transform 0.15s ease;
+    transition: transform 0.1s ease;
+}
+
+:root[data-theme="dark"] .capability {
+    background: #241434;
+    color: #ffffff;
+    box-shadow: 
+        inset 2px 2px 0px #501878,
+        inset -2px -2px 0px #100820,
+        0 4px 0px #000000;
 }
 
 .capability::before {
-    content: "▶";
-    color: var(--accent-gold);
-    font-size: 0.7rem;
+    content: "✊";
+    font-size: 0.9rem;
 }
 
 .capability:hover {
-    transform: translate(2px, -2px);
-    color: var(--accent-cyan);
+    transform: translate(-2px, -2px);
+    background: var(--sms-block-yellow);
+    color: #000000;
+    box-shadow: 
+        inset 2px 2px 0px var(--sms-block-yellow-light),
+        inset -2px -2px 0px var(--sms-block-yellow-shadow),
+        3px 3px 0px #000000;
 }
 
-/* RETRO TERMINAL & CONTACT BOX */
+/* =========================================================
+   ARTICLE / CODEX ENTRY VIEW
+   ========================================================= */
+.article-body,
+.body {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: inherit;
+}
+
+.article-body p,
+.body p {
+    margin-bottom: 1.25rem;
+}
+
+.article-body blockquote,
+.body blockquote {
+    background: #fff8d0;
+    color: #000000;
+    border: 3px solid #000000;
+    border-left: 8px solid var(--sms-kidd-red);
+    box-shadow: 
+        inset 2px 2px 0px #ffffff,
+        inset -2px -2px 0px #d8c890,
+        0 4px 0px #000000;
+    padding: 1.5rem;
+    margin: 1.75rem 0;
+    font-size: 1.55rem;
+    font-style: normal;
+}
+
+:root[data-theme="dark"] .article-body blockquote,
+:root[data-theme="dark"] .body blockquote {
+    background: #301844;
+    color: #ffffff;
+    border-left-color: var(--sms-block-yellow);
+}
+
+.article-body h2,
+.body h2,
+.article-body h3,
+.body h3 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.article-body ul,
+.body ul,
+.article-body ol,
+.body ol {
+    margin-left: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.article-body li,
+.body li {
+    margin-bottom: 0.4rem;
+}
+
+/* =========================================================
+   CONTACT TERMINAL
+   ========================================================= */
 .contact-container {
     display: flex;
     align-items: center;
@@ -817,21 +956,30 @@ section:last-of-type {
 .email {
     font-family: var(--font-pixel);
     font-size: 1rem;
-    color: var(--accent-cyan);
+    color: #000000;
+    background: #ffffff;
+    padding: 0.5rem 0.8rem;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 0px #000000;
     text-decoration: none;
-    text-shadow: 2px 2px 0px var(--border-pixel-outer);
+}
+
+:root[data-theme="dark"] .email {
+    background: #241434;
+    color: #ffffff;
 }
 
 .email:hover {
-    color: var(--accent-gold);
+    background: var(--sms-block-yellow);
+    color: #000000;
 }
 
 .copy-feedback {
     font-family: var(--font-pixel);
     font-size: 0.65rem;
-    color: var(--accent-green);
-    background: var(--surface-box);
-    border: 2px solid var(--border-pixel-outer);
+    color: #ffffff;
+    background: var(--sms-grass-green);
+    border: 2px solid #000000;
     padding: 4px 8px;
     opacity: 0;
     transition: opacity 0.2s ease;
@@ -841,27 +989,36 @@ section:last-of-type {
     opacity: 1;
 }
 
-/* FOOTER */
+/* =========================================================
+   FOOTER (STAGE CLEAR & CART RESTART)
+   ========================================================= */
 footer {
-    padding: 4rem 0 3rem;
+    padding: 2.5rem 1.5rem;
     font-family: var(--font-pixel);
     font-size: 0.65rem;
-    color: var(--subtle);
+    color: #000000;
+    background: var(--sms-block-yellow);
+    border: 4px solid #000000;
+    box-shadow: 
+        inset 3px 3px 0px var(--sms-block-yellow-light),
+        inset -3px -3px 0px var(--sms-block-yellow-shadow),
+        0 6px 0px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    border-top: 3px dashed var(--border-pixel);
+    gap: 1.25rem;
     margin-top: 3rem;
 }
 
 .footer-coin {
-    color: var(--accent-gold);
-    animation: pixel-blink 1.2s steps(2, start) infinite;
+    color: var(--sms-kidd-red);
+    animation: alex-coin-spin 1s steps(2, start) infinite;
 }
 
-/* RESPONSIVE DESIGN */
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
 @media (max-width: 900px) {
     .products-grid,
     .stream-posts-grid {
@@ -873,13 +1030,13 @@ footer {
     }
 
     h1 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 1.25rem;
+        padding: 0 1rem;
     }
 
     .retro-hud-bar {
@@ -903,9 +1060,9 @@ footer {
         left: 0;
         right: 0;
         width: 100%;
-        background: var(--surface-box);
-        border: 4px solid var(--border-pixel-outer);
-        box-shadow: 0 8px 0px var(--border-pixel-outer);
+        background: var(--sms-block-yellow);
+        border: 4px solid #000000;
+        box-shadow: 0 8px 0px rgba(0, 0, 0, 0.4);
         padding: 1rem;
         flex-direction: column;
         align-items: stretch;
@@ -922,7 +1079,7 @@ footer {
     }
 
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .intro {

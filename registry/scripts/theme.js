@@ -1,45 +1,18 @@
 (function () {
     try {
-        const storedTheme = localStorage.getItem('systems-site-theme') || localStorage.getItem('zazen-site-theme');
+        const storedTheme = localStorage.getItem('alex-site-theme') || localStorage.getItem('systems-site-theme');
         if (storedTheme === 'light' || storedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', storedTheme);
         }
-        const storedScanlines = localStorage.getItem('systems-scanlines');
+        const storedScanlines = localStorage.getItem('alex-scanlines');
         if (storedScanlines === 'off') {
             document.body.classList.add('scanlines-disabled');
         }
     } catch (error) { }
 }());
 
-const THEME_STORAGE_KEY = 'systems-site-theme';
-const SCANLINE_STORAGE_KEY = 'systems-scanlines';
-
-// Retro 8-Bit Audio Bleep (Web Audio API)
-let audioCtx = null;
-function playPixelBlip(freq = 440, type = 'square', duration = 0.04) {
-    try {
-        if (!audioCtx) {
-            const AudioContext = window.AudioContext || window.webkitAudioContext;
-            if (AudioContext) audioCtx = new AudioContext();
-        }
-        if (audioCtx && audioCtx.state === 'suspended') {
-            audioCtx.resume();
-        }
-        if (!audioCtx) return;
-
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = type;
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
-
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + duration);
-    } catch (e) { }
-}
+const THEME_STORAGE_KEY = 'alex-site-theme';
+const SCANLINE_STORAGE_KEY = 'alex-scanlines';
 
 function applyThemePreference(theme) {
     if (theme === 'light' || theme === 'dark') {
@@ -54,7 +27,7 @@ function getActiveTheme() {
     if (override === 'light' || override === 'dark') {
         return override;
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light'; // Default to Miracle World sunny day!
 }
 
 function syncThemeToggle() {
@@ -63,7 +36,7 @@ function syncThemeToggle() {
 
     const isDark = getActiveTheme() === 'dark';
     const icon = isDark ? 'light_mode' : 'dark_mode';
-    const label = isDark ? 'Switch to Famicom Cream mode' : 'Switch to Midnight Arcade mode';
+    const label = isDark ? 'Switch to Miracle World (Day)' : 'Switch to Radaxian Castle (Night)';
 
     const iconSpan = themeToggle.querySelector('.material-symbols-outlined');
     if (iconSpan) iconSpan.textContent = icon;
@@ -76,7 +49,6 @@ function initializeThemeToggle() {
     if (!themeToggle) return;
 
     themeToggle.addEventListener('click', () => {
-        playPixelBlip(620, 'square', 0.05);
         const nextTheme = getActiveTheme() === 'dark' ? 'light' : 'dark';
         applyThemePreference(nextTheme);
         try {
@@ -84,19 +56,6 @@ function initializeThemeToggle() {
         } catch (error) { }
         syncThemeToggle();
     });
-
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleSystemThemeChange = () => {
-        if (!document.documentElement.hasAttribute('data-theme')) {
-            syncThemeToggle();
-        }
-    };
-
-    if (typeof mediaQuery.addEventListener === 'function') {
-        mediaQuery.addEventListener('change', handleSystemThemeChange);
-    } else if (typeof mediaQuery.addListener === 'function') {
-        mediaQuery.addListener(handleSystemThemeChange);
-    }
 
     syncThemeToggle();
 }
@@ -112,7 +71,6 @@ function initializeScanlineToggle() {
     };
 
     scanlineToggle.addEventListener('click', () => {
-        playPixelBlip(520, 'triangle', 0.06);
         document.body.classList.toggle('scanlines-disabled');
         const isDisabled = document.body.classList.contains('scanlines-disabled');
         try {
@@ -124,7 +82,7 @@ function initializeScanlineToggle() {
     updateLabel();
 }
 
-// Stream Category Filter Engine (Supports hundreds of posts dynamically)
+// Stream Category & Janken Filter Engine
 function initializeStreamFilter() {
     const filterPills = document.querySelectorAll('.filter-pill');
     const posts = document.querySelectorAll('.product, .stream-card');
@@ -134,13 +92,12 @@ function initializeStreamFilter() {
 
     function updateCount(visibleCount, totalCount) {
         if (countHud) {
-            countHud.textContent = `[SHOWING ${visibleCount}/${totalCount}]`;
+            countHud.textContent = `[BAUM: $${visibleCount * 400} // ${visibleCount}/${totalCount} ITEMS]`;
         }
     }
 
     filterPills.forEach(pill => {
         pill.addEventListener('click', () => {
-            playPixelBlip(750, 'square', 0.04);
             filterPills.forEach(p => p.classList.remove('active'));
             pill.classList.add('active');
 
@@ -175,7 +132,6 @@ function initializeStreamFilter() {
 }
 
 function copyEmail(btn) {
-    playPixelBlip(880, 'sine', 0.08);
     let email = '';
     if (btn) {
         const container = btn.closest('.contact-container') || btn.parentElement;
@@ -237,7 +193,7 @@ function showCopyFeedback(btn) {
         feedback = document.getElementById('copyFeedback') || document.querySelector('.copy-feedback');
     }
     if (!feedback) return;
-    feedback.textContent = "ITEM STORED! [COPIED]";
+    feedback.textContent = "★ ONIGIRI OBTAINED! [COPIED] ★";
     feedback.classList.add('show');
     setTimeout(() => {
         feedback.classList.remove('show');
@@ -262,7 +218,6 @@ function initializeMobileNav() {
     }
 
     navToggle.addEventListener('click', (e) => {
-        playPixelBlip(480, 'square', 0.04);
         e.stopPropagation();
         const isOpen = navLinks.classList.contains('open');
         setNavOpen(!isOpen);
