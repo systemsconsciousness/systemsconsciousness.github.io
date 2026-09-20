@@ -21,26 +21,26 @@
         </header>
 
         <div class="hero-dialog">
-            <div class="hero-speaker-badge">★ {{eyebrow || 'RADAXIAN CODEX'}} // MAP ROOM</div>
+            <div class="hero-speaker-badge">{{eyebrow || 'PHILOSOPHY'}} // TREATISE</div>
             <h1>{{title}}</h1>
             <p class="intro">{{intro}}<span class="dialog-cursor"></span></p>
         </div>
 
         <section>
-            <div class="section-label">Codex Knowledge Base</div>
+            <div class="section-label">Theoretical Codex</div>
             <div class="pixel-box">
                 <div class="body">{{body}}</div>
             </div>
         </section>
 
         <section>
-            <div class="section-label">{{contactLabel || 'Radaxian Communication Shop'}}</div>
+            <div class="section-label">{{contactLabel || 'Accession Relay'}}</div>
             <div class="contact-container">
                 <a href="mailto:{{contactEmail}}" class="email">{{contactEmail}}</a>
-                <button class="pixel-btn" onclick="copyEmail(this)" aria-label="Copy transmission address">
-                    <span class="material-symbols-outlined" style="font-size: 14px;">content_copy</span> COPY COORD
+                <button class="pixel-btn" onclick="copyEmail(this)" aria-label="Copy transmission coordinate">
+                    COPY ACCESSION COORD
                 </button>
-                <span class="copy-feedback" id="copyFeedback">STORED!</span>
+                <span class="copy-feedback" id="copyFeedback">[ RECORDED ]</span>
             </div>
         </section>
 

@@ -1,18 +1,13 @@
 (function () {
     try {
-        const storedTheme = localStorage.getItem('alex-site-theme') || localStorage.getItem('systems-site-theme');
+        const storedTheme = localStorage.getItem('barney-site-theme') || localStorage.getItem('systems-site-theme');
         if (storedTheme === 'light' || storedTheme === 'dark') {
             document.documentElement.setAttribute('data-theme', storedTheme);
-        }
-        const storedScanlines = localStorage.getItem('alex-scanlines');
-        if (storedScanlines === 'off') {
-            document.body.classList.add('scanlines-disabled');
         }
     } catch (error) { }
 }());
 
-const THEME_STORAGE_KEY = 'alex-site-theme';
-const SCANLINE_STORAGE_KEY = 'alex-scanlines';
+const THEME_STORAGE_KEY = 'barney-site-theme';
 
 function applyThemePreference(theme) {
     if (theme === 'light' || theme === 'dark') {
@@ -27,7 +22,7 @@ function getActiveTheme() {
     if (override === 'light' || override === 'dark') {
         return override;
     }
-    return 'light'; // Default to Miracle World sunny day!
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 function syncThemeToggle() {
@@ -35,12 +30,10 @@ function syncThemeToggle() {
     if (!themeToggle) return;
 
     const isDark = getActiveTheme() === 'dark';
-    const icon = isDark ? 'light_mode' : 'dark_mode';
-    const label = isDark ? 'Switch to Miracle World (Day)' : 'Switch to Radaxian Castle (Night)';
+    const label = isDark ? 'PEARL' : 'ZINC';
 
-    const iconSpan = themeToggle.querySelector('.material-symbols-outlined');
-    if (iconSpan) iconSpan.textContent = icon;
-    themeToggle.setAttribute('aria-label', label);
+    themeToggle.textContent = label;
+    themeToggle.setAttribute('aria-label', isDark ? 'Switch to Prosthetic Pearl (Light)' : 'Switch to Subterranean Zinc (Dark)');
     themeToggle.setAttribute('aria-pressed', String(isDark));
 }
 
@@ -57,32 +50,23 @@ function initializeThemeToggle() {
         syncThemeToggle();
     });
 
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = () => {
+        if (!document.documentElement.hasAttribute('data-theme')) {
+            syncThemeToggle();
+        }
+    };
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+        mediaQuery.addEventListener('change', handleSystemThemeChange);
+    } else if (typeof mediaQuery.addListener === 'function') {
+        mediaQuery.addListener(handleSystemThemeChange);
+    }
+
     syncThemeToggle();
 }
 
-function initializeScanlineToggle() {
-    const scanlineToggle = document.getElementById('scanlineToggle');
-    if (!scanlineToggle) return;
-
-    const updateLabel = () => {
-        const isDisabled = document.body.classList.contains('scanlines-disabled');
-        scanlineToggle.setAttribute('aria-pressed', String(!isDisabled));
-        scanlineToggle.title = isDisabled ? 'CRT Scanlines: OFF' : 'CRT Scanlines: ON';
-    };
-
-    scanlineToggle.addEventListener('click', () => {
-        document.body.classList.toggle('scanlines-disabled');
-        const isDisabled = document.body.classList.contains('scanlines-disabled');
-        try {
-            localStorage.setItem(SCANLINE_STORAGE_KEY, isDisabled ? 'off' : 'on');
-        } catch (e) { }
-        updateLabel();
-    });
-
-    updateLabel();
-}
-
-// Stream Category & Janken Filter Engine
+// Stream Category & Restraint Classification Engine
 function initializeStreamFilter() {
     const filterPills = document.querySelectorAll('.filter-pill');
     const posts = document.querySelectorAll('.product, .stream-card');
@@ -92,7 +76,7 @@ function initializeStreamFilter() {
 
     function updateCount(visibleCount, totalCount) {
         if (countHud) {
-            countHud.textContent = `[BAUM: $${visibleCount * 400} // ${visibleCount}/${totalCount} ITEMS]`;
+            countHud.textContent = `[ LOT NO. ${visibleCount} / ${totalCount} VESSELS ]`;
         }
     }
 
@@ -193,11 +177,11 @@ function showCopyFeedback(btn) {
         feedback = document.getElementById('copyFeedback') || document.querySelector('.copy-feedback');
     }
     if (!feedback) return;
-    feedback.textContent = "★ ONIGIRI OBTAINED! [COPIED] ★";
+    feedback.textContent = "[ ACCESSION COORD RECORDED ]";
     feedback.classList.add('show');
     setTimeout(() => {
         feedback.classList.remove('show');
-    }, 2000);
+    }, 2500);
 }
 
 function initializeMobileNav() {
@@ -247,7 +231,6 @@ function initializeMobileNav() {
 
 document.addEventListener('DOMContentLoaded', () => {
     initializeThemeToggle();
-    initializeScanlineToggle();
     initializeStreamFilter();
     initializeMobileNav();
 });

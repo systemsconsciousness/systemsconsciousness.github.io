@@ -20,29 +20,29 @@
             {{component:header}}
         </header>
 
-        <div style="margin-bottom: 1.5rem;">
+        <div style="margin-bottom: 2rem;">
             <a href="/journal" class="pixel-btn">
-                ◀ RETURN TO RADAXIAN MAP
+                ← RETURN TO VESSEL STREAM
             </a>
         </div>
 
         <article class="question-block-frame">
             <div class="pixel-box-header">
                 <span>{{eyebrow || 'TRANSMISSION'}} // {{publishedAt}}</span>
-                <span>ENTRY ID: #{{postTitle || title}}</span>
+                <span>CATALOG NO. #{{postTitle || title}}</span>
             </div>
 
             <h1 style="margin-top: 1rem;">{{title}}</h1>
             
             {{excerpt ? '<div class="quote-highlight">' + excerpt + '</div>' : ''}}
 
-            <div class="body" style="margin-top: 2rem;">
+            <div class="body" style="margin-top: 2.5rem;">
                 {{body}}
             </div>
         </article>
 
         <section>
-            <div class="section-label">Nearby Miracle World Logs</div>
+            <div class="section-label">Adjacent Sculptural Vessels</div>
             <div class="products-grid">
                 {{nextPosts}}
             </div>
