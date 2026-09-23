@@ -89,94 +89,8 @@
         }
       ]
     },
-    "feature-grid": {
-      "name": "Feature Grid Schema",
-      "fields": [
-        {
-          "name": "title",
-          "label": "Page Title",
-          "type": "text",
-          "required": true
-        },
-        {
-          "name": "eyebrow",
-          "label": "Section Label",
-          "type": "text"
-        },
-        {
-          "name": "intro",
-          "label": "Intro Text",
-          "type": "textarea"
-        },
-        {
-          "name": "product1Name",
-          "label": "Card 1 Name",
-          "type": "text"
-        },
-        {
-          "name": "product1Description",
-          "label": "Card 1 Description",
-          "type": "textarea"
-        },
-        {
-          "name": "product1Link",
-          "label": "Card 1 Link",
-          "type": "text"
-        },
-        {
-          "name": "product1LinkLabel",
-          "label": "Card 1 Link Label",
-          "type": "text"
-        },
-        {
-          "name": "product2Name",
-          "label": "Card 2 Name",
-          "type": "text"
-        },
-        {
-          "name": "product2Description",
-          "label": "Card 2 Description",
-          "type": "textarea"
-        },
-        {
-          "name": "product2Link",
-          "label": "Card 2 Link",
-          "type": "text"
-        },
-        {
-          "name": "product2LinkLabel",
-          "label": "Card 2 Link Label",
-          "type": "text"
-        },
-        {
-          "name": "product3Name",
-          "label": "Card 3 Name",
-          "type": "text"
-        },
-        {
-          "name": "product3Description",
-          "label": "Card 3 Description",
-          "type": "textarea"
-        },
-        {
-          "name": "product3Link",
-          "label": "Card 3 Link",
-          "type": "text"
-        },
-        {
-          "name": "product3LinkLabel",
-          "label": "Card 3 Link Label",
-          "type": "text"
-        },
-        {
-          "name": "footerText",
-          "label": "Footer Text",
-          "type": "text"
-        }
-      ]
-    },
     "landing": {
-      "name": "Landing Page Schema",
+      "name": "Landing Stream Schema",
       "fields": [
         {
           "name": "brandName",
@@ -193,96 +107,6 @@
           "name": "heroText",
           "label": "Intro Text",
           "type": "textarea"
-        },
-        {
-          "name": "practice1",
-          "label": "Matrix 1",
-          "type": "text"
-        },
-        {
-          "name": "practice2",
-          "label": "Matrix 2",
-          "type": "text"
-        },
-        {
-          "name": "practice3",
-          "label": "Matrix 3",
-          "type": "text"
-        },
-        {
-          "name": "practice4",
-          "label": "Matrix 4",
-          "type": "text"
-        },
-        {
-          "name": "practice5",
-          "label": "Matrix 5",
-          "type": "text"
-        },
-        {
-          "name": "practice6",
-          "label": "Matrix 6",
-          "type": "text"
-        },
-        {
-          "name": "practice7",
-          "label": "Matrix 7",
-          "type": "text"
-        },
-        {
-          "name": "practice8",
-          "label": "Matrix 8",
-          "type": "text"
-        },
-        {
-          "name": "practice9",
-          "label": "Matrix 9",
-          "type": "text"
-        },
-        {
-          "name": "product1Name",
-          "label": "Featured 1 Name",
-          "type": "text"
-        },
-        {
-          "name": "product1Description",
-          "label": "Featured 1 Description",
-          "type": "textarea"
-        },
-        {
-          "name": "product1Link",
-          "label": "Featured 1 Link",
-          "type": "text"
-        },
-        {
-          "name": "product2Name",
-          "label": "Featured 2 Name",
-          "type": "text"
-        },
-        {
-          "name": "product2Description",
-          "label": "Featured 2 Description",
-          "type": "textarea"
-        },
-        {
-          "name": "product2Link",
-          "label": "Featured 2 Link",
-          "type": "text"
-        },
-        {
-          "name": "product3Name",
-          "label": "Featured 3 Name",
-          "type": "text"
-        },
-        {
-          "name": "product3Description",
-          "label": "Featured 3 Description",
-          "type": "textarea"
-        },
-        {
-          "name": "product3Link",
-          "label": "Featured 3 Link",
-          "type": "text"
         },
         {
           "name": "contactEmail",
@@ -326,7 +150,6 @@
   "templates": {
     "default": "registry/templates/default.html",
     "article": "registry/templates/article.html",
-    "feature-grid": "registry/templates/feature-grid.html",
     "landing": "registry/templates/landing.html",
     "stream": "registry/templates/stream.html"
   },
@@ -458,7 +281,7 @@
   },
   "pages": {
     "index": {
-      "title": "Systems Consciousness — Zen Awareness & Cybernetic Wholes",
+      "title": "Systems Consciousness — A Stream of Zen & Systems Dynamics",
       "slug": "index",
       "schema": "landing",
       "template": "landing",
@@ -468,98 +291,20 @@
         "brandName": "SYSTEMS CONSCIOUSNESS",
         "title": "A Stream of Zen Awareness & Systems Dynamics.",
         "heroText": "An ongoing stream exploring the architecture of consciousness, recursive feedback loops, and how living wholes emerge from relational parts.",
-        "practice1": "Feedback Loops",
-        "practice2": "Non-Duality",
-        "practice3": "Emergence",
-        "practice4": "Cybernetics",
-        "practice5": "Beginner's Mind",
-        "practice6": "Requisite Variety",
-        "practice7": "Interbeing",
-        "practice8": "Gall's Law",
-        "practice9": "Dynamic Equilibrium",
-        "product1Name": "Dancing With Systems",
-        "product1Description": "Donella Meadows on navigating unpredictable complexity with humility, agility, and systemic rhythm.",
-        "product1Link": "journal/dancing-with-systems",
-        "product2Name": "Mountains and Waters",
-        "product2Description": "Dōgen Zenji's classic exploration of non-duality and recursive perception in Zen practice.",
-        "product2Link": "journal/mountains-and-waters",
-        "product3Name": "The Pattern Which Connects",
-        "product3Description": "Gregory Bateson on cybernetic ecology and mind as an interactive feedback loop with nature.",
-        "product3Link": "journal/pattern-which-connects",
         "contactEmail": "dialogue@systemsconsciousness.org",
-        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
-      }
-    },
-    "about": {
-      "title": "The Codex — Systems Consciousness",
-      "slug": "about",
-      "schema": "default",
-      "template": "default",
-      "publishedAt": "",
-      "updatedAt": "",
-      "content": {
-        "title": "The Intersection of Ancient Zen & Modern Systems Inquiry",
-        "eyebrow": "Treatise",
-        "intro": "Why unite Zen Buddhism and Systems Dynamics? Because both recognize that isolation is an illusion, boundaries are functional conventions, and the observer is always inside the loop.",
-        "body": "<h2>The Philosophy</h2><p><strong>Systems Thinking</strong> provides the formal language of stocks, flows, balancing loops, reinforcing cascades, delays, and emergence. It allows us to analyze how ecologies, organizations, and networks behave across time.</p><p><strong>Zen Awareness</strong> provides the direct experiential realization of non-duality (advaita / shunya)—loosening attachment to rigid mental models, embracing uncertainty, and acting with effortless responsiveness (wu wei).</p><h2>The Stream</h2><p>This archive is structured as a quiet, enduring stream capable of holding hundreds of quotes, papers, reflections, and links over decades with timeless typographic serenity.</p>",
-        "contactLabel": "Dialogue",
-        "contactEmail": "dialogue@systemsconsciousness.org",
-        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
-      }
-    },
-    "starter-kit": {
-      "title": "Toolkits & Frameworks — Systems Consciousness",
-      "slug": "starter-kit",
-      "schema": "feature-grid",
-      "template": "feature-grid",
-      "publishedAt": "",
-      "updatedAt": "",
-      "content": {
-        "title": "Essential Frameworks for Systems Inquiry",
-        "eyebrow": "Frameworks",
-        "intro": "Contemplative practices, simulation models, and heuristics for seeing whole systems.",
-        "product1Name": "Causal Loop Diagrams",
-        "product1Description": "Mapping balancing and reinforcing circuits to reveal hidden leverage points in complex organizations.",
-        "product1Link": "journal/dancing-with-systems",
-        "product1LinkLabel": "Read reflection",
-        "product2Name": "Ashby's Law of Requisite Variety",
-        "product2Description": "Only variety can absorb variety. A control apparatus must possess equal complexity to the system it regulates.",
-        "product2Link": "journal/cybernetic-equilibrium",
-        "product2LinkLabel": "Read reflection",
-        "product3Name": "Zazen / Open Monitoring",
-        "product3Description": "Quieting the narrative self to perceive the continuous feedback loop between stimulus and reaction.",
-        "product3Link": "journal/mountains-and-waters",
-        "product3LinkLabel": "Read reflection",
         "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
       }
     }
   },
   "navigation": {
     "primary": {
-      "menu_items": [
-        {
-          "label": "Home",
-          "slug": "/"
-        },
-        {
-          "label": "Stream",
-          "slug": "/journal"
-        },
-        {
-          "label": "Codex",
-          "slug": "/about"
-        },
-        {
-          "label": "Toolkits",
-          "slug": "/starter-kit"
-        }
-      ]
+      "menu_items": []
     }
   },
   "settings": {
     "siteTitle": "Systems Consciousness",
     "siteUrl": "/",
-    "siteLatestCommitMessage": "✨ Quiet Luxury & Minimal Editorial Redesign",
+    "siteLatestCommitMessage": "✨ Stream-First Homepage & Streamlined Experience",
     "siteGithubRepoLink": "https://github.com/systemsconsciousness/systemsconsciousness.github.io",
     "branch": "main",
     "universalTags": {
