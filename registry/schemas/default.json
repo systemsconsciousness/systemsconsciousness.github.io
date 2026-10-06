@@ -1,0 +1,42 @@
+{
+  "name": "Standard Page Schema",
+  "fields": [
+    {
+      "name": "title",
+      "label": "Page Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "eyebrow",
+      "label": "Section Label",
+      "type": "text"
+    },
+    {
+      "name": "intro",
+      "label": "Intro Text",
+      "type": "textarea"
+    },
+    {
+      "name": "body",
+      "label": "Body Content",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "contactLabel",
+      "label": "Contact Label",
+      "type": "text"
+    },
+    {
+      "name": "contactEmail",
+      "label": "Contact Email",
+      "type": "text"
+    },
+    {
+      "name": "footerText",
+      "label": "Footer Text",
+      "type": "text"
+    }
+  ]
+}

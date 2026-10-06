@@ -1,0 +1,26 @@
+{
+  "name": "Content Stream Schema",
+  "fields": [
+    {
+      "name": "eyebrow",
+      "label": "Section Label",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "label": "Stream Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "intro",
+      "label": "Intro Text",
+      "type": "textarea"
+    },
+    {
+      "name": "footerText",
+      "label": "Footer Text",
+      "type": "text"
+    }
+  ]
+}

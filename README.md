@@ -1,4 +1,4 @@
-# Zazen
+# Systems Consciousness
 
 This repository is a [Zazen](https://zazen.dev) site designed to be forked, remixed, and adapted into your own version.
 
@@ -11,15 +11,13 @@ This repository is a [Zazen](https://zazen.dev) site designed to be forked, remi
 ## Templates In This Site
 - `default`
 - `article`
-- `feature-grid`
 - `landing`
 - `stream`
 
 ## Schemas In This Site
 - `default`: Standard Page Schema
 - `article`: Article Schema
-- `feature-grid`: Feature Grid Schema
-- `landing`: Landing Page Schema
+- `landing`: Landing Stream Schema
 - `stream`: Content Stream Schema
 
 ## Canonical Site Tags
@@ -29,7 +27,8 @@ This repository is a [Zazen](https://zazen.dev) site designed to be forked, remi
 - `{{siteGithubRepoLink}}`
 
 ## Custom Universal Tags
-- No custom universal tags are configured yet.
+- `{{genre}}`
+- `{{author}}`
 
 ## Forking And Customizing
 1. Fork this repository.
@@ -39,6 +38,6 @@ This repository is a [Zazen](https://zazen.dev) site designed to be forked, remi
 
 ## Repository Metadata
 - GitHub repository: https://github.com/systemsconsciousness/systemsconsciousness.github.io
-- Latest commit message: 🔥 Full Repository Reset & Purge via Zazen
+- Latest commit message: Promote all drafts to production
 
 The goal is simple: if you like this site, fork it, keep the structure you want, and evolve the rest into your own design and publishing system.

@@ -1,0 +1,31 @@
+{
+  "name": "Landing Stream Schema",
+  "fields": [
+    {
+      "name": "brandName",
+      "label": "Brand Name",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "label": "Hero Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "heroText",
+      "label": "Intro Text",
+      "type": "textarea"
+    },
+    {
+      "name": "contactEmail",
+      "label": "Contact Email",
+      "type": "text"
+    },
+    {
+      "name": "footerText",
+      "label": "Footer Text",
+      "type": "text"
+    }
+  ]
+}

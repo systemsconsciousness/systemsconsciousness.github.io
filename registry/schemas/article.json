@@ -1,0 +1,47 @@
+{
+  "name": "Article Schema",
+  "fields": [
+    {
+      "name": "title",
+      "label": "Title",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "eyebrow",
+      "label": "Section Label / Category",
+      "type": "text"
+    },
+    {
+      "name": "excerpt",
+      "label": "Quote / Excerpt",
+      "type": "textarea"
+    },
+    {
+      "name": "author",
+      "label": "Author / Speaker",
+      "type": "text"
+    },
+    {
+      "name": "sourceUrl",
+      "label": "Source URL",
+      "type": "text"
+    },
+    {
+      "name": "publishedAt",
+      "label": "Published Date",
+      "type": "text"
+    },
+    {
+      "name": "body",
+      "label": "Body",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "name": "footerText",
+      "label": "Footer Text",
+      "type": "text"
+    }
+  ]
+}

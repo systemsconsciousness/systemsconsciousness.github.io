@@ -153,6 +153,37 @@
     "landing": "registry/templates/landing.html",
     "stream": "registry/templates/stream.html"
   },
+  "components": {
+    "header": "registry/components/header.html",
+    "footer": "registry/components/footer.html"
+  },
+  "styles": {
+    "main.css": "registry/styles/main.css"
+  },
+  "scripts": {
+    "theme.js": "registry/scripts/theme.js"
+  },
+  "skills": {
+    "zazen-developer": ".agent/skills/zazen-developer/SKILL.md"
+  },
+  "media": {},
+  "pages": {
+    "index": {
+      "title": "A Stream of Zen Awareness & Systems Dynamics",
+      "slug": "index",
+      "schema": "landing",
+      "template": "landing",
+      "publishedAt": "",
+      "updatedAt": "2026-10-06T22:58:06.441Z",
+      "content": {
+        "brandName": "SYSTEMS CONSCIOUSNESS",
+        "title": "A Stream of Zen Awareness & Systems Dynamics",
+        "heroText": "An ongoing stream exploring the architecture of consciousness, recursive feedback loops, and how living wholes emerge from relational parts.",
+        "contactEmail": "dialogue@systemsconsciousness.org",
+        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
+      }
+    }
+  },
   "streams": {
     "journal": {
       "title": "The Stream",
@@ -279,23 +310,6 @@
       }
     }
   },
-  "pages": {
-    "index": {
-      "title": "Systems Consciousness — A Stream of Zen & Systems Dynamics",
-      "slug": "index",
-      "schema": "landing",
-      "template": "landing",
-      "publishedAt": "",
-      "updatedAt": "",
-      "content": {
-        "brandName": "SYSTEMS CONSCIOUSNESS",
-        "title": "A Stream of Zen Awareness & Systems Dynamics.",
-        "heroText": "An ongoing stream exploring the architecture of consciousness, recursive feedback loops, and how living wholes emerge from relational parts.",
-        "contactEmail": "dialogue@systemsconsciousness.org",
-        "footerText": "Systems Consciousness — An ongoing inquiry into Zen and cybernetic wholes."
-      }
-    }
-  },
   "navigation": {
     "primary": {
       "menu_items": []
@@ -304,7 +318,7 @@
   "settings": {
     "siteTitle": "Systems Consciousness",
     "siteUrl": "/",
-    "siteLatestCommitMessage": "✨ Stream-First Homepage & Streamlined Experience",
+    "siteLatestCommitMessage": "Promote all drafts to production",
     "siteGithubRepoLink": "https://github.com/systemsconsciousness/systemsconsciousness.github.io",
     "branch": "main",
     "universalTags": {
@@ -316,15 +330,5 @@
       "target": "github-pages",
       "baseUrl": ""
     }
-  },
-  "components": {
-    "header": "registry/components/header.html",
-    "footer": "registry/components/footer.html"
-  },
-  "styles": {
-    "main.css": "registry/styles/main.css"
-  },
-  "scripts": {
-    "theme.js": "registry/scripts/theme.js"
   }
 }
